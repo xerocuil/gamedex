@@ -1,0 +1,11 @@
+*.bak*
+*.pyc
+.cache
+.coverage
+.pytest_cache/
+__pycache__/
+bin/
+cache
+import/
+instance/
+test.*

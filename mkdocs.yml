@@ -1,0 +1,17 @@
+site_name: GameDex
+
+plugins:
+  - mkdocstrings
+
+theme:
+  name: "material"
+
+nav:
+  - Home: index.md
+  - changelog.md
+  - Developer Notes: dev_notes.md
+
+markdown_extensions:
+  - toc:
+      toc_depth: "2"
+  - pymdownx.tasklist
