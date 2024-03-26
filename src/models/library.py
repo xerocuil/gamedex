@@ -1,5 +1,6 @@
-from lib.extensions import db
 from datetime import datetime
+from slugify import slugify
+from lib.extensions import db
 
 
 class Collection(db.Model):
@@ -40,33 +41,30 @@ class Platform(db.Model):
 
     Attributes:
         id (int): Platform ID
-        launcher (str): Platform executable
-        name: Platform full name
-        ra_core: Retroarch core
         slug: Platform slug ID
+        core: Retroarch core (optional)
+        launcher (str): Platform executable (optional)
+        name: Platform full name
     '''
     id = db.Column(db.Integer, primary_key=True)
-    emulator = db.Column(db.Boolean, default=0)
+    slug = db.Column(db.String(128), unique=True)
+    # legacy_id = db.Column(db.Integer, unique=True) Deprecated
+    core = db.Column(db.String(128))
+    games = db.relationship('Game', backref='platform')
     launcher = db.Column(db.String(128))
     name = db.Column(db.String(128), unique=True)
-    ra_core = db.Column(db.String(128))
-    slug = db.Column(db.String(128), unique=True)
-    legacy_id = db.Column(db.Integer, unique=True)
-    games = db.relationship('Game', backref='platform')
 
     def __repr__(self):
         return f'{self.name}'
 
 
 class Game(db.Model):
-    '''Main Library model
-
-    [description]
+    '''Game Model
 
     Attributes:
         id (str): Game ID
         alt_title (str): Alternative game title
-        archived (str): Game has been backed up to physical media
+        archived (bool): Game has been backed up to physical media
         co_op (bool): Co-op multiplayer
         collection_id (int): Collection ID
         controller_support (int): Controller/gamepad support
@@ -162,3 +160,17 @@ class Game(db.Model):
         for t in tag_string:
             tag_array.append(t)
         return tag_array
+
+
+class Device(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128), nullable=False, unique=True)
+    mnt_path = db.Column(db.String(128), unique=True)
+    games_path = db.Column(db.String(128), unique=True)
+
+    def __repr__(self):
+        return f'{self.name}'
+
+    def device_slug(self):
+        slug = slugify(self.name)
+        return slug
