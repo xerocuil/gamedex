@@ -1,0 +1,16 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+
+<h1>{% block title %}{{ collection.name }}{% endblock %}</h1>
+
+<p>{{ collection.description }}</p>
+
+{% include 'library/game/list.html' %}
+
+{% endblock %}
+
+
+{% block sidebar %}
+
+{% endblock %}

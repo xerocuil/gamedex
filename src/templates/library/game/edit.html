@@ -1,0 +1,15 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+
+<h1 class="title">{% block title %} Edit {{ game.title }} {% endblock %}</h1>
+
+{% include 'library/game/form.html' %}
+
+{% endblock %}
+
+
+{% block sidebar %}
+
+{% endblock %}
+

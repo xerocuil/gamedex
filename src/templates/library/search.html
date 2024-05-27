@@ -1,0 +1,20 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+
+{% block title %}Search{% endblock %}
+
+{% if pagination %}
+    <h2 class="title">Results for '{{ query }}'</h2>
+    {% include 'library/game/list.html' %}
+{% else %}
+    <p class="notification">No search string.</p>
+{% endif %}
+
+{% endblock %}
+
+
+{% block sidebar %}
+
+{% endblock %}
+

@@ -1,0 +1,210 @@
+<form method="post">
+    <div class="columns">
+        <div class="column">
+            {{ form.hidden_tag() }}
+            <div class="field">
+                {{ form.title.label }}<br>
+                {{ form.title(class="title", value=game.title) }}
+            </div>
+
+            <div class="field">
+                {{ form.alt_title.label }}<br>
+                {{ form.alt_title(class="alt_title", value=game.alt_title) }}
+            </div>
+
+            <div class="field">
+                {{ form.filename.label }}<br>
+                {{ form.filename(class="filename", value=game.filename) }}
+            </div>
+
+            <div class="field">
+                {{ form.platform_id.label }}<br>
+                <select name="platform_id" id="platform_id">
+                    <option value='0'>None</option>
+                    {% for name, id in platforms %}
+                        <option value="{{ id }}"
+                            {% if id  == game.platform_id %}
+                                selected
+                            {% endif %}>
+                            {{ name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                {{ form.genre_id.label }}<br>
+                <select name="genre_id" id="genre_id">
+                    <option value='0'>None</option>
+                    {% for name, id in genres %}
+                        <option value="{{ id }}"
+                            {% if id  == game.genre_id %}
+                                selected
+                            {% endif %}>
+                            {{ name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                {{ form.tags.label }}<br>
+                {{ form.tags(class="tags", value=game.tags) }}
+            </div>
+
+            <div class="field">
+                {{ form.collection_id.label }}<br>
+                <select name="collection_id" id="collection_id">
+                    <option value='0'>None</option>
+
+                    {% for name, id in collections %}
+                        <option value="{{ id }}"
+                            {% if game.collection %}
+                                {% if id  == game.collection.id %}
+                                    selected
+                                {% endif %}
+                            {% endif %}>
+                            {{ name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                {{ form.description.label }}<br>
+                <textarea id="description" name="description" rows="8" cols="48">{{ game.description }}</textarea>
+            </div>
+
+            <div class="field">
+                {{ form.year.label }}<br>
+                {{ form.year(class="year", size=8, value=game.year) }}
+            </div>
+
+            <div class="field">
+                {{ form.developer.label }}<br>
+                {{ form.developer(class="developer", value=game.developer) }}
+            </div>
+
+            <div class="field">
+                {{ form.publisher.label }}<br>
+                {{ form.publisher(class="publisher", value=game.publisher) }}
+            </div>
+
+            <div class="field">
+                {{ form.region.label }}<br>
+                <select name="region" id="region">
+                    {% for r in form.region.choices %}
+                        <option value="{{ r[0] }}" {%if r[0] == game.region %}selected{% endif %}>{{ r[1] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                {{ form.translation.label }}<br>
+                <input class="translation" id="translation" name="translation" type="checkbox" {% if game.translation %}checked{% endif %}>
+            </div>
+
+            <div class="field">
+                {{ form.esrb.label }}<br>
+                <select name="esrb" id="esrb">
+                    {% for e in form.esrb.choices %}
+                        <option value="{{ e[0] }}" {%if e[0] == game.esrb %}selected{% endif %}>{{ e[1] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                {{ form.players.label }}<br>
+                {{ form.players(class="players", size=4, value=game.players) }}
+            </div>
+
+            <div class="field">
+                {{ form.co_op.label }}<br>
+                <input class="co_op" id="co_op" name="co_op" type="checkbox" {% if game.co_op %}checked{% endif %}>
+            </div>
+
+            <div class="field">
+                {{ form.online_multiplayer.label }}<br>
+                <input class="online_multiplayer" id="online_multiplayer" name="online_multiplayer" type="checkbox" {% if game.online_multiplayer %}checked{% endif %}>
+            </div>
+
+            <div class="field">
+                {{ form.controller_support.label }}<br>
+                <input class="controller_support" id="controller_support" name="controller_support" type="checkbox" {% if game.controller_support %}checked{% endif %}>
+            </div>
+
+
+        </div>
+
+        <div class="column">
+            <div class="field">
+                {{ form.archived.label }}<br>
+                <input class="archived" id="archived" name="archived" type="checkbox" {% if game.archived %}checked{% endif %}>
+            </div>
+
+            <div class="field">
+                {{ form.favorite.label }}<br>
+                <input class="favorite" id="favorite" name="favorite" type="checkbox" {% if game.favorite %}checked{% endif %}>
+            </div>
+
+            <div class="field">
+                {{ form.store.label }}<br>
+                <select name="store" id="store">
+                    <option value=''>None</option>
+                    {% for s in form.store.choices %}
+                        <option value="{{ s[0] }}" {%if s[0] == game.store %}selected{% endif %}>{{ s[1] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            
+            <!-- System Requirements -->
+            <div class="field">
+                {{ form.operating_system.label }}<br>
+                {{ form.operating_system(class="operating_system", value=game.operating_system) }}
+            </div>
+
+            <div class="field">
+                {{ form.processor.label }}<br>
+                {{ form.processor(class="processor", value=game.processor) }}
+            </div>
+
+            <div class="field">
+                {{ form.ram.label }}<br>
+                {{ form.ram(class="ram", value=game.ram) }}
+            </div>
+
+             <div class="field">
+                {{ form.hdd.label }}<br>
+                {{ form.hdd(class="hdd", value=game.hdd) }}
+            </div>
+
+            <div class="field">
+                {{ form.gpu.label }}<br>
+                {{ form.gpu(class="gpu", value=game.gpu) }}
+            </div>
+
+            <div class="field">
+                {{ form.mod.label }}<br>
+                {{ form.mod(class="mod", value=game.mod) }}
+            </div>
+
+            <div class="field">
+                {{ form.save_path.label }}<br>
+                {{ form.save_path(class="save_path", value=game.save_path) }}
+            </div>
+
+             <div class="field">
+                {{ form.steam_id.label }}<br>
+                {{ form.steam_id(class="steam_id", value=game.steam_id) }}
+            </div>
+
+            <div class="field">
+                {{ form.notes.label }}<br>
+                <textarea id="notes" name="notes" rows="8" cols="48">{{ game.notes }}</textarea>
+            </div>
+        </div>
+    </div>
+
+    <div>{{ form.submit() }}</div>
+</form>
