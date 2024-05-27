@@ -1,22 +1,37 @@
 #!/usr/bin/env python
 import json
 import os
-
+import random
 import shutil
+import string
 import tarfile
 import webview
-
 import pandas as pd
+
 from flask import Flask
-from lib.extensions import db, Config
+
 from routes.api import api_bp
 from routes.app import app_bp
 from routes.device import device_bp
 from routes.library import library_bp
 from routes.nav import nav_bp
+from sqlalchemy import inspect
 
 import lib.archive as archive
 import lib.rg35xx as rgw
+from lib.extensions import db, Config
+
+
+def generate_key():
+    '''Generate Flask key
+
+    Returns:
+        key (str): Randomly generated 64 character key
+    '''
+    key = ''.join(
+        random.SystemRandom()
+            .choice(string.ascii_letters + string.digits) for _ in range(64))
+    return key
 
 
 def create_app():
@@ -24,8 +39,8 @@ def create_app():
     new = Flask(__name__, template_folder='templates')
     new.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + Config.DB
     new.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    new.config['SECRET_KEY'] = Config.KEY
-    new.config['FLASK_DEBUG'] = Config.DEBUG
+    new.config['SECRET_KEY'] = generate_key()
+    new.config['FLASK_DEBUG'] = True
     db.init_app(new)
     new.register_blueprint(api_bp)
     new.register_blueprint(app_bp)
@@ -37,17 +52,15 @@ def create_app():
 
 app = create_app()
 
-if not os.path.exists(Config.DB):
-    print("Initializing database...")
-    with app.app_context():
+with app.app_context():
+    inspector = inspect(db.engine)
+    if not inspector.has_table('game'):
+        print('Initializing database...')
         db.create_all()
 
 
 class JsApi:
-    '''
-    ## JsApi
-
-    API for bridging front-end JavaScript functions
+    '''API for bridging front-end JavaScript functions
     with back-end Python functions.
     '''
 
@@ -236,10 +249,10 @@ window = webview.create_window(
 
 
 def main():
-    webview.start(debug=True)
+    # webview.start(debug=True)
 
     # Debug
-    # app.run()
+    app.run()
 
 
 if __name__ == '__main__':
