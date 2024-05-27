@@ -1,5 +1,4 @@
 from datetime import datetime
-from slugify import slugify
 from lib.extensions import db
 
 
@@ -47,12 +46,11 @@ class Platform(db.Model):
         name: Platform full name
     '''
     id = db.Column(db.Integer, primary_key=True)
-    slug = db.Column(db.String(128), unique=True)
-    # legacy_id = db.Column(db.Integer, unique=True) Deprecated
-    core = db.Column(db.String(128))
-    games = db.relationship('Game', backref='platform')
     launcher = db.Column(db.String(128))
     name = db.Column(db.String(128), unique=True)
+    slug = db.Column(db.String(128), unique=True)
+    core = db.Column(db.String(128))
+    games = db.relationship('Game', backref='platform')
 
     def __repr__(self):
         return f'{self.name}'
@@ -162,15 +160,15 @@ class Game(db.Model):
         return tag_array
 
 
-class Device(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(128), nullable=False, unique=True)
-    mnt_path = db.Column(db.String(128), unique=True)
-    games_path = db.Column(db.String(128), unique=True)
+# class Device(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(128), nullable=False, unique=True)
+#     mnt_path = db.Column(db.String(128), unique=True)
+#     games_path = db.Column(db.String(128), nullable=True, unique=True)
 
-    def __repr__(self):
-        return f'{self.name}'
+#     def __repr__(self):
+#         return f'{self.name}'
 
-    def device_slug(self):
-        slug = slugify(self.name)
-        return slug
+#     def device_slug(self):
+#         slug = slugify(self.name)
+#         return slug
