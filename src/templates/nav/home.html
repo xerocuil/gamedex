@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Nav Home</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}">
+
+        <style type="text/css">
+            .home {
+                overflow:hidden;
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background-color: #333;
+            }
+            .slider {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: -100%;
+                background-color: #000;
+                color: #fff;
+                transition: 0.4s ease;
+            }
+
+            .nav:hover .slider {
+              right:0;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="window">
+            <div class="nav" data-component="screens">
+                <section class="home">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nisl eget lorem lacinia rutrum at sed odio. Suspendisse viverra ipsum eget cursus pulvinar. Phasellus a velit nec tellus facilisis pharetra. Sed varius auctor nunc ut placerat. Praesent aliquam quam ut pretium imperdiet. Cras a sodales metus. Duis in vulputate nibh. Sed accumsan, sapien ut egestas rhoncus, nisi mauris consectetur eros, eu maximus ex nisi sit amet nisl. Duis malesuada vitae nibh ut imperdiet. Donec erat ligula, pharetra quis quam et, lacinia imperdiet dui. Proin tempor nisi vitae aliquam ultricies. Fusce arcu est, vehicula et sagittis elementum, imperdiet sit amet est. Vivamus a turpis magna. Nulla semper risus lectus, a accumsan leo ultricies at. Nam vel porta mauris, vitae venenatis massa. Donec non tristique libero, sit amet finibus risus. </section>
+
+                <section class="platform slider">Sed eu nulla varius, vulputate quam sed, semper mauris. Fusce imperdiet orci lectus, vitae cursus mi auctor non. Aenean interdum posuere felis, eget vehicula arcu ornare eu. Mauris a neque odio. Praesent volutpat, libero eu mattis imperdiet, tellus ipsum dictum nisl, at pretium tellus leo ac ex. Sed euismod nisi a felis luctus accumsan. Sed a dolor diam. Suspendisse blandit nisi sit amet dui cursus auctor. Praesent sed quam vel ipsum sollicitudin convallis in eu elit. Pellentesque et ex malesuada, consectetur erat in, eleifend lorem. Nunc eu malesuada nibh, laoreet dignissim dui. Nunc vel eros in ex facilisis hendrerit ut ut neque. Sed bibendum imperdiet dignissim. Vestibulum scelerisque, metus vel dictum fermentum, erat diam pulvinar sem, porttitor ullamcorper leo tellus vel orci. Sed rutrum pharetra dui vitae congue.</section>
+            </div>
+        </div>
+
+    <script type="text/javascript">
+        window.addEventListener('gamepadconnected', function(event) {
+            // Do something on connect
+            console.log(event) // see output below
+        });
+
+        window.addEventListener('gamepaddisconnected', function(event) {
+            // Do something on disconnect
+            console.log('no controller')
+        });
+    </script>
+
+    </body>
+</html>

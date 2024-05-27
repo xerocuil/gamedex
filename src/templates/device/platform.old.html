@@ -1,0 +1,95 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+
+<h2>{{ device['name'] }} / {{ platform_name }}</h2>
+<h3>{{ platform.name }}</h3>
+
+<article id="device">
+    <div id="installed">
+        <h3>Installed Games</h3>
+        <div class="listing">
+            <table>
+                {% for g in device_games %}
+                    <tr>
+                        <td>
+                            {% if g.title %}
+                                {{ g.title }}
+                            {% else %}
+                                {{ g.filename}}
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <div id="available">
+        <h3>Available Games</h3>
+        <div class="listing">
+            <table>
+                {% for ag in available_games %}
+                    <tr>
+                        <td>{{ ag.title }}</td>
+                        <td><button onclick="installGame('{{ device.slug }}', '{{ platform_slug }}', '{{ ag.filename }}')">Install</button></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</article>
+
+<div id="console" style="display: none;">
+    <div id="console-message">
+        <p><strong>Installing <span id="gameName"></span>...</strong></p>
+
+        <p id="consoleText"></p>
+
+        <div id="installConfirm" style="display: none;"><button onclick="window.location.reload();">OK</button></div>
+        <button onclick="hideConsole()">Close Window</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function showConsole() {
+        document.getElementById("console").style.display = "block";
+    }
+
+    function hideConsole() {
+        document.getElementById("console").style.display = "none";
+    }
+
+    function toggleConsole() {
+        var divStatus = document.getElementById("console").style.display
+        if (divStatus == "block"){
+            hideConsole();
+        } else if (divStatus == "none"){
+            showConsole();
+        }
+    }
+    function installGame(deviceSlug, platform, filename) {
+        
+        var obj;
+        document.getElementById("gameName").innerText = filename
+        document.getElementById("consoleText").innerText = "Installing "+filename+" to "+deviceSlug+"..."
+        showConsole();
+
+        var installUrl = "/"+deviceSlug+"/"+platform+"/"+filename
+        fetch(installUrl)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("consoleText").innerText = "Installation Complete."
+                document.getElementById("installConfirm").style.display = "block";
+            });
+        
+    }
+</script>
+{% endblock %}
+
+
+{% block sidebar %}
+    
+
+{% endblock %}
+
