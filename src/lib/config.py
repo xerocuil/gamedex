@@ -5,6 +5,9 @@ import random
 import string
 from configparser import ConfigParser
 
+LIB_DIR = os.path.dirname(os.path.abspath(__file__))
+APP_DIR = os.path.dirname(LIB_DIR)
+
 HOME_DIR = os.path.expanduser('~')
 PROFILE_DIR = os.path.join(HOME_DIR, '.gamedex')
 CONFIG_PATH = os.path.join(PROFILE_DIR, 'config.ini')
@@ -39,10 +42,10 @@ def init_config():
         'app_title': str(os.getenv('APP_TITLE')),
         'debug': os.getenv('FLASK_DEBUG'),
         'db': os.path.join(PROFILE_DIR, 'db.sqlite3'),
-        'media': MEDIA,  # Deprecate
-        'json': JSON,  # Deprecate
-        'key': generate_key(),
-        'server_name': 'http://127.0.0.10:8080'
+        'media': MEDIA,
+        'json': JSON,
+        'key': generate_key()
+        # 'server_name': 'http://127.0.0.10:8080' Deprecated
     }
 
     conf['GAMES'] = {
@@ -62,17 +65,16 @@ def init_config():
 
     conf['FTP'] = {
         'host': '192.168.0.100',
-        'port': 21
+        'port': 21,
+        'path': 'Games'
     }
 
-    conf['SCRAPERS'] = {
-        'mg_api_key': None,
-        'gb_api_key': None,
-        'ss_passwd': None,
-        'ss_debug': None
-    }
-
-    conf['SETTINGS'] = {'show_mc': '0'}  # Deprecate
+    # conf['SCRAPERS'] = {
+    #     'mg_api_key': None,
+    #     'gb_api_key': None,
+    #     'ss_passwd': None,
+    #     'ss_debug': None
+    # }
 
     # Write to config.ini
     with open(CONFIG_PATH, 'w') as conf_data:
@@ -114,7 +116,6 @@ class Config:
         PROFILE_DIR (str): Path to user profile directory
         JSON (str): Path to JSON path for API
         MEDIA (str): Path to `media` directory
-        SERVER_NAME (str): Server Name
         GAMES_DIR (str): Path to `games` directory
         FTP_HOST (str): Host name for FTP server
         FTP_PORT (int): Port number for FTP server (default: 21)
@@ -126,6 +127,7 @@ class Config:
     """
 
     # App settings
+    APP_DIR = APP_DIR
     APP_ID = conf['APP']['app_id']
     APP_TITLE = conf['APP']['app_title']
     CONFIG_PATH = CONFIG_PATH
@@ -135,7 +137,6 @@ class Config:
     PROFILE_DIR = PROFILE_DIR
     JSON = conf['APP']['json']  # Deprecate
     MEDIA = conf['APP']['media']  # Deprecate
-    SERVER_NAME = conf['APP']['server_name']  # Deprecate
 
     # Game settings
     GAMES_DIR = conf['GAMES']['games_dir']  # Deprecate
