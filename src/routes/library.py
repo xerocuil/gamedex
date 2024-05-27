@@ -4,13 +4,30 @@ import markdown
 import os
 import requests
 import subprocess
+from io import BytesIO
 
 from flask import Blueprint, flash, render_template, request, redirect, url_for
+from wand.image import Image
+
 from lib.extensions import db, Config, Utils
 from forms.library import CollectionForm, GameForm
 from models.library import Collection, Game, Genre, Platform
 
 library_bp = Blueprint('library', __name__)
+
+
+def get_css(file):
+    with open(file, 'r') as f:
+        print(file)
+        css = f.read()
+    return css
+
+
+def mm_to_px(mm):
+    pixels = mm * 3.7795275591
+    pixels = round(pixels, 0)
+    pixels = int(pixels)
+    return pixels
 
 
 # CONTEXT PROCESSORS
@@ -144,6 +161,7 @@ def game_detail(game_id):
 
     return render_template(
         'library/game/detail.html',
+        theme='print',
         boxart=boxart,
         boxart_url=boxart_url,
         desc=desc,
@@ -316,6 +334,8 @@ def game_edit(game_id):
 @library_bp.route('/library/game/<int:game_id>/readme')
 def game_readme(game_id):
     game = Game.query.get_or_404(game_id)
+
+    # Make large text fields HTML safe
     if game.description:
         description = markdown.markdown(game.description)
     else:
@@ -326,33 +346,62 @@ def game_readme(game_id):
     else:
         notes = None
 
-    logo_dir = os.path.join(Config.MEDIA, 'games', game.platform.slug, 'logo')
-    logo_file = game.slug() + '.png'
-    logo_url = os.path.join(logo_dir, logo_file)
-
+    # Search for hero or box art
     game_art_url = None
     media_dir = os.path.join(Config.MEDIA, 'games', game.platform.slug)
     boxart_img = os.path.join(media_dir, 'boxart', game.slug() + '.jpg')
     hero_img = os.path.join(media_dir, 'hero', game.slug() + '.jpg')
 
-    print(boxart_img)
-    print(hero_img)
+    # Set page dimensions
+    page_width = mm_to_px(216)
+    fig_max_width = mm_to_px(89)
+    fig_max_height = mm_to_px(108)
 
     if os.path.exists(hero_img):
         game_art_url = hero_img
+        game_art_type = 'hero'
     elif os.path.exists(boxart_img):
         game_art_url = boxart_img
+        game_art_type = 'boxart'
 
+    # Convert game art to data and resize
     if game_art_url:
-        with open(game_art_url, 'rb') as f:
-            game_art_data = base64.b64encode(f.read())
-            game_art = game_art_data.decode('utf-8')
+        game_art_data = BytesIO()
+        with Image(filename=game_art_url) as img:
+            with img.clone() as i:
+                if game_art_type == 'hero':
+                    i.transform(resize=str(page_width) + 'x')
+                elif game_art_type == 'boxart':
+                    if i.width >= i.height:
+                        i.transform(resize=str(fig_max_width) + 'x')
+                        game_art_type = 'landscape'
+                    else:
+                        i.transform(resize='x' + str(fig_max_height))
+                        game_art_type = 'portrait'
+                i.save(game_art_data)
+
+                game_art_data = base64.b64encode(game_art_data.getvalue())
+                game_art = game_art_data.decode('utf-8')
+
+    # Get inline css content
+    css_path = os.path.join(
+        Config.APP_DIR,
+        'static',
+        'assets',
+        'css',
+        'themes',
+        'print.min.css'
+    )
+    css = get_css(css_path)
 
     return render_template(
         '/library/game/readme.html',
+        theme='print',
+        css=css,
         game=game,
         description=description,
         game_art=game_art,
+        game_art_type=game_art_type,
         notes=notes)
 
 
@@ -452,7 +501,13 @@ def platform_detail(platform_id):
 def search():
     query = request.args.get('query')
     if query:
-        pagination = Game.query.filter((Game.title.like('%' + query + '%')) | (Game.alt_title.like('%' + query + '%')) | (Game.developer.like('%' + query + '%')) | (Game.publisher.like('%' + query + '%')) | (Game.tags.like('%' + query + '%'))).paginate(per_page=25, max_per_page=100)
+        pagination = Game.query.filter(
+            (Game.title.like('%' + query + '%')) |
+            (Game.alt_title.like('%' + query + '%')) |
+            (Game.developer.like('%' + query + '%')) |
+            (Game.publisher.like('%' + query + '%')) |
+            (Game.tags.like('%' + query + '%'))).paginate(
+                per_page=25, max_per_page=100)
     else:
         pagination = None
     return render_template(
