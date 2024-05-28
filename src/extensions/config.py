@@ -13,7 +13,7 @@ CONFIG_PATH = os.path.join(PROFILE_DIR, 'config.ini')
 cfg = ConfigParser()
 
 
-## Functions
+# Functions
 def generate_key():
     """Returns:
         key (str): Randomly generated 64 character key
