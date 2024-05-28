@@ -4,8 +4,9 @@
 .coverage
 .pytest_cache/
 __pycache__/
-bin/
+docs/bin/
 cache
 import/
 instance/
 test.*
+v0/

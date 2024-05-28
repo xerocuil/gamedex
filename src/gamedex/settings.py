@@ -15,7 +15,10 @@ APP_CFG = extensions.config.cfg['APP']
 
 # Server settings
 SECRET_KEY = APP_CFG['key']
-DEBUG = APP_CFG['debug']
+if APP_CFG['debug'] == 'True':
+    DEBUG = True
+else:
+    DEBUG = False
 
 # Host settings
 ALLOWED_HOSTS = []
