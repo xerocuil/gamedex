@@ -105,3 +105,7 @@ class Platform(models.Model):
     name = models.CharField(max_length=200, null=False)
     slug = models.CharField(max_length=32, null=False)
     description = models.TextField()
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=200)
