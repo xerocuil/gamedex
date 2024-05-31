@@ -3,22 +3,26 @@
 import os
 import subprocess
 import extensions.config
+import extensions.utils as utils
 
-app_cfg = extensions.config.cfg['APP']
+APP_CFG = extensions.config.cfg['APP']
 
-if app_cfg['public_mode'] == 'True':
-    host = '0.0.0.0'
-else:
-    host = app_cfg['server_name']
+
+utils.check_for_db()
 
 
 def main():
+    if APP_CFG['public_mode'] == 'True':
+        host = '0.0.0.0'
+    else:
+        host = APP_CFG['server_name']
+
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     subprocess.run([
         'python3',
         'manage.py',
         'runserver',
-        host + ':' + app_cfg['port']])
+        host + ':' + APP_CFG['port']])
 
 
 if __name__ == '__main__':
