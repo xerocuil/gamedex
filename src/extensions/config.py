@@ -45,6 +45,7 @@ def init_config():
         'debug': False,
         'db': os.path.join(
             PROFILE_DIR,
+            'sys',
             'db',
             'gd.db'),
         'key': generate_key(),
@@ -60,11 +61,6 @@ def init_config():
 
 # Create configuration files if missing
 if not os.path.exists(CONFIG_PATH):
-    db_dir = os.path.join(PROFILE_DIR, 'db')
-    media_dir = os.path.join(PROFILE_DIR, 'media')
-    os.makedirs(PROFILE_DIR, exist_ok=True)
-    os.makedirs(db_dir, exist_ok=True)
-    os.makedirs(media_dir, exist_ok=True)
     init_config()
 
 # Load configuration from `config.ini` file
