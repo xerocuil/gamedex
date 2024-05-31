@@ -2,16 +2,15 @@
 
 import os
 import subprocess
-import extensions.config
+import extensions.config as config
 import extensions.utils as utils
 
-APP_CFG = extensions.config.cfg['APP']
-
-
-utils.check_for_db()
+APP_CFG = config.cfg['APP']
 
 
 def main():
+    utils.check_installation()
+
     if APP_CFG['public_mode'] == 'True':
         host = '0.0.0.0'
     else:
