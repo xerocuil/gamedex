@@ -27,6 +27,7 @@ if APP_CFG['public_mode']:
     ALLOWED_HOSTS.append('*')
 else:
     ALLOWED_HOSTS.append(APP_CFG['server_name'])
+    ALLOWED_HOSTS.append('192.168.0.110')
 
 # Application definition
 INSTALLED_APPS = [
@@ -36,12 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -100,8 +103,22 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = 'static/'
-MEDIA_URL = 'media/'
+STATIC_URL = '/assets/'
+STATIC_ROOT = os.path.join(PROFILE_DIR, 'sys', 'assets')
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(PROFILE_DIR, 'media')
+
+STATICFILES_DIRS = [BASE_DIR / 'assets']
+STORAGES = {
+    'default': {
+        'BACKEND': 'django.core.files.storage.FileSystemStorage',
+    },
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',  # new
+    },
+}
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
