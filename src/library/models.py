@@ -122,3 +122,8 @@ class Game(models.Model):
         else:
             t = self.title
         return t
+
+    def slug(self):
+        f = self.filename.split('.')
+        s = f[0]
+        return s
