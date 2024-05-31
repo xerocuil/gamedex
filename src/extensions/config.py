@@ -4,7 +4,9 @@ import string
 
 from configparser import ConfigParser
 
-# Global paths
+# GLOBALS
+EXT_DIR = os.path.dirname(os.path.abspath(__file__))
+APP_DIR = os.path.dirname(EXT_DIR)
 HOME_DIR = os.path.expanduser('~')
 PROFILE_DIR = os.path.join(HOME_DIR, '.gamedex')
 CONFIG_PATH = os.path.join(PROFILE_DIR, 'config.ini')
@@ -13,7 +15,7 @@ CONFIG_PATH = os.path.join(PROFILE_DIR, 'config.ini')
 cfg = ConfigParser()
 
 
-# Functions
+# FUNCTIONS
 def generate_key():
     """Returns:
         key (str): Randomly generated 64 character key
