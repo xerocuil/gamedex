@@ -1,17 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
-<svg
-    width="64"
-    height="64"
-    viewBox="0 0 16.933333 16.933334"
-    version="1.1"
-    id="svg1"
-    xml:space="preserve"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:svg="http://www.w3.org/2000/svg">
-    <defs id="defs1" />
-    <path
-         id="icon"
-         style="fill:#0078d4;stroke-width:0"
-         d="m 8.906978,8.9073082 h 8.026355 V 16.933333 H 8.906978 Z M 0,8.9073082 H 8.0263549 V 16.933333 H 0 Z M 8.906978,0 h 8.026355 V 8.0260258 H 8.906978 Z M 0,0 H 8.0263549 V 8.0260258 H 0 Z" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" version="1.1" id="svg_windows_icon" xml:space="preserve">
+    <path id="windows_icon" style="fill:#0078d4;stroke:none;" d="M 67.328345,67.330839 H 128 V 128 H 67.328345 Z M 0,67.330839 H 60.671659 V 128 H 0 Z M 67.328345,0 H 128 V 60.669172 H 67.328345 Z M 0,0 H 60.671659 V 60.669172 H 0 Z"/>
 </svg>
