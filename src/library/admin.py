@@ -14,7 +14,7 @@ class GameAdmin(admin.ModelAdmin):
     list_display = ('title', 'genre', 'developer', 'publisher', 'platform', 'archived')
     search_fields = (
         'title',
-        'path',
+        'filename',
         'genre__name',
         'developer',
         'publisher',

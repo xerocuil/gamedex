@@ -1,6 +1,8 @@
+import os
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
+import gamedex.settings as settings
 
 ESRB_RATINGS = [
     ('E', 'Everyone'),
@@ -29,6 +31,16 @@ STORES = [
     ('PSN', 'PlayStation Network'),
     ('STEAM', 'Steam'),
     ('OTHER', 'Other')
+]
+
+GAME_MEDIA = [
+    {'img': 'boxart', 'ext': 'jpg'},
+    {'img': 'grid', 'ext': 'jpg'},
+    {'img': 'hero', 'ext': 'jpg'},
+    {'img': 'icon', 'ext': 'png'},
+    {'img': 'logo', 'ext': 'png'},
+    {'img': 'screenshot', 'ext': 'jpg'},
+    {'img': 'wallpaper', 'ext': 'jpg'}
 ]
 
 SC_FAIL = 'Value entered failed the sanity check'
@@ -127,3 +139,21 @@ class Game(models.Model):
         f = self.filename.split('.')
         s = f[0]
         return s
+
+    def get_game_media(self):
+        platform_root = os.path.join(settings.MEDIA_ROOT, 'games', self.platform.slug)
+        platform_url = settings.MEDIA_URL + 'games/' + self.platform.slug
+        game_art = []
+
+        print(settings.MEDIA_URL)
+        for i in GAME_MEDIA:
+            path = os.path.join(platform_root, i['img'], self.slug() + '.' + i['ext'])
+            if os.path.exists(path):
+                print(path, 'found')
+                img_url = platform_url + '/' + i['img'] + '/' + self.slug() + '.' + i['ext']
+                game_art.append({'img': i['img'], 'url': img_url})
+                print({'img': 'boxart', 'url': img_url})
+            else:
+                print(path, 'not found')
+
+        return game_art

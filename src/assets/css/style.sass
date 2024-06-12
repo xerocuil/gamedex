@@ -133,18 +133,9 @@ table
     input:focus
         border: $main-border
     input#query
-        // border-radius: 0.4rem
         height: $default-margin
         width: 18.4rem
         padding-right: 4.8rem
-        // display: flex
-        // align-items: center
-        background-image: url("/static/assets/img/icons/search.svg")
-        background-repeat: no-repeat
-        background-position: right
-        background-size: 3.6rem
-        // padding-left: $default-margin
-
 
 #system-messages
     ul
@@ -186,6 +177,23 @@ table
     flex-flow: row nowrap
     justify-content: space-between
 
+// MEDIA
+#media
+    height: 12.8rem
+    display: flex
+    flex-flow: row wrap
+    gap: $default-margin
+    .media_image
+        height: 11.2rem
+        width: 11.2rem
+        padding: 0.8rem
+        display: flex
+        align-items: center
+        background-color: $alt-bkgd
+        img
+            position: relative
+            height: auto
+            width: 100%
 
 // CLASSES
 .columns
@@ -195,6 +203,11 @@ table
 .icon
     max-width: $default-margin
     max-height: $default-margin
+    padding: 0.8rem
+
+.logo
+    max-height: $default-margin
+    padding: 0.4rem
 
 .game-list
     border-collapse: collapse
