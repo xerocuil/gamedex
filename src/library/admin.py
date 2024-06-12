@@ -11,7 +11,7 @@ mark_as_archived.short_description = "Archived"
 
 
 class GameAdmin(admin.ModelAdmin):
-    list_display = ('title', 'genre', 'developer', 'publisher', 'platform', 'archived')
+    list_display = ('title', 'year', 'genre', 'developer', 'publisher', 'platform', 'archived')
     search_fields = (
         'title',
         'filename',
