@@ -172,6 +172,17 @@ table
 #main-window
     padding: 0 $default-margin
 
+#tag-list
+    display: inline
+    list-style: none
+    padding: 0
+    li
+        display: inline
+    li:after
+        content: ", "
+    li:last-child:after
+        content: ""
+
 #tech-info
     display: flex
     flex-flow: row nowrap

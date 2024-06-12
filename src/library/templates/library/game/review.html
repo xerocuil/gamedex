@@ -1,0 +1,226 @@
+{% extends 'library/shared/base.html' %}
+
+{% block content %}
+
+<div id="game-title">
+    <h1>{% block title %}{{ game.display_title }}{% endblock %}</h1>
+    {% if game.alt_title %}
+        <div class="alt-title"><em>A.K.A. {{ game.alt_title }}</em></div>
+    {% endif %}
+</div>
+
+<div id="game">
+    <div id="boxart">
+        <img src="/media/games/{{ game.platform.slug }}/boxart/{{ game.slug }}.jpg" alt="Boxart">
+    </div> 
+
+    <div id="game_details">
+        <div class="detail">
+            <label>File Name</label>
+            <div>{{ game.filename }}</div>
+        </div>
+
+        {% if game.esrb %}
+            <div class="detail">
+                <label>ESRB</label>
+                <div>{{ game.esrb }}</div>
+            </div>
+        {% endif %}
+
+        <div class="detail">
+            <label>Players</label>
+            <div>{{ game.players }}</div>
+            {% if game.online_multiplayer %}
+                <div>Online Multiplayer</div>
+            {% endif %}
+            {% if game.online_multiplayer %}
+                <div>Co-op</div>
+            {% endif %}
+        </div>
+
+        <div class="detail">
+            <label>Controller</label>
+            <div>
+                {% if game.controller_support %}
+                    Controller Supported
+                {% else %}
+                    Mouse/Keyboard Required
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="detail">
+            <label>Platform</label>
+            <div><a href="{{ game.platform.id }}">{{ game.platform.name }}</a></div>
+        </div>
+
+        <div class="detail">
+            <label>Year</label>
+            <div>{{ game.year }}</div>
+        </div>
+
+        <div class="detail">
+            <label>Region</label>
+            <div>
+                {{ game.region }}
+                {% if game.translation %}
+                    , <em>Translated</em>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="detail">
+            <label>Genre</label>
+            <div>{{ game.genre }}</div>
+        </div>
+
+        {% if game.tags %}
+        <div class="detail">
+            <label>Tags</label><br>
+            <ul id="tag-list">
+                {% for t in game.tags.all %}
+                    <li>{{ t.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <div class="detail">
+            <label>Developer</label>
+            <div>{{ game.developer }}</div>
+        </div>
+
+        <div class="detail">
+            <label>Publisher</label>
+            <div>{{ game.publisher }}</div>
+        </div>
+
+        {% if game.store %}
+            <div class="detail">
+                <label>Store</label>
+                <div>{{ game.store }}</div>
+            </div>
+        {% endif %}
+
+        {% if game.last_played %}
+            <div class="detail">
+                <label>Last Played</label>
+                <div>{{ game.last_played }}</div>
+            </div>
+        {% endif %}
+
+        {% if game.play_count %}
+            <div class="detail">
+                <label>Play Count</label>
+                <div>{{ game.play_count }}</div>
+            </div>
+        {% endif %}
+
+        {% if game.collection_id %}
+            <div class="detail">
+                <label>Collection</label>
+                <div>
+                    <a href="">{{ game.collection }}</a>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if game.favorite %}
+            <div class="detail">
+                <label>Favorited &#x272d;<!--star unicode --></label>
+            </div>
+        {% endif %}
+
+        {% if game.archived %}
+        <div class="detail">
+            <label>Archived &#x1f4bf;<!--disc unicode --></label>
+        </div>
+        {% endif %}
+
+        <div class="detail">
+            <label>Date Added</label>
+            <div>{{ game.date_added }}</div>
+        </div>
+
+        <div class="detail">
+            <label>Date Modified</label>
+            <div>{{ game.date_added }}</div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="description">
+        <h3>Description</h3>
+        {{ game.description | safe }}
+    </div>
+
+    <div id="tech-info">
+        {% if game.operating_system %}
+            <div id="system_requirements">
+                <h3>System Requirements</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Operating System</th>
+                            <td>{{ game.operating_system }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Processor</th>
+                            <td>{{ game.processor }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Memory</th>
+                            <td>{{ game.ram }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Disk Space</th>
+                            <td>{{ game.hdd }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Graphics</th>
+                            <td>{{ game.gpu }}</td>
+                        </tr>
+
+                        {% if game.mod %}
+                            <tr>
+                                <th>Mod/Engine</th>
+                                <td>{{ game.mod }}</td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+
+        {% if notes %}
+            <div class="notes">
+                <h3>Notes</h3>
+                {{ notes | safe }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% if game.get_game_media|length > 1 %}<h2>Images</h2>{% endif %}
+<div id="media">
+    {% for m in game.get_game_media %}
+        {% if not m.img == 'boxart' %}
+            <div class="media_image"><a href="{{ m.url }}"><img src="{{ m.url }}""></a></div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block sidebar %}
+    {% if installed %}
+        <div class="launcher">
+            <button class="execute" onClick="launch_game('{{ game.platform.slug }}','{{ game.filename }}' )">Play</button>
+            </button>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -27,7 +27,6 @@ if APP_CFG['public_mode']:
     ALLOWED_HOSTS.append('*')
 else:
     ALLOWED_HOSTS.append(APP_CFG['server_name'])
-    ALLOWED_HOSTS.append('192.168.0.110')
 
 # Application definition
 INSTALLED_APPS = [
