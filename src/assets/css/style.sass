@@ -53,6 +53,7 @@ code
     border: none
 
 h1, h2, h3, h4, h5, h6
+    margin: $default-margin 0
     font-family: "cabin-bold"
     text-transform: uppercase
 
@@ -134,28 +135,31 @@ table
                 display: block
                 li
                     padding: $base
-        #query
-            width: $base * 8
+        #search
+            height: $default-margin
+            border-radius: $base
+            input:focus
+                border: $main-border
+            input#query
+                height: $default-margin
+                padding-right: 4.8rem
 
 #main-window
     width: 80%
     margin: 0 auto
     display: grid
     grid-template-columns: 3fr 1fr
+    gap: $default-margin * 2
     justify-content: space-between
     z-index: 0
     #content, #sidebar
         margin-top: $default-margin * 2
-
-#search
-    height: $default-margin
-    border-radius: $base
-    input:focus
-        border: $main-border
-    input#query
-        height: $default-margin
-        width: 18.4rem
-        padding-right: 4.8rem
+    #sidebar
+        text-align: right
+        ul
+            li
+                margin: $base auto
+                list-style: none
 
 #system-messages
     ul

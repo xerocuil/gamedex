@@ -8,6 +8,8 @@
 - play_time, product_id to `library.models`
 - Tag class to `library.models`
 - `app_context` to `extensions`
+- Game search function
+- Platform vector images
 
 ### Changed
 

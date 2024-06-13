@@ -3,6 +3,7 @@
 import os
 import subprocess
 import extensions.config as config
+import extensions.lutris as lutris
 import extensions.utils as utils
 
 APP_CFG = config.cfg['APP']
@@ -10,6 +11,7 @@ APP_CFG = config.cfg['APP']
 
 def main():
     utils.check_installation()
+    lutris.import_data()
 
     if APP_CFG['public_mode'] == 'True':
         host = '0.0.0.0'
