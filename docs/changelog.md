@@ -1,16 +1,21 @@
 # Changelog
 
+
 ## Unreleased
 
 ### Added
 
-- Field: product_id to `library.models`
-- Class: _Tag_ to `library.models`
+- play_time, product_id to `library.models`
+- Tag class to `library.models`
+- `app_context` to `extensions`
 
 ### Changed
 
 - Migrated from Flask to Django
-- Field: _steam_id_ to _game_id_ in `library.models`
+- steam_id to game_id in `library.models`
+- last_played field from datetime to int in `library.models`
+- Added query support for pagination
+
 
 ## [0.0.0] - 2024.0309
 
