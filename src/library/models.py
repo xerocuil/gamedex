@@ -34,6 +34,7 @@ STORES = [
 ]
 
 GAME_MEDIA = [
+    {'img': 'banner', 'ext': 'jpg'},
     {'img': 'boxart', 'ext': 'jpg'},
     {'img': 'grid', 'ext': 'jpg'},
     {'img': 'hero', 'ext': 'jpg'},
@@ -95,13 +96,14 @@ class Game(models.Model):
     genre = models.ForeignKey('Genre', blank=True, null=True, on_delete=models.SET_NULL)
     gpu = models.CharField(blank=True, max_length=200, null=True)
     hdd = models.CharField(blank=True, max_length=64, null=True)
-    last_played = models.DateTimeField(blank=True, null=True)
+    last_played = models.IntegerField(blank=True, null=True)
     mod = models.CharField(blank=True, max_length=64, null=True)
     notes = models.TextField(blank=True, max_length=8192, null=True)
     online_multiplayer = models.BooleanField(default=False)
     operating_system = models.CharField(blank=True, max_length=64, null=True)
     platform = models.ForeignKey('Platform', on_delete=models.SET_NULL, null=True)
     play_count = models.IntegerField(blank=True, default=0, null=True)
+    play_time = models.DecimalField(blank=True, null=True, max_digits=24, decimal_places=17)
     players = models.IntegerField(
         default=1,
         validators=[
@@ -145,15 +147,10 @@ class Game(models.Model):
         platform_url = settings.MEDIA_URL + 'games/' + self.platform.slug
         game_art = []
 
-        print(settings.MEDIA_URL)
         for i in GAME_MEDIA:
             path = os.path.join(platform_root, i['img'], self.slug() + '.' + i['ext'])
             if os.path.exists(path):
-                print(path, 'found')
                 img_url = platform_url + '/' + i['img'] + '/' + self.slug() + '.' + i['ext']
                 game_art.append({'img': i['img'], 'url': img_url})
-                print({'img': 'boxart', 'url': img_url})
-            else:
-                print(path, 'not found')
 
         return game_art
