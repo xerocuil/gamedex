@@ -1,0 +1,93 @@
+{% load platform %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Platform</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Rating</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for game in page_obj %}
+            <tr>
+                <td>
+                    <a href="{% url 'library:game_review' game.id %}">{{ game.display_title }}</a>
+                    {% if game.alt_title %}
+                        <br><em class="alt_title">a.k.a. {{ game.alt_title }}</em>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{% url 'library:platform_review' game.platform.id %}">
+                        {{ game.platform.slug | platform_tag:'icon' | safe }}
+                    </a>
+                </td>
+                <td>{{ game.genre }}</td>
+                <td>{{ game.year }}</td>
+                <td>{{ game.esrb }}</td>
+                <td></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    {% if page_total > 1 %}
+        <tfoot>
+            <tr>
+                <td id="pagination" colspan="100%"">
+                    <span id="step-links">
+                        {% if page_obj.has_previous %}
+                            {% if query %}
+                                {% if page_total > 3 %}
+                                    <div>
+                                        [ <a href="?q={{ query }}&page=1">&laquo; First</a> ]
+                                    </div>
+                                {% endif %}
+                                <div>
+                                    [ <a href="?q={{ query }}&page={{ page_obj.previous_page_number }}">Prev</a> ]
+                                </div>
+                            {% else %}
+                                {% if page_total > 3 %}
+                                    <div>
+                                        [ <a href="?page=1">&laquo; First</a> ]
+                                    </div>
+                                {% endif %}
+
+                                <div>
+                                    [ <a href="?page={{ page_obj.previous_page_number }}">Prev</a> ]
+                                </div>
+                                
+                            {% endif %}
+                        {% endif %}
+                
+                        <span class="current">
+                            [ Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }} ]
+                        </span>
+                
+                        {% if page_obj.has_next %}
+                            {% if query %}
+                                <div>
+                                    [ <a href="?q={{ query }}&page={{ page_obj.next_page_number }}">Next</a> ]
+                                </div>
+                                {% if page_total > 3 %}
+                                    <div>
+                                        [ <a href="?q={{ query }}&page={{ page_obj.paginator.num_pages }}">Last &raquo;</a> ]
+                                    </div>
+                                {% endif %}
+                            {% else %}
+                                <div>
+                                    [ <a href="?page={{ page_obj.next_page_number }}">Next</a> ]
+                                </div>
+
+                                <div>
+                                    [ <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a> ]
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    </span>
+                </td>
+            </tr>
+        </tfoot>
+    {% endif %}
+</table>

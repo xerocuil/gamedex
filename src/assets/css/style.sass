@@ -91,9 +91,6 @@ table
         padding: $default-margin
         background-color: white
 
-#content, #sidebar
-    margin-top: $default-margin * 2
-
 #device
     display: grid
     grid-template-columns: 1fr 1fr
@@ -103,29 +100,52 @@ table
         overflow: scroll
         scrollbar-width: thin
 
-#header
+#top-nav
     width: 100%
-    height: 6.4rem
-    padding: 0 $default-margin
-    display: flex
-    align-items: center
-    justify-content: flex-start
-    gap: 0 $base
     position: fixed
     top: 0
     background: $alt-bkgd
     z-index: 10
-    *
-        align-self: center
-    #query
-        width: $base * 8
+    #header
+        width: 80%
+        height: 6.4rem
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 0 $base
+        nav
+            .sub-header
+                display: inline-block
+                padding: 2.0rem 0
+                font-size: 2.0rem
+                text-transform: uppercase
+                a
+                    text-decoration: none
+            .sub-menu-content
+                display: none
+                padding: 0.8rem 0
+                position: absolute
+                z-index: 50
+                background-color: $alt-bkgd
+                li
+                    list-style: none
+            .sub-menu:hover .sub-menu-content
+                display: block
+                li
+                    padding: $base
+        #query
+            width: $base * 8
 
 #main-window
-    width: 100%
+    width: 80%
+    margin: 0 auto
     display: grid
-    grid-template-columns: 12fr 4fr
+    grid-template-columns: 3fr 1fr
     justify-content: space-between
     z-index: 0
+    #content, #sidebar
+        margin-top: $default-margin * 2
 
 #search
     height: $default-margin
@@ -171,6 +191,14 @@ table
 
 #main-window
     padding: 0 $default-margin
+
+#pagination
+    #step-links
+        padding: $default-margin * 0.5
+        display: flex
+        flex-flow: row nowrap
+        gap: $default-margin
+        justify-content: center
 
 #tag-list
     display: inline
@@ -227,27 +255,6 @@ table
             height: 4.8rem
             .alt_title
                 font-size: 1.4rem 
-
-.sub-header
-    padding: $default-margin 0
-    display: inline-block
-    font-size: 2.0rem
-    text-transform: uppercase
-    a
-        text-decoration: none
-
-.sub-menu-content
-    padding: 0.8rem
-    display: none
-    position: absolute
-    z-index: 50
-    background-color: $alt-bkgd
-    li
-        padding: 0.8rem 0
-        list-style: none
-
-.sub-menu:hover .sub-menu-content
-    display: block
 
 // INTERFACE
 .confirm

@@ -1,8 +1,7 @@
 from django.db.models import Q
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponse
-from .models import Collection, Game, Genre, Platform, Tag
+from .models import Game, Platform
 
 
 def loading(request):
@@ -10,14 +9,16 @@ def loading(request):
 
 
 def home(request):
-    page_title = "Home Page"
+    page_title = 'Home Page'
     games = Game.objects.order_by('-date_added')
     paginator = Paginator(games, 50)
+    page_total = paginator.num_pages
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'library/game/index.html', {
         'page_title': page_title,
-        'page_obj': page_obj
+        'page_obj': page_obj,
+        'page_total': page_total
     })
 
 
@@ -29,16 +30,21 @@ def game_review(request, game_id):
 
 
 def search_results(request):
-    query = request.GET.get("q")
-    page_title = "Search results for " + query
-    page_obj = Game.objects.filter(
+    query = request.GET.get('q')
+    results = Game.objects.filter(
         Q(title__icontains=query) |
         Q(filename__icontains=query))
-    print(page_obj)
-    # return object_list
+    page_title = str(len(results)) + ' results for "' + query + '"'
+    paginator = Paginator(results, 50)
+    page_total = paginator.num_pages
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     return render(request, 'library/game/search_results.html', {
         'page_title': page_title,
-        'page_obj': page_obj
+        'page_obj': page_obj,
+        'page_total': page_total,
+        'query': query
     })
 
 
@@ -47,7 +53,7 @@ def search_results(request):
 ############
 
 def platforms(request):
-    page_title = "Platforms"
+    page_title = 'Platforms'
     platforms = Platform.objects.order_by('name')
     return render(request, 'library/platform/index.html', {
         'page_title': page_title,

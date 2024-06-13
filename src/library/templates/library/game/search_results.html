@@ -1,0 +1,12 @@
+{% extends "library/shared/base.html" %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+
+<p><strong>{{ page_title }}</strong></p>
+
+{% include 'library/game/list.html' %}
+
+{% endblock %}
+

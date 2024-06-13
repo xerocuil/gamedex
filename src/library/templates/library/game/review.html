@@ -1,5 +1,7 @@
 {% extends 'library/shared/base.html' %}
 
+{% load game_tags %}
+
 {% block content %}
 
 <div id="game-title">
@@ -29,7 +31,13 @@
 
         <div class="detail">
             <label>Players</label>
-            <div>{{ game.players }}</div>
+            <div>
+                {% if game.players == 1 %}
+                    Single-Player
+                {% else %}
+                    {{ game.players }} Players
+                {% endif %}
+            </div>
             {% if game.online_multiplayer %}
                 <div>Online Multiplayer</div>
             {% endif %}
@@ -62,7 +70,7 @@
         <div class="detail">
             <label>Region</label>
             <div>
-                {{ game.region }}
+                {{ game.get_region_display }}
                 {% if game.translation %}
                     , <em>Translated</em>
                 {% endif %}
@@ -98,14 +106,7 @@
         {% if game.store %}
             <div class="detail">
                 <label>Store</label>
-                <div>{{ game.store }}</div>
-            </div>
-        {% endif %}
-
-        {% if game.last_played %}
-            <div class="detail">
-                <label>Last Played</label>
-                <div>{{ game.last_played }}</div>
+                <div>{{ game.get_store_display }}</div>
             </div>
         {% endif %}
 
@@ -131,6 +132,20 @@
             </div>
         {% endif %}
 
+        {% if game.last_played %}
+            <div class="detail">
+                <label>Last Played</label>
+                <div>{{ game.last_played | display_time_elapsed }}</div>
+            </div>
+        {% endif %}
+
+        {% if game.play_time %}
+            <div class="detail">
+                <label>Play Time</label>
+                <div>{{ game.play_time | display_playtime }}</div>
+            </div>
+        {% endif %}
+
         {% if game.archived %}
         <div class="detail">
             <label>Archived &#x1f4bf;<!--disc unicode --></label>
@@ -151,14 +166,14 @@
 
 <div>
     <div class="description">
-        <h3>Description</h3>
+        <h2>Description</h2>
         {{ game.description | safe }}
     </div>
 
     <div id="tech-info">
         {% if game.operating_system %}
             <div id="system_requirements">
-                <h3>System Requirements</h3>
+                <h2>System Requirements</h2>
                 <table>
                     <tbody>
                         <tr>
@@ -199,7 +214,7 @@
 
         {% if notes %}
             <div class="notes">
-                <h3>Notes</h3>
+                <h2>Notes</h2>
                 {{ notes | safe }}
             </div>
         {% endif %}
