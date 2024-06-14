@@ -1,11 +1,11 @@
-@use "shared" as *
-@use "themes/default" as *
+@use 'shared' as *
+@use 'themes/default' as *
 
 
 // Global Variables
 $base: 1.6rem
 $default-margin: $base * 2
-
+$default-border: 1px solid $color02
 
 // Elements
 html
@@ -21,13 +21,12 @@ textarea
     font-size: $base
 
 body
-    color: $main-color
-    background-color: $main-bkgd
-    height: 100%
+    color: $color00
+    background-color: $color01
     z-index: 0
 
 a
-    color: $alt-color
+    color: $color03
     text-decoration: underline
     text-decoration-style: dotted
 
@@ -42,26 +41,35 @@ button
     display: inline-flex
     align-items: center
     padding: 0.8rem
-    font-family: "cabin-bold"
+    font-family: $header-font
     text-transform: uppercase
     color: white
-    border: $main-border
+    border: $default-border
 
 code
     background: rgb(55, 55, 55)
     font-size: $base
     border: none
 
+dl
+    dt
+        font-weight: 600
+        margin-bottom: $base / 2
+    dd
+        margin-bottom: $base
+
 h1, h2, h3, h4, h5, h6
-    margin: $default-margin 0
-    font-family: "cabin-bold"
+    margin: 0 0 $base 0
+    padding: 0
+    font-family: $header-font
     text-transform: uppercase
 
 input
-    border: $main-border
+    border: $default-border
 
 label
     font-weight: 600
+    margin-bottom: $base
 
 nav
     a
@@ -69,11 +77,12 @@ nav
 
 table
     width: 100%
+    border-spacing: 0
     tr
         td, th
             text-align: left
-            padding: 0.4em 0
-            border-bottom: $main-border
+            padding: $base 0
+            border-bottom: $default-border
             
 // IDS
 #console
@@ -83,7 +92,7 @@ table
     position: fixed
     top: 0
     left: 0
-    background-color: $alt-bkgd
+    background-color: $color04
     #console-container
         width: 64.0rem
         height: 80%
@@ -105,7 +114,7 @@ table
     width: 100%
     position: fixed
     top: 0
-    background: $alt-bkgd
+    background: $color04
     z-index: 10
     #header
         width: 80%
@@ -128,7 +137,7 @@ table
                 padding: 0.8rem 0
                 position: absolute
                 z-index: 50
-                background-color: $alt-bkgd
+                background-color: $color04
                 li
                     list-style: none
             .sub-menu:hover .sub-menu-content
@@ -139,28 +148,34 @@ table
             height: $default-margin
             border-radius: $base
             input:focus
-                border: $main-border
+                border: $default-border
             input#query
                 height: $default-margin
                 padding-right: 4.8rem
 
 #main-window
     width: 80%
-    margin: 0 auto
+    margin: $default-margin * 3 auto
     display: grid
     grid-template-columns: 3fr 1fr
     gap: $default-margin * 2
     justify-content: space-between
     z-index: 0
-    #content, #sidebar
-        margin-top: $default-margin * 2
-    #sidebar
-        text-align: right
-        ul
-            li
-                margin: $base auto
-                list-style: none
-
+    #content-col
+        padding: 0
+    #sidebar-col
+        padding: 0
+        #sidebar
+            padding: $base
+            display: grid
+            gap: $default-margin * 2
+            background-color: $color05
+            border-radius: $base
+            ul
+                li
+                    margin: $base auto
+                    list-style: none
+            
 #system-messages
     ul
         display: block
@@ -187,14 +202,22 @@ table
         .detail
             margin: 0 0 $base 0
 
+#game-modules
+    display: flex
+    flex-flow: row wrap
+    gap: $default-margin * 2
+    div
+        flex: 0 1 36.0rem
+
+#game-list
+    .alt-title
+        margin-top: $base / 2
+
 #game-title
     display: flex
     flex-flow: row nowrap
     align-items: center
     gap: 0 $default-margin
-
-#main-window
-    padding: 0 $default-margin
 
 #pagination
     #step-links
@@ -211,9 +234,9 @@ table
     li
         display: inline
     li:after
-        content: ", "
+        content: ', '
     li:last-child:after
-        content: ""
+        content: ''
 
 #tech-info
     display: flex
@@ -232,7 +255,7 @@ table
         padding: 0.8rem
         display: flex
         align-items: center
-        background-color: $alt-bkgd
+        background-color: $color04
         img
             position: relative
             height: auto
@@ -252,13 +275,9 @@ table
     max-height: $default-margin
     padding: 0.4rem
 
-.game-list
-    border-collapse: collapse
-    tr
-        td
-            height: 4.8rem
-            .alt_title
-                font-size: 1.4rem 
+.right
+    text-align: right
+    padding-left: $default-margin
 
 // INTERFACE
 .confirm
