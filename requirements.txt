@@ -1,0 +1,13 @@
+asgiref==3.8.1
+certifi==2024.6.2
+charset-normalizer==3.3.2
+configparser==7.0.0
+Django==5.0.6
+idna==3.7
+Markdown==3.6
+oauthlib==3.2.2
+requests==2.32.3
+requests-oauthlib==2.0.0
+sqlparse==0.5.0
+urllib3==2.2.1
+whitenoise==6.6.0
