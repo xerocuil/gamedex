@@ -1,0 +1,14 @@
+{% extends "library/shared/base.html" %}
+
+{% load platform_tags %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+
+<h1>{{ page_title }}</h1>
+
+{% include 'library/game/list.html' %}
+
+{% endblock %}
+

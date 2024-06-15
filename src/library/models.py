@@ -1,4 +1,5 @@
 import os
+import markdown
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
@@ -102,7 +103,7 @@ class Game(models.Model):
     online_multiplayer = models.BooleanField(default=False)
     operating_system = models.CharField(blank=True, max_length=64, null=True)
     platform = models.ForeignKey('Platform', on_delete=models.SET_NULL, null=True)
-    play_count = models.IntegerField(blank=True, default=0, null=True)
+    play_count = models.IntegerField(blank=True, default=0, null=True)  # Deprecated
     play_time = models.DecimalField(blank=True, null=True, max_digits=24, decimal_places=17)
     players = models.IntegerField(
         default=1,
@@ -129,6 +130,7 @@ class Game(models.Model):
     def __str__(self):
         return self.title
 
+    
     def display_title(self):
         if self.title.endswith(', The') or self.title.endswith(', A'):
             x, y = self.title.split(', ')
@@ -136,11 +138,6 @@ class Game(models.Model):
         else:
             t = self.title
         return t
-
-    def slug(self):
-        f = self.filename.split('.')
-        s = f[0]
-        return s
 
     def get_game_media(self):
         platform_root = os.path.join(settings.MEDIA_ROOT, 'games', self.platform.slug)
@@ -154,3 +151,16 @@ class Game(models.Model):
                 game_art.append({'img': i['img'], 'url': img_url})
 
         return game_art
+
+    def md_description(self):
+        md = markdown.markdown(self.description)
+        return md
+
+    def md_notes(self):
+        md = markdown.markdown(self.notes)
+        return md
+    
+    def slug(self):
+        f = self.filename.split('.')
+        s = f[0]
+        return s

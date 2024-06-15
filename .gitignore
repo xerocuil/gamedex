@@ -9,3 +9,4 @@ cache
 docs/bin/
 site
 test.py
+Pipfile*

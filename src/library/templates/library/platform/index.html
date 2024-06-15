@@ -1,0 +1,36 @@
+{% extends "library/shared/base.html" %}
+
+{% load platform_tags %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+
+<h1>Index</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Logo</th>
+            <th>Icon</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in platforms %}
+            <tr>
+                <td style="width: 320px;">{{ p.slug | platform_img:'logo' | safe }}</td>
+                <td style="padding-left: 128px;">{{ p.slug | platform_img:'icon' | safe }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+       
+    </tfoot>
+</table>
+
+{% endblock %}
+
+
+<div id="sidebar">
+    {% block sidebar %}{% endblock %}
+</div>

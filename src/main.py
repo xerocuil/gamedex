@@ -11,6 +11,7 @@ APP_CFG = config.cfg['APP']
 
 def main():
     utils.check_installation()
+    utils.count_tags()
     lutris.import_data()
 
     if APP_CFG['public_mode'] == 'True':

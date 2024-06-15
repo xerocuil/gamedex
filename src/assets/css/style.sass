@@ -2,12 +2,13 @@
 @use 'themes/default' as *
 
 
-// Global Variables
+// GLOBALS
 $base: 1.6rem
 $default-margin: $base * 2
 $default-border: 1px solid $color02
 
-// Elements
+
+// ELEMENTS
 html
     font-size: 62.5%
 
@@ -34,9 +35,6 @@ a:hover
     text-decoration: underline
     text-decoration-style: dotted
 
-.confirm
-    background-color: $confirm
-
 button
     display: inline-flex
     align-items: center
@@ -54,22 +52,28 @@ code
 dl
     dt
         font-weight: 600
-        margin-bottom: $base / 2
+        margin-bottom: $base * 0.5
     dd
         margin-bottom: $base
 
 h1, h2, h3, h4, h5, h6
-    margin: 0 0 $base 0
+    margin: 0 0 $default-margin 0
     padding: 0
     font-family: $header-font
     text-transform: uppercase
+
+h1
+    margin: 0 0 $default-margin 0
+
+h2, h3, h4, h5, h6
+    margin: 0 0 $base 0
 
 input
     border: $default-border
 
 label
-    font-weight: 600
-    margin-bottom: $base
+    font-weight: 700
+    margin-bottom: $default-margin
 
 nav
     a
@@ -83,7 +87,8 @@ table
             text-align: left
             padding: $base 0
             border-bottom: $default-border
-            
+
+
 // IDS
 #console
     height: 100%
@@ -163,27 +168,26 @@ table
     z-index: 0
     #content-col
         padding: 0
+        #content
+            display: grid
+            gap: $default-margin
     #sidebar-col
         padding: 0
         #sidebar
-            padding: $base
+            padding: $default-margin $base 0 $base
             display: grid
-            gap: $default-margin * 2
+            gap: $default-margin
             background-color: $color05
             border-radius: $base
             ul
                 li
                     margin: $base auto
                     list-style: none
-            
-#system-messages
-    ul
-        display: block
-        padding: $base
-        border: 1px dashed #ccc
+            .sidebar-module
+                margin-bottom: $default-margin
 
 
-// Game
+// GAME
 #game
     display: grid
     grid-template-columns: 1fr 2fr
@@ -199,8 +203,6 @@ table
         display: flex
         flex-flow: column wrap
         justify-content: flex-start
-        .detail
-            margin: 0 0 $base 0
 
 #game-modules
     display: flex
@@ -211,13 +213,15 @@ table
 
 #game-list
     .alt-title
-        margin-top: $base / 2
+        margin-top: $base * 0.5
 
 #game-title
     display: flex
     flex-flow: row nowrap
     align-items: center
     gap: 0 $default-margin
+    h1
+        margin: 0
 
 #pagination
     #step-links
@@ -241,25 +245,29 @@ table
 #tech-info
     display: flex
     flex-flow: row nowrap
-    justify-content: space-between
+    gap: $default-margin
+    #notes, #system-requirements
+        flex: 0 1 40%
+
+.detail
+    margin: 0 0 $base 0
 
 // MEDIA
 #media
-    height: 12.8rem
     display: flex
     flex-flow: row wrap
-    gap: $default-margin
-    .media_image
-        height: 11.2rem
-        width: 11.2rem
+    gap: $base
+    .media-image
+        height: 4.8rem
+        width: 4.8rem
         padding: 0.8rem
-        display: flex
-        align-items: center
         background-color: $color04
         img
-            position: relative
-            height: auto
+            height: 100%
             width: 100%
+            object-fit: cover
+            overflow: hidden
+
 
 // CLASSES
 .columns
@@ -279,7 +287,14 @@ table
     text-align: right
     padding-left: $default-margin
 
-// INTERFACE
+
+// UI
+#system-messages
+    ul
+        display: block
+        padding: $base
+        border: 1px dashed #ccc
+
 .confirm
     background-color: $confirm
 

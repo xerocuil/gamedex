@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{% static 'img/gui/favicon.ico' %}" sizes="any">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
@@ -13,15 +14,25 @@
 <div id="top-nav">
     <div id="header">
         <nav>
-            <div class="sub-header"><a href="{% url 'library:home' %}">Home</a></div>
+            <div class="sub-header">
+                <a href="{% url 'library:game_index' %}">Home</a>
+            </div>
 
             <div class="sub-menu sub-header">
-                <a href="{% url 'library:home' %}">Games</a>
+                <a href="{% url 'library:game_index' %}">Games</a>
                 <ul class="sub-menu-content">
-                    <li><a href="{% url 'library:platforms' %}">Platforms</a></li>
-                    <li><a href="/admin/">Admin</a></li>
+                    <li><a href="{% url 'library:platform_index' %}">Platforms</a></li>
                 </ul>
             </div>
+
+            <div class="sub-header">
+                <a href="/admin/">Admin</a>
+            </div>
+
+            <div class="sub-header">
+                <a href="{% url 'library:settings' %}">Settings</a>
+            </div>
+                
         </nav>
             
         <div id="search">
@@ -33,31 +44,25 @@
 </div>
 
 <div id="main-window">
-    <div id="content">
+    <div id="content-col">
         <div id="system-messages">
-            <!-- {% if message %}
-                {{ message }}
-            {% endif %} -->
+            {% if message %}{{ message }}{% endif %}
         </div>
-
-        <div id="page">
-            {% block content %} {% endblock %}
+        <div id="content">
+            {% block content %}{% endblock %}
         </div>
     </div>
 
-    <div id="sidebar">
-        {% block sidebar %} {% endblock %}
+    <div id="sidebar-col">
+        <div id="sidebar">
+            {% block sidebar %} {% endblock %}
+        </div>
     </div>
 </div>
 
-<script type="text/javascript">
-    // Activate search with enter button on search field
-    document.getElementById('query').onkeydown = function(e){
-        if(e.keyCode == 13){
-            search_query()
-        }
-    };
-</script>
+<footer>
+    
+</footer>
 
 </body>
 </html>

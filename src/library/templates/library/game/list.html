@@ -1,6 +1,4 @@
-{% load platform %}
-
-<table>
+<table id="game-list">
     <thead>
         <tr>
             <th>Title</th>
@@ -15,16 +13,16 @@
         {% for game in page_obj %}
             <tr>
                 <td>
-                    <a href="{% url 'library:game_review' game.id %}">{{ game.display_title }}</a>
+                    <a href="{% url 'library:game_review' game.id %}">
+                        {{ game.display_title }}
+                    </a>
                     {% if game.alt_title %}
-                        <br><em class="alt_title">a.k.a. {{ game.alt_title }}</em>
+                        <div class="alt-title">
+                            <em>a.k.a. {{ game.alt_title }}</em>
+                        </div>
                     {% endif %}
                 </td>
-                <td>
-                    <a href="{% url 'library:platform_review' game.platform.id %}">
-                        {{ game.platform.slug | platform_tag:'icon' | safe }}
-                    </a>
-                </td>
+                <td>{{ game.platform }}</td>
                 <td>{{ game.genre }}</td>
                 <td>{{ game.year }}</td>
                 <td>{{ game.esrb }}</td>

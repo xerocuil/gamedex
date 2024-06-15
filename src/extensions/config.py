@@ -56,9 +56,14 @@ def init_config():
         'port': generate_server_name()[1]
     }
 
+    # Directory configuration
+    cfg['DIR'] = {
+        'games': os.path.join(HOME_DIR, 'Games'),
+    }
+
     # Write to config.ini
-    with open(CONFIG_PATH, 'w') as conf_data:
-        cfg.write(conf_data)
+    with open(CONFIG_PATH, 'w') as f:
+        cfg.write(f)
 
 
 # Create configuration files if missing

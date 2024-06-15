@@ -33,6 +33,9 @@ def count_tags():
     tag_count = []
 
     # Look up each tag and count each instance in the `library_game_tags` table
+    #
+    # I'm sure there is a much more elegant way to access ManytoMany fields
+    # but for now I'm using the hacky SQLite way.
     for t in tags:
         db_cursor.execute(f'SELECT count(*) FROM library_game_tags WHERE tag_id == {t.id};')
         count = db_cursor.fetchone()[0]
@@ -55,13 +58,12 @@ def count_platforms():
         platform_count.append({'id': p.id, 'name': p.name, 'count': 0})
 
     for g in games:
-        platform  = next(item for item in platform_count if item['id'] == g.platform.id)
+        platform = next(item for item in platform_count if item['id'] == g.platform.id)
         platform['count'] = platform['count'] + 1
 
     platform_count = sorted(platform_count, key=lambda x: x['count'], reverse=True)
 
     return platform_count
-
 
 
 def total_playtime():
@@ -75,7 +77,7 @@ def total_playtime():
     for g in games:
         if g.play_time:
             if g.play_time > 0:
-                total = total  + g.play_time
+                total = total + g.play_time
 
     return total
 
@@ -107,7 +109,6 @@ def check_installation():
         check_for_dir(db_dir)
 
         # Migrate database/collect static files
-        curr_dir = os.getcwd()
         migrate_db('library')
         collect_static()
 

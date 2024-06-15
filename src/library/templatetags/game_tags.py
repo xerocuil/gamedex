@@ -5,30 +5,20 @@ from django import template
 
 register = template.Library()
 
-
 @register.filter()
-def display_timestamp(timestamp):
-    """Convert UNIX timestamp to datetime format
-
-    Args:
-        timestamp (int): UNIX timestamp
-
-    Returns:
-        datetime: Converted datetime object
-    """
-    dt = datetime.fromtimestamp(timestamp)
-    return dt
-
+def format_date(date_obj):
+    d = date_obj.strftime('%Y-%m-%d')
+    return d
 
 @register.filter()
 def display_playtime(hours):
-    """Convert play time decimal to human readable string
+    """Convert play time decimal to human-readable string.
 
     Args:
         hours (decimal): No. of hours played
 
     Returns:
-        str: Display play in hours or minutes
+        str: Display play time in hours or minutes
     """
     if hours < 1:
         time = round(hours * 60)
@@ -41,7 +31,7 @@ def display_playtime(hours):
 
 @register.filter()
 def display_time_elapsed(timestamp):
-    """Convert UNIX timestamp to human-readable string
+    """Convert time elapsed from UNIX timestamp to human-readable string.
 
     Args:
         timestamp (int): UNIX timestamp
@@ -91,3 +81,17 @@ def display_time_elapsed(timestamp):
         else:
             display_str = str(years) + ' years ago'
     return display_str
+
+
+@register.filter()
+def display_timestamp(timestamp):
+    """Convert UNIX timestamp to datetime format.
+
+    Args:
+        timestamp (int): UNIX timestamp
+
+    Returns:
+        datetime: Converted datetime object
+    """
+    dt = datetime.fromtimestamp(timestamp)
+    return dt
