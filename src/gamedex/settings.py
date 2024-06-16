@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-import extensions.config
+import extensions.config as config
 
 # Directories
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,7 +11,7 @@ PROFILE_DIR = os.path.join(
 MEDIA = os.path.join(PROFILE_DIR, 'media')
 
 # Import settings from `config.ini`
-APP_CFG = extensions.config.cfg['APP']
+APP_CFG = config.cfg['APP']
 
 # Server settings
 SECRET_KEY = APP_CFG['key']
@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'gamedex.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': APP_CFG['db'],
+        'NAME': config.DB_PATH
     }
 }
 
@@ -103,11 +103,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/assets/'
-STATIC_ROOT = os.path.join(PROFILE_DIR, 'sys', 'assets')
+STATIC_ROOT = config.ASSETS_DIR
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROFILE_DIR, 'media')
+MEDIA_ROOT = config.MEDIA_DIR
 
 STATICFILES_DIRS = [BASE_DIR / 'assets']
 STORAGES = {
@@ -115,7 +115,7 @@ STORAGES = {
         'BACKEND': 'django.core.files.storage.FileSystemStorage',
     },
     'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',  # new
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
     },
 }
 

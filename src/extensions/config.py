@@ -4,12 +4,21 @@ import string
 
 from configparser import ConfigParser
 
+
 # GLOBALS
 EXT_DIR = os.path.dirname(os.path.abspath(__file__))
 APP_DIR = os.path.dirname(EXT_DIR)
 HOME_DIR = os.path.expanduser('~')
 PROFILE_DIR = os.path.join(HOME_DIR, '.gamedex')
+MEDIA_DIR = os.path.join(PROFILE_DIR, 'media')
+SYS_DIR = os.path.join(PROFILE_DIR, 'sys')
+DB_DIR = os.path.join(SYS_DIR, 'db')
+ASSETS_DIR = os.path.join(PROFILE_DIR, 'assets')
+JSON_DIR = os.path.join(SYS_DIR, 'assets', 'json')
 CONFIG_PATH = os.path.join(PROFILE_DIR, 'config.ini')
+DB_PATH = os.path.join(PROFILE_DIR, 'sys', 'db', 'gd.db')
+GD_DIRS = [MEDIA_DIR, DB_DIR, JSON_DIR]
+
 
 # Initialize config object
 cfg = ConfigParser()
