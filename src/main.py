@@ -4,6 +4,7 @@ import os
 import subprocess
 import extensions.config as config
 import extensions.lutris as lutris
+import extensions.steam as steam
 import extensions.utils as utils
 
 APP_CFG = config.cfg['APP']
@@ -13,6 +14,7 @@ def main():
     utils.check_installation()
     utils.count_tags()
     lutris.import_data()
+    steam.export_data()
 
     if APP_CFG['public_mode'] == 'True':
         host = '0.0.0.0'
