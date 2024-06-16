@@ -149,6 +149,28 @@
         </table>
     </div>
 
+    <div class="sidebar-module">
+        <h3>Recently Modified</h3>
+        <table>
+            <thead>
+                <th>Title</th>
+                <th class="right">Date Modified</th>
+            </thead>
+            <tbody>
+                {% for ra in recently_modified %}
+                    <tr>
+                        <td>
+                            <a href="{% url 'library:game_review' ra.id %}">
+                                {{ ra.title }}
+                            </a>
+                        </td>
+                        <td class="right">{{ ra.date_modified | format_date }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
     <div  class="sidebar-module">
         <h3>Stats</h3>
         <table>

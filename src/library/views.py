@@ -29,6 +29,7 @@ def game_index(request):
 
     most_played = game_obj.order_by('-play_time')[:4]
     recently_added = game_obj.order_by('-date_added')[:4]
+    recently_modified = game_obj.order_by('-date_modified')[:4]
     recently_played = game_obj.order_by('-last_played')[:4]
     top_tags = count_tags()[:4]
     playtime = total_playtime()
@@ -55,6 +56,7 @@ def game_index(request):
         'platform_count': platform_count,
         'playtime': playtime,
         'recently_added': recently_added,
+        'recently_modified': recently_modified,
         'recently_played': recently_played,
         'top_platforms': top_platforms,
         'top_tags': top_tags
