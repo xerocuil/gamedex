@@ -2,9 +2,30 @@ import json
 
 
 def load_json_file(file):
+    """Import JSON data object from file.
+
+    Args:
+        file (str): Path of JSON file to load
+
+    Returns:
+        data (arr): Table of JSON data
+    """
     with open(file, 'r') as f:
         data = json.load(f)
     return data
+
+
+def save_json_file(file, obj, indent=0):
+    """Save JSON data object to file.
+
+    Args:
+        file (str): File destination
+        obj (list, dict): JSON data object
+        indent (int): Indentation level
+    """
+
+    with open(file, 'w') as f:
+        json.dump(obj, f, indent=indent)
 
 
 def sort_title(title, option):
@@ -12,26 +33,26 @@ def sort_title(title, option):
 
     Args:
         title (str): Title to convert
-        option (str): Covert/Display
+        option (str): Conversion option [`s`/`d`]
 
     Options:
-        `c`: Convert to sortable title (move article to end of string)
-        `d`: Display sortable title (move artice to beginning of string)
+        `s`: Convert to sortable title (move article to end of string)  
+        `d`: Convert to display title (move artice to beginning of string)
 
     Returns:
-        str: Converted title
+        c_title (str): Converted title string
 
     Example:
-        Input: `sort_title('The Sample Title', c)`
-        Output: Sample Title, The
+        Input: `sort_title('The Sample Title', c)`  
+        Output: `Sample Title, The`
 
-    """
+    """  # Supress trailing whitespace warning # noqa: W291
 
     article = ''
     base_title = ''
     t = ''
 
-    def c(title):
+    def s(title):
         if title.startswith('A ') or \
                 title.startswith('An ') or \
                 title.startswith('The '):
@@ -58,10 +79,10 @@ def sort_title(title, option):
         return t
 
     try:
-        cstr = locals()[option](title)
+        c_title = locals()[option](title)
     except KeyError:
         print('\nOption not recognized. Displaying help dialog...\n\ndef ' +
               sort_title.__name__ + '(title, option)\n\n' + sort_title.__doc__)
         exit()
 
-    return cstr
+    return c_title
