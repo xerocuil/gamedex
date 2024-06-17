@@ -3,7 +3,7 @@ import os
 import sqlite3
 import subprocess
 import extensions.config as config
-from extensions.helpers import load_json_file, sort_title
+from extensions.helpers import load_json_file, save_json_file, sort_title
 from library.models import Game, Platform, Tag
 
 
@@ -17,13 +17,18 @@ APP_DIR = config.APP_DIR
 # GAME FUNCTIONS
 
 def scan_games():
-    """Scan games directory
+    """Scan games directory for each platform and load game data.
 
     Returns:
         list: Table of installed games
     """
 
     installed_games = []
+    json_dir = os.path.join(config.JSON_DIR, 'library')
+    json_file = os.path.join(json_dir, 'installed.json')
+
+    # installed_games_json = os.path.join(config.JSON_DIR, 'library', 'installed.json')
+
     lutris_data = load_json_file(
         os.path.join(
             config.JSON_DIR,
@@ -71,7 +76,7 @@ def scan_games():
                     replace(' And ', ' and ').\
                     replace(' Of ', ' of ').\
                     replace(' The ', ' the ')
-                title = sort_title(title, 'c')
+                title = sort_title(title, 's')
                 game_dict = {
                     'id': None,
                     'filename': r,
@@ -146,12 +151,10 @@ def get_installed_games():
 
     installed_games = {'registered': registered, 'unregistered': unregistered}
 
-    if not os.path.isdir(json_dir):
-        print(json_dir)
-        os.makedirs(json_dir)
+    print(json.dumps(installed_games, indent=4))
 
-    with open(json_file, 'w', encoding='utf-8') as f:
-        json.dump(installed_games, f, indent=4)
+    check_for_dir(json_dir)
+    save_json_file(json_file, installed_games)
 
     print('Installed game listing complete.')
 

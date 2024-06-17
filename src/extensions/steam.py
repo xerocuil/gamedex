@@ -2,11 +2,12 @@ import json
 import os
 import vdf
 
-import extensions.app_context
+import extensions.app_context  # noqa: F401
 import extensions.config as config
-
 from library.models import Game
 
+
+# GLOBALS
 
 HOME_DIR = os.path.expanduser('~')
 DEFAULT_STEAM_LIBRARY = os.path.join(HOME_DIR, '.steam', 'steam')
@@ -19,6 +20,8 @@ JSON_DIR = os.path.join(config.JSON_DIR, 'steam')
 JSON_FILE = os.path.join(JSON_DIR, 'installed.json')
 
 
+# FUNCTIONS
+
 def export_data():
     """Export Steam data to JSON files"""
     installed_games = []
@@ -26,11 +29,10 @@ def export_data():
     for file in os.listdir(os.path.join(STEAM_APPS)):
         if file.endswith('.acf'):
             file_data = vdf.load(open(os.path.join(STEAM_APPS, file)))
-            manifest_data = {
+            installed_games.append({
                 'title': file_data['AppState']['name'],
                 'filename': file_data['AppState']['appid']
-                }
-            installed_games.append(manifest_data)
+                })
 
         for g in installed_games:
             try:

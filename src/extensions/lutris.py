@@ -4,19 +4,19 @@ import sqlite3
 from decimal import Decimal
 from django.utils import timezone
 
-import extensions.app_context
+import extensions.app_context  # noqa: F401
 import extensions.config as config
-
 from library.models import Game
 
 
 # GLOBALS
+
 JSON_DIR = os.path.join(config.JSON_DIR, 'lutris')
 JSON_FILE = os.path.join(JSON_DIR, 'installed.json')
-# NDB_JSON = os.path.join(JSON_DIR, 'ndb.json')
 
 
-# Database connection (Lutris)
+# DB CONNECTION
+
 LUTRIS_DB = os.path.join(os.path.expanduser('~'), '.local', 'share', 'lutris', 'pga.db')
 LT_CONN = None
 CONN_ERR = 'Could not connect to Lutris database.'
@@ -30,12 +30,10 @@ if os.path.exists(LUTRIS_DB):
         exit()
 
 
-def import_data():
-    """Import data from Lutris Sqlite DB
+# FUNCTIONS
 
-    Returns:
-        dict: Lutris table data
-    """
+def import_data():
+    """Import data from Lutris Sqlite DB"""
 
     # Export Lutris data to JSON file and load JSON data
     export_data()
