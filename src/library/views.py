@@ -1,3 +1,4 @@
+import requests
 from django.db.models import Q
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
@@ -65,6 +66,13 @@ def game_index(request):
 
 def game_review(request, game_id):
     game = get_object_or_404(Game, pk=game_id)
+    installed_games_url = request.build_absolute_uri('/') + 'assets/json/library/installed.json'
+    registered_games = requests.get(installed_games_url).json()['registered']
+    query = next((item['id'] for item in registered_games if item['id'] == game.id), None)
+    if query:
+        game.installed = True
+    else:
+        game.installed = False
     return render(request, 'library/game/review.html', {
         'game': game
     })

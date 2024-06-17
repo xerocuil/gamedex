@@ -184,9 +184,10 @@
 
 
 {% block sidebar %}
-{% if installed %}
-<div class="launcher">
-    <button class="execute" onClick="launch_game('{{ game.platform.slug }}','{{ game.filename }}' )">Play</button>
+{% if game.installed %}
+<div id="launcher" class="sidebar-module">
+    <!-- [TODO] Create javascript request -->
+    <button class="execute" onClick="launcher('{{ game.platform.slug }}','{{ game.filename }}' )">Play</button>
     </button>
 </div>
 {% endif %}
