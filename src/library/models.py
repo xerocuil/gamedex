@@ -1,9 +1,16 @@
 import os
 import markdown
+
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
+
+from extensions.helpers import sort_title
 import gamedex.settings as settings
+# import extensions.utils
+
+
+# LIBRARY DATA
 
 ESRB_RATINGS = [
     ('E', 'Everyone'),
@@ -47,6 +54,8 @@ GAME_MEDIA = [
 
 SC_FAIL = 'Value entered failed the sanity check'
 
+
+# CLASSES
 
 class Collection(models.Model):
     name = models.CharField(max_length=200)
@@ -130,14 +139,8 @@ class Game(models.Model):
     def __str__(self):
         return self.title
 
-    
     def display_title(self):
-        if self.title.endswith(', The') or self.title.endswith(', A'):
-            x, y = self.title.split(', ')
-            t = str(y + ' ' + x)
-        else:
-            t = self.title
-        return t
+        return sort_title(self.title, 'd')
 
     def get_game_media(self):
         platform_root = os.path.join(settings.MEDIA_ROOT, 'games', self.platform.slug)
