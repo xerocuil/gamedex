@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=/opt/empr/run.sh
+Icon=/opt/empr/docs/icon.png
+Name=Empr
+Comment=Video game library manager

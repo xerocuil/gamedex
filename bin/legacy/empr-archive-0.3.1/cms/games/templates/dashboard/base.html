@@ -1,0 +1,20 @@
+{% load static %}
+
+{% include "dashboard/header.html" %}
+
+	<div id="content" class="container">
+
+		{% include "dashboard/messages.html" %}
+
+		<div class="row">
+			<div class="nine columns">
+				{% block content %}{% endblock %}
+			</div>
+
+			<div class="three columns">
+				{% block sidebar %}{% endblock %}
+			</div>
+		</div>
+	</div>
+
+{% include "dashboard/footer.html" %}

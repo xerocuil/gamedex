@@ -1,0 +1,40 @@
+{% extends "dashboard/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+	<div class="eight columns">
+		<h2>{{ page_title }}</h2>
+	</div>
+
+	<div class="four columns right">
+		<p><a href="/collection/add"><img class="sm-icon" src="{% static 'assets/add.png' %}" title="Add Collection"></a></p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="twelve columns">
+		<table class="u-full-width">
+			<thead>
+				<th>Name</th>
+				<th>Description</th>
+			</thead>
+			<tbody>
+				{% for c in collections %}
+				<tr>
+					<td><a href="{% url 'games:edit_collection' c.id %}">{{ c.name }}</a></td>
+					<td>{{ c.description }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+	
+{% endblock %}
+
+{% block sidebar %}
+{% include "dashboard/default_sidebar.html" %}
+{% endblock %}

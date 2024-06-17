@@ -1,0 +1,16 @@
+<textarea style="width: 80%; height: 100%; border: none">
+<gameList>{% for game in games %}
+ <game>
+  <path>./{{ game.path }}</path>
+  <name>{{ game.title }}</name>
+  <sortname>{{ game.sort_title }}</sortname>
+  <desc>{{ game.description }}</desc>
+  <image>{{ game.boxart.name }}</image>
+  <releasedate>{{ game.release_date }}</releasedate>
+  <developer>{{ game.developer }}</developer>
+  <publisher>{{ game.publisher }}</publisher>
+  <genre>{{ game.genre }}</genre>
+  <players>{{ game.player }}</players>
+ </game>{% endfor %}
+</gameList>
+</textarea>

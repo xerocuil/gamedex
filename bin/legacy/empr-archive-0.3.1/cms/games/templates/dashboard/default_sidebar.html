@@ -1,0 +1,75 @@
+<div id="default-sidebar">
+	<script>
+		function toggle (target, cclass) {
+			document.getElementById(target).classList.toggle(cclass);
+		}
+	</script>
+
+	<div class="sidebar-header">
+		<h5 onclick="toggle('platformBox', 'box')">Platforms</h5>
+	</div>
+
+	<div id="platformBox" class="box">
+		<div class="box-content">
+			<ul>
+				{% for p in platforms %}
+					{% if p.game_set.count %}
+						<li><a href="{% url 'games:platform' p.id %}">{{ p.name }}</a></li>
+					{% endif %}
+				{% endfor %}
+				<li><a href="{% url 'games:platform_index' %}">>> Manage</a>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sidebar-header">
+		<h5 onclick="toggle('genreBox', 'box')">Genres</h5>
+	</div>
+
+	<div id="genreBox" class="box">
+		<div class="box-content">
+			<ul>
+				{% for g in genres %}
+					{% if g.game_set.count %}
+						<li><a href="{% url 'games:genre' g.id %}">{{ g.name }}</a></li>
+					{% endif %}
+				{% endfor %}
+				<li><a href="{% url 'games:genre_index' %}">>> Manage</a>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sidebar-header">
+		<h5 onclick="toggle('tagBox', 'box')">Tags</h5>
+	</div>
+
+	<div id="tagBox" class="box">
+		<div class="box-content">
+			<p>
+				{% for t in tags %}
+					{% if t.game_set.count %}
+						<a href="/tag/{{ t.id }}">{{ t.name }}</a>&nbsp;&nbsp;&nbsp;
+					{% endif %}
+				{% endfor %}
+			</p>
+			<p><a href="{% url 'games:tag_index' %}">>> Manage</a></p>
+		</div>
+	</div>
+
+	<div class="sidebar-header">
+		<h5 onclick="toggle('collectionBox', 'box')">Collections</h5>
+	</div>
+
+	<div id="collectionBox" class="box">
+		<div class="box-content">
+			<ul>
+				{% for c in collections %}
+					{% if c.game_set.count %}
+						<li><a href="/collection/{{ c.id }}">{{ c.name }}</a></li>
+					{% endif %}
+				{% endfor %}
+				<li><a href="{% url 'games:collection_index' %}">>> Manage</a>
+			</ul>
+		</div>
+	</div>
+</div>

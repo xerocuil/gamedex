@@ -1,0 +1,43 @@
+id	launcher	name	slug	core
+1		Atari 2600	atari2600	stella_libretro
+2		32X	32x	picodrive_libretro
+3		3DO	3do	opera_libretro
+4		Nintendo 3DS	3ds	citra_libretro
+5		Amiga	amiga	puae_libretro
+6		Commodore 64	c64	vice_x64_libretro
+7		MS-DOS	dos	dosbox_pure_libretro
+8		Dreamcast	dreamcast	flycast_libretro
+9	['ruffle', %filename%]	Adobe Flash	flash	
+10	['dolphin-emu', '-b', '-e', %filename%]	GameCube	gamecube	
+11		Game Boy	gb	sameboy_libretro
+12		Game Boy Advance	gba	mgba_libretro
+13		Game Boy Color	gbc	sameboy_libretro
+14		Genesis	genesis	picodrive_libretro
+15		Game Gear	gg	picodrive_libretro
+16		Atari Jaguar	jaguar	virtualjaguar_libretro
+17	['start_app(%filename%)']	Linux	linux	
+18		Atari Lynx	lynx	mednafen_lynx_libretro
+19			mame	mame_libretro
+20		MSX	msx	bluemsx_libretro
+21		Nintendo 64	n64	mupen64plus_next_libretro
+22		Nintendo DS	nds	desmume_libretro
+23		Neo Geo	neogeo	fbneo_libretro
+24		Nintendo	nes	nestopia_libretro
+25		Neo Geo Pocket	ngp	race_libretro
+26		PlayStation 2	ps2	pcsx2_libretro
+27	['rpcs3', '--no-gui', '--fullscreen', %filename%]	PlayStation 3	ps3	
+28		PlayStation Portable	psp	ppsspp_libretro
+29		PlayStation	psx	mednafen_psx_libretro
+30		Saturn	saturn	mednafen_saturn_libretro
+31		Sega CD	scd	picodrive_libretro
+32	['scummvm', '-f', '--auto-detect', '-p', %filename%]	ScummVM	scummvm	
+33		Master System	sms	picodrive_libretro
+34		Super Nintendo	snes	snes9x_libretro
+35	['steam', '-silent', '-applaunch']	Steam	steam	
+36		TurboGrafx-16	tg16	mednafen_pce_libretro
+37		Virtual Boy	vb	mednafen_vb_libretro
+38		Wii	wii	dolphin_libretro
+39	['cemu', %filename%]	Wii U	wiiu	
+40	['start_app(%filename%)']	Windows	windows	
+41		WonderSwan	ws	mednafen_wswan_libretro
+42	['xemu', '-full-screen', '-dvd_path', %filename%]	Xbox	xbox	

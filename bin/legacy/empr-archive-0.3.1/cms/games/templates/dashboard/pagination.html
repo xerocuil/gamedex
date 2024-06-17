@@ -1,0 +1,25 @@
+{% if page_obj.has_other_pages %}
+
+<ul class="pagination-list">
+	{% if page_obj.has_previous %}
+		<li><a class="pagination-previous" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+	{% else %}
+		<li class="pagination-link disabled"><span>&laquo;</span></li>
+	{% endif %}
+
+	{% for i in page_obj.paginator.page_range %}
+		{% if page_obj.number == i %}
+			<li class="pagination-link is-current"><span>{{ i }} <span class="sr-only"></span></span></li>
+		{% else %}
+			<li><a class="pagination-link" href="?page={{ i }}">{{ i }}</a></li>
+		{% endif %}
+	{% endfor %}
+
+	{% if page_obj.has_next %}
+		<li><a class="pagination-next" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+	{% else %}
+		<li class="pagination-link disabled"><span>&raquo;</span></li>
+	{% endif %}
+</ul>
+	
+{% endif %}

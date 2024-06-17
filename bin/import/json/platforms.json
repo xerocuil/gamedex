@@ -1,0 +1,380 @@
+[
+    {
+        "id": "1",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Atari 2600",
+        "ra_core": "stella_libretro",
+        "slug": "2600",
+        "legacy_id": "9"
+    },
+    {
+        "id": "2",
+        "emulator": 1,
+        "launcher": "",
+        "name": "32X",
+        "ra_core": "picodrive_libretro",
+        "slug": "32x",
+        "legacy_id": "31"
+    },
+    {
+        "id": "3",
+        "emulator": 1,
+        "launcher": "",
+        "name": "3DO",
+        "ra_core": "opera_libretro",
+        "slug": "3do",
+        "legacy_id": "13"
+    },
+    {
+        "id": "4",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Nintendo 3DS",
+        "ra_core": "citra_libretro",
+        "slug": "3ds",
+        "legacy_id": "38"
+    },
+    {
+        "id": "5",
+        "emulator": 0,
+        "launcher": "",
+        "name": "Amiga",
+        "ra_core": "puae_libretro",
+        "slug": "amiga",
+        "legacy_id": "3"
+    },
+    {
+        "id": "6",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Commodore 64",
+        "ra_core": "vice_x64_libretro",
+        "slug": "c64",
+        "legacy_id": "34"
+    },
+    {
+        "id": "7",
+        "emulator": 0,
+        "launcher": "",
+        "name": "MS-DOS",
+        "ra_core": "dosbox_pure_libretro",
+        "slug": "dos",
+        "legacy_id": "41"
+    },
+    {
+        "id": "8",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Dreamcast",
+        "ra_core": "flycast_libretro",
+        "slug": "dreamcast",
+        "legacy_id": "6"
+    },
+    {
+        "id": "9",
+        "emulator": 1,
+        "launcher": "['ruffle', %filename%]",
+        "name": "Adobe Flash",
+        "ra_core": "",
+        "slug": "flash",
+        "legacy_id": "44"
+    },
+    {
+        "id": "10",
+        "emulator": 1,
+        "launcher": "['dolphin-emu', '-b', '-e', %filename%]",
+        "name": "GameCube",
+        "ra_core": "",
+        "slug": "gamecube",
+        "legacy_id": "2"
+    },
+    {
+        "id": "11",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Game Boy",
+        "ra_core": "sameboy_libretro",
+        "slug": "gb",
+        "legacy_id": "35"
+    },
+    {
+        "id": "12",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Game Boy Advance",
+        "ra_core": "mgba_libretro",
+        "slug": "gba",
+        "legacy_id": "15"
+    },
+    {
+        "id": "13",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Game Boy Color",
+        "ra_core": "sameboy_libretro",
+        "slug": "gbc",
+        "legacy_id": "16"
+    },
+    {
+        "id": "14",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Genesis",
+        "ra_core": "picodrive_libretro",
+        "slug": "genesis",
+        "legacy_id": "12"
+    },
+    {
+        "id": "15",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Game Gear",
+        "ra_core": "picodrive_libretro",
+        "slug": "gg",
+        "legacy_id": "28"
+    },
+    {
+        "id": "16",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Atari Jaguar",
+        "ra_core": "virtualjaguar_libretro",
+        "slug": "jaguar",
+        "legacy_id": "26"
+    },
+    {
+        "id": "17",
+        "emulator": 0,
+        "launcher": "['start_app(%filename%)\u2019]",
+        "name": "Linux",
+        "ra_core": "",
+        "slug": "linux",
+        "legacy_id": "42"
+    },
+    {
+        "id": "18",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Atari Lynx",
+        "ra_core": "mednafen_lynx_libretro",
+        "slug": "lynx",
+        "legacy_id": "30"
+    },
+    {
+        "id": "19",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Multiple Arcade Machine Emulator",
+        "ra_core": "mame_libretro",
+        "slug": "mame",
+        "legacy_id": "14"
+    },
+    {
+        "id": "20",
+        "emulator": 1,
+        "launcher": "",
+        "name": "MSX",
+        "ra_core": "bluemsx_libretro",
+        "slug": "msx",
+        "legacy_id": "39"
+    },
+    {
+        "id": "21",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Nintendo 64",
+        "ra_core": "mupen64plus_next_libretro",
+        "slug": "n64",
+        "legacy_id": "7"
+    },
+    {
+        "id": "22",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Nintendo DS",
+        "ra_core": "desmume_libretro",
+        "slug": "nds",
+        "legacy_id": "37"
+    },
+    {
+        "id": "23",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Neo Geo",
+        "ra_core": "fbneo_libretro",
+        "slug": "neogeo",
+        "legacy_id": "17"
+    },
+    {
+        "id": "24",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Nintendo",
+        "ra_core": "nestopia_libretro",
+        "slug": "nes",
+        "legacy_id": "10"
+    },
+    {
+        "id": "25",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Neo Geo Pocket",
+        "ra_core": "race_libretro",
+        "slug": "ngp",
+        "legacy_id": "18"
+    },
+    {
+        "id": "26",
+        "emulator": 1,
+        "launcher": "",
+        "name": "PlayStation 2",
+        "ra_core": "pcsx2_libretro",
+        "slug": "ps2",
+        "legacy_id": "11"
+    },
+    {
+        "id": "27",
+        "emulator": 1,
+        "launcher": "[\u2018rpcs3', '--no-gui', '--fullscreen', %filename%]",
+        "name": "PlayStation 3",
+        "ra_core": "",
+        "slug": "ps3",
+        "legacy_id": "36"
+    },
+    {
+        "id": "28",
+        "emulator": 1,
+        "launcher": "",
+        "name": "PlayStation Portable",
+        "ra_core": "ppsspp_libretro",
+        "slug": "psp",
+        "legacy_id": "8"
+    },
+    {
+        "id": "29",
+        "emulator": 1,
+        "launcher": "",
+        "name": "PlayStation",
+        "ra_core": "mednafen_psx_libretro",
+        "slug": "psx",
+        "legacy_id": "5"
+    },
+    {
+        "id": "30",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Saturn",
+        "ra_core": "mednafen_saturn_libretro",
+        "slug": "saturn",
+        "legacy_id": "19"
+    },
+    {
+        "id": "31",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Sega CD",
+        "ra_core": "picodrive_libretro",
+        "slug": "scd",
+        "legacy_id": "27"
+    },
+    {
+        "id": "32",
+        "emulator": 1,
+        "launcher": "[\u2018scummvm', '-f', '--auto-detect', '-p', %filename%]",
+        "name": "ScummVM",
+        "ra_core": "",
+        "slug": "scummvm",
+        "legacy_id": ""
+    },
+    {
+        "id": "33",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Master System",
+        "ra_core": "picodrive_libretro",
+        "slug": "sms",
+        "legacy_id": "29"
+    },
+    {
+        "id": "34",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Super Nintendo",
+        "ra_core": "snes9x_libretro",
+        "slug": "snes",
+        "legacy_id": "24"
+    },
+    {
+        "id": "35",
+        "emulator": 0,
+        "launcher": "[\u2018steam', '-silent', '-applaunch']",
+        "name": "Steam",
+        "ra_core": "",
+        "slug": "steam",
+        "legacy_id": "4"
+    },
+    {
+        "id": "36",
+        "emulator": 1,
+        "launcher": "",
+        "name": "TurboGrafx-16",
+        "ra_core": "mednafen_pce_libretro",
+        "slug": "tg16",
+        "legacy_id": "20"
+    },
+    {
+        "id": "37",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Virtual Boy",
+        "ra_core": "mednafen_vb_libretro",
+        "slug": "vb",
+        "legacy_id": "32"
+    },
+    {
+        "id": "38",
+        "emulator": 1,
+        "launcher": "",
+        "name": "Wii",
+        "ra_core": "dolphin_libretro",
+        "slug": "wii",
+        "legacy_id": "21"
+    },
+    {
+        "id": "39",
+        "emulator": 1,
+        "launcher": "[\u2018cemu', %filename%]",
+        "name": "Wii U",
+        "ra_core": "",
+        "slug": "wiiu",
+        "legacy_id": "23"
+    },
+    {
+        "id": "40",
+        "emulator": 0,
+        "launcher": "[\u2018start_app(%filename%)\u2019]",
+        "name": "Windows",
+        "ra_core": "",
+        "slug": "windows",
+        "legacy_id": "43"
+    },
+    {
+        "id": "41",
+        "emulator": 1,
+        "launcher": "",
+        "name": "WonderSwan",
+        "ra_core": "mednafen_wswan_libretro",
+        "slug": "ws",
+        "legacy_id": "33"
+    },
+    {
+        "id": "42",
+        "emulator": 1,
+        "launcher": "[\u2018xemu', '-full-screen', '-dvd_path', %filename%]",
+        "name": "Xbox",
+        "ra_core": "",
+        "slug": "xbox",
+        "legacy_id": "22"
+    }
+]

@@ -1,0 +1,39 @@
+// Palette
+$main-color: rgb(34,34,34) // Mine Shaft
+$main-bkgd: white
+$main-border: 1px solid rgb(103,103,103) // Dove Grey
+
+$alt-color: rgba(24,24,24,0.9) // Mine Shaft (Sheer)
+$alt-bkgd: rgb(182,182,182) // Nobel
+
+
+// Fonts
+@font-face
+    font-family: "cabin-bold"
+    src: url("/static/assets/fonts/cabin-bold.ttf")
+
+$default-font: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+$default-monospace: monospace !default
+
+
+table
+    min-width: 50%
+    td, th
+        padding: 2mm
+        text-align: left
+
+article
+    width: 216mm
+    margin: 0 auto
+    display: grid
+    gap: 4mm 0
+    
+#summary
+    display: flex
+    flex-flow: row wrap
+    gap: 8mm
+    #game_art
+        flex: 1 1 auto
+    #details
+        flex: 8 1 96mm
+

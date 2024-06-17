@@ -1,0 +1,17 @@
+{% extends "dashboard/full.html" %}
+{% load markdown static %}
+
+{% block title %}Add Game{% endblock %}
+
+{% block content %}
+  
+
+<div class="row">
+  <div class="columns">
+    <h4>Add Game</h4>
+  </div>
+</div>
+
+{% include "games/form.html" %} 
+
+{% endblock %}

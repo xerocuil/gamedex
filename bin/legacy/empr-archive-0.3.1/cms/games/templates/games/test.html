@@ -1,0 +1,10 @@
+{% extends "games/console.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <body>    
+    {% for p in platforms %}
+    <a href="/platform/{{ p.id }}"><div><h2>{{ p.name }}</h2></div></a>
+    {% endfor %}
+{% endblock %}

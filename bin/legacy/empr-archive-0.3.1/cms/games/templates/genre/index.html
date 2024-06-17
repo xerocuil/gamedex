@@ -1,0 +1,38 @@
+{% extends "dashboard/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+	<div class="eight columns">
+		<h2>{{ page_title }}</h2>
+	</div>
+
+	<div class="four columns right">
+		<p><a href="/genre/add"><img class="sm-icon" src="{% static 'assets/add.png' %}" title="Add Genre"></a></p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="twelve columns">
+		<table class="u-full-width">
+			<thead>
+				<th>Name</th>
+			</thead>
+			<tbody>
+				{% for g in genres %}
+				<tr>
+					<td><a href="{% url 'games:edit_genre' g.id %}">{{ g.name }}</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+	
+{% endblock %}
+
+{% block sidebar %}
+{% include "dashboard/default_sidebar.html" %}
+{% endblock %}

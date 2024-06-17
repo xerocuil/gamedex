@@ -1,0 +1,16 @@
+"genre","legacy_id","new_id"
+"Action",3,1
+"Action/Adventure",5,2
+"Action/RPG",4,3
+"Adventure",6,4
+"Compilation",14,5
+"Educational",12,6
+"Fighting",9,7
+"Music/Rhythm",17,8
+"Puzzle",10,9
+"Quiz/Trivia",18,10
+"Racing/Driving",7,11
+"Role-Playing",1,12
+"Sports",2,13
+"Strategy",11,14
+"Tabletop",8,15

@@ -1,0 +1,18 @@
+{% extends "dashboard/full.html" %}
+{% load markdown static %}
+
+{% block content %}  
+
+<div class="row">
+  <div class="columns">
+    <h4>{% block title %}{{ page_title }}{% endblock %}</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columns">
+    {% include "platform/form.html" %} 
+  </div>
+</div>
+
+{% endblock %}

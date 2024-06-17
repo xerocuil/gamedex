@@ -1,0 +1,7 @@
+{% extends 'library/base.html' %}
+
+
+{% block content %}
+    <h1 class="title">{% block title %} {{ platform.name }} {% endblock %}</h1>
+    {% include 'library/game/list.html' %}
+{% endblock %}

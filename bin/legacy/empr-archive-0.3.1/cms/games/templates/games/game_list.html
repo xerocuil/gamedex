@@ -1,0 +1,44 @@
+{% load static %}
+
+<tr>
+	<td style="text-align: center;">
+		{% if g.icon %}
+			<img class="icon" src="{{ g.icon.url }}">
+		{% elif g.boxart %}
+			<img class="icon" src="{{ g.boxart.url }}">
+		{% elif g.platform.icon %}
+			<img class="icon" src="{{ g.platform.icon.url }}">
+		{% endif %}
+	</td>
+	
+	<td>
+		<a href="{% url 'games:detail' g.id %}">{{ g.title }}</a>
+	</td>
+	
+	<td class="center">
+		{% if g.platform %}
+		<a href="{% url 'games:platform' g.platform_id %}">
+			{% if g.platform.icon %}
+				<img class="icon" src="{{ g.platform.icon.url }}" title="{{ g.platform.name }}">
+			{% else %}
+				{{ g.platform.slug.upper }}
+			{% endif %}
+		</a>
+		{% endif %}
+	</td>
+	
+	<td>
+		{% if g.genre %}
+			<a href="{% url 'games:genre' g.genre_id %}">{{ g.genre }}</a>
+		{% endif %}
+	</td>
+	
+	<td>{% if g.release_date %}{{ g.release_year }}{% endif %}</td>
+	
+	<td>
+		<a href="{% url 'games:edit_game' g.id %}"><img class="sm-icon" src="{% static 'imgs/icons/edit.svg' %}" title="Edit"></a>
+		{% if g.archived %}
+			<img class="sm-icon" src="{% static 'imgs/icons/archive.svg' %}" title="Archived">
+		{% endif %}
+	</td>
+</tr>

@@ -1,0 +1,15 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Latest Games</h2>
+
+{% for q in query %}
+
+{% endfor %}
+{% endblock %}
+
+{% block sidebar %}
+{% include "dashboard/default_sidebar.html" %}
+{% endblock %}

@@ -1,0 +1,77 @@
+[
+    {
+        "id": "1",
+        "name": "Action",
+        "legacy_id": "3"
+    },
+    {
+        "id": "2",
+        "name": "Action/Adventure",
+        "legacy_id": "5"
+    },
+    {
+        "id": "3",
+        "name": "Action/RPG",
+        "legacy_id": "4"
+    },
+    {
+        "id": "4",
+        "name": "Adventure",
+        "legacy_id": "6"
+    },
+    {
+        "id": "5",
+        "name": "Compilation",
+        "legacy_id": "14"
+    },
+    {
+        "id": "6",
+        "name": "Educational",
+        "legacy_id": "12"
+    },
+    {
+        "id": "7",
+        "name": "Fighting",
+        "legacy_id": "9"
+    },
+    {
+        "id": "8",
+        "name": "Music/Rhythm",
+        "legacy_id": "17"
+    },
+    {
+        "id": "9",
+        "name": "Puzzle",
+        "legacy_id": "10"
+    },
+    {
+        "id": "10",
+        "name": "Quiz/Trivia",
+        "legacy_id": "18"
+    },
+    {
+        "id": "11",
+        "name": "Racing/Driving",
+        "legacy_id": "7"
+    },
+    {
+        "id": "12",
+        "name": "Role-Playing",
+        "legacy_id": "1"
+    },
+    {
+        "id": "13",
+        "name": "Sports",
+        "legacy_id": "2"
+    },
+    {
+        "id": "14",
+        "name": "Strategy",
+        "legacy_id": "11"
+    },
+    {
+        "id": "15",
+        "name": "Tabletop",
+        "legacy_id": "8"
+    }
+]

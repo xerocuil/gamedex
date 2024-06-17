@@ -1,0 +1,15 @@
+  <div id="admin_panel">
+    <ul>
+      {% if game.id %}
+      <li><a href="/admin/games/game/{{ game.id }}/change/">Edit Game</a></li>
+      {% else %}
+      <li><a href="/admin/games/game/add/">Add Game</a></li>
+      {% endif %}
+      <li><a href="/admin/games/game/">Games</a></li>
+      <li><a href="/admin/games/platform/">Platforms</a></li>
+      <li><a href="{% url 'games:export_csv' %}">Export to CSV</a></li>
+      <!-- <hr> -->
+      <!-- <li><a href="/test/">Test</a></li> -->
+      <!-- <li><a href="/scrape_game/">scrape_game</a></li> -->
+    </ul>
+  </div>

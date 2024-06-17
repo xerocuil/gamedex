@@ -1,0 +1,28 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+
+<h1 class="title">{% block title %}Edit {{ collection.name }} Collection{% endblock %}</h1>
+
+<form method="post">
+    {{ form.hidden_tag() }}
+
+    <div class="field">
+        {{ form.name.label }}<br>
+        {{ form.name(id="name", value=collection.name) }}
+    </div>
+
+    <div class="field">
+        {{ form.description.label }}<br>
+        <textarea id="description" name="description" rows="8" cols="48">{{ collection.description }}</textarea>
+    </div>
+
+    <div>{{ form.submit() }}</div>
+</form>
+
+{% endblock %}
+
+
+{% block sidebar %}
+
+{% endblock %}

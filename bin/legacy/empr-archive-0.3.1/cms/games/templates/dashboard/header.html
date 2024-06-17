@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Video Game Database{% endblock %}&nbsp;&nbsp;|&nbsp;&nbsp;Empr</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'assets/favicon.ico' %}"/>
+  <link rel="manifest" href="{% static 'manifest.json' %}">
+  <style>
+    .box { display: none }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <div class="row">
+        <div id="title" class="nine columns">
+          <a class="link" href="/"><img src="{% static 'assets/logo.png' %}"></a>
+          {% if settings.DEBUG %}
+            <p>debug</p>
+          {% endif %}
+        </div>
+
+        <div class="three columns">
+          <form action="{% url 'games:search_results' %}" method="get">
+            <input class="input is-rounded" name="q" type="text" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

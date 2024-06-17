@@ -1,0 +1,10 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Genres {% endblock %}</h1>
+    <div class="content">
+        {% for g in genres %}
+            <p class="genres">{{ g.name }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

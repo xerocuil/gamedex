@@ -1,0 +1,13 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+
+  <form id="import">
+    <input type="file" id="file_path">
+    <button type="submit" name="Upload" onclick="get_import()">Upload</button>
+  </form>
+
+  <div id="notify"></div>
+
+
+{% endblock %}

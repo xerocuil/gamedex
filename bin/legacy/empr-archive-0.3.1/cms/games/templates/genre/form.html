@@ -1,0 +1,16 @@
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <div class="row">
+    <div class="twelve columns">
+      {{ form.as_p }}
+    </div>
+  </div>
+     
+  <button class="button" type="submit">Save</button>
+
+  {% if page_title == "Edit Genre" %}
+    <a class="button" href="{% url 'games:delete_genre' genre.id %}">Delete</a>
+  {% endif %}
+
+</form>

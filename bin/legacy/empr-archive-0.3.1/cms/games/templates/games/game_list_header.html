@@ -1,0 +1,24 @@
+<thead>
+	<th colspan="2">
+		{% if 'search' in request.get_full_path %}
+			Title
+		{% else %}
+			<a href="?q={{ search_filter }}&order_by={% if order_by == "sort_title" %}-{% endif %}sort_title">Title</a>
+		{% endif %}
+	</th>
+	<th class="center">
+		{% if 'search' in request.get_full_path or '/platform/' in request.get_full_path %}
+			Platform
+		{% else %}
+			<a href="?order_by={% if order_by == "platform" %}-{% endif %}platform">Platform</a>
+		{% endif %}
+	</th>
+	<th>
+		{% if 'search' in request.get_full_path or '/genre/' in request.get_full_path %}
+			Genre
+		{% else %}
+			<a href="?order_by={% if order_by == "genre" %}-{% endif %}genre">Genre</th>
+		{% endif %}
+	<th><a href="?order_by={% if order_by == "release_date" %}-{% endif %}release_date">Year</th>
+	<th><a href="?order_by={% if order_by == "archived" %}-{% endif %}archived"></th>
+</thead>

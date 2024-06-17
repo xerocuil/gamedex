@@ -1,0 +1,271 @@
+	{% extends "dashboard/base.html" %}
+{% load markdown static %}
+
+{% block title %}{{ game.title }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+	<div class="nine columns">
+		<span class="game-title"><a href="{% url 'games:edit_game' game.id %}">{{ game.title }}</a></span>
+		{% if game.alt_title %}<p>Original Title: {{ game.alt_title }}</p>{% endif %}
+	</div>
+
+	<div class="three columns">
+		<h4 class="u-pull-right"><a href="{% url 'games:platform' game.platform_id %}">{% if game.platform.logo %}<img class="logo" src="{{ game.platform.logo.url }}">{% else %}{{ game.platform.slug.upper }}{% endif %}</a></h4>
+	</div>
+</div>
+
+<hr>
+
+<div class="row">
+	{% if game.display %}
+	<div class="columns">
+		<img class="game-display" src="{{ game.display.url }}" title="{{ game.title }}">
+	</div>
+	{% elif game.boxart %}
+	<div class="columns">
+		<img class="game-boxart" src="{{ game.boxart.url }}" title="{{ game.title }}">
+	</div>
+	{% endif %}
+</div>
+
+<div class="row">
+	<div class="twelve columns">
+		<hr>
+		{{ game.description }}
+		<hr>
+	</div>
+</div>
+
+<div class="row">
+	<div class="eight columns">
+		<h4>Game Information</h4>
+
+		<table class="u-full-width">
+			{% if installed %}
+			<tr>
+				<td colspan="2"><a href="{% url 'games:play_game' game.platform.slug game.path %}">Play</a></td>
+			</tr>
+			{% endif %}
+
+			{% if game.steam_id %}
+			<tr>
+				<td><strong>Steam ID</strong></td>
+				<td>{{ game.steam_id }}</td>
+			</tr>
+			{% endif %}
+
+			<tr>
+				<td><strong>Path</strong></td>
+				<td>{{ game.path }}</td>
+			</tr>
+
+			<tr>
+				<td><strong>Sort Title</strong></td>
+				<td>{{ game.sort_title }}</td>
+			</tr>
+			
+			{% if game.collection %}
+			<tr>
+				<td>Collection</td>
+				<td><a href="/collection/{{ game.collection_id }}/">{{ game.collection.name }} Collection</a></td>
+			</tr>
+			{% endif %}
+			
+			{% if game.genre %}
+			<tr>
+				<td><strong>Genre</strong></td>
+				<td>{{ game.genre }}</td>
+			</tr>
+			{% endif %}
+
+			{% if game.player %}
+			<tr>
+				<td><strong>Players</strong></td>
+				<td>{{ game.get_player_display }}</td>
+			</tr>
+			{% endif %}
+
+			{% if game.get_game_tags %}
+			<tr>
+				<td><strong>Tags</strong></td>
+				<td>{{ game.get_game_tags }}</td>
+			</tr>
+			{% endif %}
+
+			{% if game.release_date %}
+			<tr>
+				<td><strong>Release Date</strong></td>
+				<td>{{ game.release_year }}</td>
+			</tr>
+			{% endif %}
+
+			<tr>
+				<td><strong>Developer</strong></td>
+				<td>{{ game.developer }}</td>
+			</tr>
+
+			<tr>
+				<td><strong>Publisher</strong></td>
+				<td>{{ game.publisher }}</td>
+			</tr>
+
+			{% if game.esrb %}
+			<tr>
+				<td><strong>ESRB Rating</strong></td>
+				<td>{{ game.esrb }}</td>
+			</tr>
+			{% endif %}
+
+			<tr>
+				<td><strong>Region</strong></td>
+				<td>{{ game.get_region_display }}{% if game.translation %} (Translated){% endif %}</td>
+			</tr>
+
+			{% if game.save_path %}
+			<tr>
+				<td><strong>Save Path</strong></td>
+				<td><code>{{ game.save_path }}</code></td>
+			</tr>
+			{% endif %}
+
+			{% if game.store %}
+			<tr>
+				<td><strong>Store</strong></td>
+				<td>{{ game.get_store_display }}</td>
+			</tr>
+			{% endif %}
+		</table>
+
+		{% if game.operating_system %}
+		<h4>System Requirements</h4>
+		<table class="u-full-width">
+			<tr>
+				<td><strong>OS</strong></td>
+				<td>{{ game.operating_system }}</td>
+			</tr>
+			<tr>
+				<td><strong>CPU</strong></td>
+				<td>{{ game.processor }}</td>
+			</tr>
+			<tr>
+				<td><strong>RAM</strong></td>
+				<td>{{ game.ram }}</td>
+			</tr>
+			<tr>
+				<td><strong>HDD</strong></td>
+				<td>{{ game.hdd }}</td>
+			</tr>
+			<tr>
+				<td><strong>GPU</strong></td>
+				<td>{{ game.gpu }}</td>
+			</tr>
+		</table>
+		{% endif %}
+	</div>
+
+	<div class="four columns">
+		<h4>Files</h4>
+
+		<table class="u-full-width">
+			<tr>
+				<td><strong>Readme</strong></td>
+				<td><span class="u-pull-right"><a href="/readme/{{ game.id }}/" target="_blank">Preview</a></span></td>
+			</tr>
+
+			{% if game.manual %}
+			<tr>
+				<td><strong>Manual</strong></td>
+				<td><span class="u-pull-right"><a href="{{ game.manual.url }}">Download</a></span></td>
+			</tr>
+			{% endif %}
+
+			{% if game.icon %}
+			<tr>
+				<td><strong>Icon</strong></td>
+				<td><a href="{{ game.icon.url }}"><img class="u-pull-right game-icon" src="{{ game.icon.url }}" title="{{ game.title }} Icon"></a></td>
+			</tr>
+			{% endif %}
+
+			{% if game.title_image %}
+			<tr>
+				<td><strong>Title</strong></td>
+				<td><a href="{{ game.title_image.url }}"><img class="u-pull-right game-title-thumb" src="{{ game.title_image.url }}"></a></td>
+			</tr>
+			{% endif %}
+
+			{% if game.boxart %}
+			<tr>
+				<td><strong>Boxart</strong></td>
+				<td><a href="{{ game.boxart.url }}"><img class="u-pull-right game-boxart-thumb" src="{{ game.boxart.url }}" title="{{ game.title }} Box Art"></a></td>
+			</tr>
+			{% endif %}
+
+			{% if game.screenshot %}
+			<tr>
+				<td><strong>Screenshot</strong></td>
+				<td><a href="{{ game.screenshot.url }}"><img class="u-pull-right game-screenshot-thumb" src="{{ game.screenshot.url }}" title="{{ game.title }} Screenshot"></a></td>
+			</tr>
+			{% endif %}
+
+			{% if game.header %}
+			<tr>
+				<td><strong>Header</strong></td>
+				<td><a href="{{ game.header.url }}"><img class="u-pull-right game-screenshot-thumb" src="{{ game.header.url }}" title="{{ game.title }} Header"></a></td>
+			</tr>
+			{% endif %}
+
+			{% if game.wallpaper %}
+			<tr>
+				<td><strong>Wallpaper</strong></td>
+				<td><a href="{{ game.wallpaper.url }}"><img class="u-pull-right game-screenshot-thumb" src="{{ game.wallpaper.url }}" title="{{ game.title }} Wallpaper"></a></td>
+			</tr>
+			{% endif %}
+
+		</table>
+
+		<h4>Links</h4>
+		<p>
+			<a href="https://www.giantbomb.com/search/?i=game&q={{ game.title }}">
+				<img class="icon" src="{% static 'imgs/icons/giantbomb.png' %}" title="Giant Bomb"></a>
+
+			<a href="https://www.igdb.com/search?type=1&q={{ game.title }}">
+				<img class="icon" src="{% static 'imgs/icons/igdb.png' %}" title="IGDB"></a>
+
+			<a href="https://www.mobygames.com/search/quick?q={{ game.title }}">
+				<img class="icon" src="{% static 'imgs/icons/moby.png' %}" title="Moby Games"></a>
+
+			<a href="https://thegamesdb.net/search.php?name={{ game.title }}">
+				<img class="icon" src="{% static 'imgs/icons/tgdb.png' %}" title="TGDB"></a>
+				
+			{% if game.platform.slug == 'pc' or game.platform.slug == 'steam' %}
+			<a href="https://www.pcgamingwiki.com/w/index.php?search={{ game.title }}">
+				<img class="icon" src="{% static 'imgs/icons/pcgw.png' %}" title="PCGamingWiki"></a>
+				{% if game.steam_id %}
+				<a href="https://www.protondb.com/app/{{ game.steam_id }}">
+					<img class="icon" src="{% static 'imgs/icons/protondb.png' %}" title="ProtonDB"></a>
+
+				<a href="https://steamdb.info/app/{{ game.steam_id }}">
+					<img class="icon" src="{% static 'imgs/icons/steamdb.png' %}" title="SteamDB"></a>
+				{% else %}
+				<a href="https://www.protondb.com/search?q={{ game.title }}&type=1&category=0">
+					<img class="icon" src="{% static 'imgs/icons/protondb.png' %}" title="ProtonDB"></a>
+
+				<a href="https://steamdb.info/search/?a=app&q={{ game.title }}&type=1&category=0">
+					<img class="icon" src="{% static 'imgs/icons/steamdb.png' %}" title="SteamDB"></a>
+				{% endif %}
+			{% endif %}
+		</p>
+	</div>
+</div>
+
+<div>
+	<a class="button" href="{% url 'games:delete_game' game.id %}">Delete</a>
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+{% include "dashboard/default_sidebar.html" %}
+{% endblock %}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/favicon.ico')}}" sizes="any">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/style.min.css') }}">
+    <title>{% block title %} {% endblock %}</title>
+    <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="sub-header"><a href="{{ url_for('library.home') }}">Home</a></div>
+
+    <div class="sub-menu sub-header">
+        <a href="{{ url_for('library.home') }}">Browse</a>
+        <ul class="sub-menu-content">
+            <li><a href="{{ url_for('library.favorites') }}">Favorites</a></li>
+            <li><a href="{{ url_for('library.collections') }}">Collections</a></li>
+            <li><a href="{{ url_for('library.genres') }}">Genres</a></li>
+            <li><a href="{{ url_for('library.platforms') }}">Platforms</a></li>
+        </ul>
+    </div>
+        
+    <div class="sub-header">
+        <a href="{{ url_for('device.devices') }}">Devices</a>
+    </div>
+
+    <div class="sub-header">
+        <button onclick="history.back()">Go Back</button>
+    </div>
+
+    <div class="sub-header">
+        <button onclick="history.go(0)">Refresh</button>
+    </div>
+
+    <div class="sub-header">
+        <a href="" onClick="toggleFullscreen()">Toggle Fullscreen</a>
+    </div>
+
+    <div class="sub-header">
+        <a href="" onClick="closeWindow()">Close Window</a>
+    </div>
+
+    <div id="search">
+        <input type="text" name="query" id="query" placeholder="Search...">
+    </div>
+</div>
+
+<div id="main-window">
+    <div id="content">
+        <div id="system-messages">
+            <!-- {% if message %}
+                {{ message }}
+            {% endif %} -->
+    
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div id="page">
+            {% block content %} {% endblock %}
+        </div>
+    </div>
+
+    <div id="sidebar">
+        {% block sidebar %} {% endblock %}
+    </div>
+</div>
+
+<script type="text/javascript">
+    // Activate search with enter button on search field
+    document.getElementById('query').onkeydown = function(e){
+        if(e.keyCode == 13){
+            search_query()
+        }
+    };
+</script>
+
+</body>
+</html>

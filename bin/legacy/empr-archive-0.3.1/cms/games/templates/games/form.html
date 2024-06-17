@@ -1,0 +1,203 @@
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <div class="row">
+    <div class="seven columns">
+
+      <div class="row">
+        <div class="two columns"><label>Title</label></div>
+        <div class="ten columns">{{ game_form.title }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Sort Title</label></div>
+        <div class="ten columns">{{ game_form.sort_title }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Alternative Title</label></div>
+        <div class="ten columns">{{ game_form.alt_title }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>File Name</label></div>
+        <div class="ten columns">{{ game_form.path }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Platform</label></div>
+        <div class="ten columns">{{ game_form.platform }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Description</label></div>
+        <div class="ten columns">{{ game_form.description }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Developer</label></div>
+        <div class="ten columns">{{ game_form.developer }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Publisher</label></div>
+        <div class="ten columns">{{ game_form.publisher }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>ESRB</label></div>
+        <div class="ten columns">{{ game_form.esrb }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Genre</label></div>
+        <div class="ten columns">{{ game_form.genre }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Tags</label></div>
+        <div class="ten columns">{{ game_form.tags }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Region</label></div>
+        <div class="four columns">{{ game_form.region }}</div>
+        <div class="two columns"><label>Translated?</label></div>
+        <div class="two columns">{{ game_form.translation }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Release Date</label></div>
+        <div class="ten columns">{{ game_form.release_date }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Store</label></div>
+        <div class="ten columns">{{ game_form.store }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Steam ID</label></div>
+        <div class="ten columns">{{ game_form.steam_id }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Collection</label></div>
+        <div class="ten columns">{{ game_form.collection }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Controller Support</label></div>
+        <div class="ten columns">{{ game_form.controller_support }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Operating System</label></div>
+        <div class="ten columns">{{ game_form.operating_system }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Processor</label></div>
+        <div class="ten columns">{{ game_form.processor }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Ram</label></div>
+        <div class="ten columns">{{ game_form.ram }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>HDD</label></div>
+        <div class="ten columns">{{ game_form.hdd }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>GPU</label></div>
+        <div class="ten columns">{{ game_form.gpu }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Engine</label></div>
+        <div class="ten columns">{{ game_form.engine }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Player(s)</label></div>
+        <div class="three columns">{{ game_form.player }}</div>
+        <div class="three columns">
+          <label>Co-op?</label>
+          <label>Online Multiplayer?</label>
+        </div>
+        <div class="one columns">
+          {{ game_form.co_op }}<br>
+          {{ game_form.online_multiplayer }}
+        </div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Favorite</label></div>
+        <div class="one columns">{{ game_form.favorite }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="two columns"><label>Archived</label></div>
+        <div class="one columns">{{ game_form.archived }}</div>
+      </div><hr>
+
+      
+    </div>
+
+    <div class="five columns">
+      <div class="row">
+        <div class="three columns"><label>Manual</label></div>
+        <div class="nine columns">{{ game_form.manual }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="three columns"><label>Save Path</label></div>
+        <div class="nine columns">{{ game_form.save_path }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="three columns"><label>Boxart</label></div>
+        <div class="nine columns">{{ game_form.boxart }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="three columns"><label>Display</label></div>
+        <div class="nine columns">{{ game_form.display }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="three columns"><label>Header</label></div>
+        <div class="nine columns">{{ game_form.header }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="three columns"><label>Icon</label></div>
+        <div class="nine columns">{{ game_form.icon }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="three columns"><label>Screenshot</label></div>
+        <div class="nine columns">{{ game_form.screenshot }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="three columns"><label>Logo</label></div>
+        <div class="nine columns">{{ game_form.title_image }}</div>
+      </div><hr>
+
+      <div class="row">
+        <div class="three columns"><label>Background</label></div>
+        <div class="nine columns">{{ game_form.wallpaper }}</div>
+      </div><hr>
+    </div>
+  </div>
+
+  {{ game_form.date_added.as_hidden }}
+  {{ game_form.date_modified.as_hidden }}
+     
+  <button class="button" type="submit">Save</button>
+
+</form>

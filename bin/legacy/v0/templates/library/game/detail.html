@@ -1,0 +1,277 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+
+<div id="game-title">
+    <h1>{% block title %}{{ game.sort_title() }}{% endblock %}</h1>
+    {% if game.alt_title %}
+        <div class="alt-title"><em>A.K.A. {{ game.alt_title }}</em></div>
+    {% endif %}
+</div>
+
+<div id="game">
+    <div id="boxart">
+        {% if boxart %}
+            <img src="{{ url_for('app.media', path='games/'+game.platform.slug+'/boxart/'+game.slug()+'.jpg') }}" alt="Boxart">
+        {% else %}
+            <span>boxart</span>
+        {% endif %}
+    </div>
+
+    
+
+    <div id="game_details">
+        <div class="detail">
+            <label>File Name</label>
+            <div>{{ game.filename }}</div>
+        </div>
+
+        {% if game.esrb %}
+            <div class="detail">
+                <label>ESRB</label>
+                <div>{{ game.esrb }}</div>
+            </div>
+        {% endif %}
+
+        <div class="detail">
+            <label>Players</label>
+            <div>{{ game.players }}</div>
+            {% if game.online_multiplayer %}
+                <div>Online Multiplayer</div>
+            {% endif %}
+            {% if game.online_multiplayer %}
+                <div>Co-op</div>
+            {% endif %}
+        </div>
+
+        <div class="detail">
+            <label>Controller</label>
+            <div>
+                {% if game.controller_support %}
+                    Controller Supported
+                {% else %}
+                    Mouse/Keyboard Required
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="detail">
+            <label>Platform</label>
+            <div><a href="{{ url_for('library.platform_detail', platform_id=game.platform.id) }}">{{ game.platform.name }}</a></div>
+        </div>
+
+        <div class="detail">
+            <label>Year</label>
+            <div>{{ game.year }}</div>
+        </div>
+
+        <div class="detail">
+            <label>Region</label>
+            <div>
+                {{ game.region }}
+                {% if game.translation %}
+                    , <em>Translated</em>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="detail">
+            <label>Genre</label>
+            <div>{{ game.genre }}</div>
+        </div>
+
+        <div class="detail">
+            <label>Tags</label>
+            <div>[Tags]</div>
+        </div>
+
+        <div class="detail">
+            <label>Developer</label>
+            <div>{{ game.developer }}</div>
+        </div>
+
+        <div class="detail">
+            <label>Publisher</label>
+            <div>{{ game.publisher }}</div>
+        </div>
+
+        {% if game.store %}
+            <div class="detail">
+                <label>Store</label>
+                <div>{{ game.store }}</div>
+            </div>
+        {% endif %}
+
+        {% if game.last_played %}
+            <div class="detail">
+                <label>Last Played</label>
+                <div>{{ game.last_played.strftime('%Y-%m-%d') }}</div>
+            </div>
+        {% endif %}
+
+        {% if game.play_count %}
+            <div class="detail">
+                <label>Play Count</label>
+                <div>{{ game.play_count }}</div>
+            </div>
+        {% endif %}
+
+        {% if game.collection_id %}
+            <div class="detail">
+                <label>Collection</label>
+                <div>
+                    <a href="{{ url_for('library.collection_detail', collection_id=game.collection_id) }}">{{ game.collection }}</a>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if game.favorite %}
+            <div class="detail">
+                <label>Favorited &#x272d;<!--star unicode --></label>
+            </div>
+        {% endif %}
+
+        {% if game.archived %}
+        <div class="detail">
+            <label>Archived &#x1f4bf;<!--disc unicode --></label>
+        </div>
+        {% endif %}
+
+        {% if mc_score %}
+        <div class="detail">
+            <label>Metacritic Score</label>
+            <div>{{ mc_score }}</div>
+        </div>
+        {% endif %}
+
+        <div class="detail">
+            <label>Date Added</label>
+            <div>{{ game.date_added.strftime('%Y-%m-%d') }}</div>
+        </div>
+
+        <div class="detail">
+            <label>Date Modified</label>
+            <div>{{ game.date_added.strftime('%Y-%m-%d') }}</div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="description">
+        <h3>Description</h3>
+        {{ desc | safe }}
+    </div>
+
+    <div id="tech-info">
+        {% if game.operating_system %}
+            <div id="system_requirements">
+                <h3>System Requirements</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Operating System</th>
+                            <td>{{ game.operating_system }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Processor</th>
+                            <td>{{ game.processor }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Memory</th>
+                            <td>{{ game.ram }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Disk Space</th>
+                            <td>{{ game.hdd }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Graphics</th>
+                            <td>{{ game.gpu }}</td>
+                        </tr>
+
+                        {% if game.mod %}
+                            <tr>
+                                <th>Mod/Engine</th>
+                                <td>{{ game.mod }}</td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+
+        {% if notes %}
+            <div class="notes">
+                <h3>Notes</h3>
+                {{ notes | safe }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+    <h4>Launch Game</h4>
+    
+    {% if installed %}
+        <div class="launcher">
+            <button class="execute" onClick="launch_game('{{ game.platform.slug }}','{{ game.filename }}' )">
+                <img src="{{ url_for('static', filename='assets/img/icons/play.svg')}}"/> Play
+            </button>
+        </div>
+    {% endif %}
+
+    <h4>Links</h4>
+    <p>
+        <a href="https://www.giantbomb.com/search/?i=game&q={{ game.title }}">
+            <img class="icon" src="{{ url_for('static', filename='assets/img/icons/giantbomb.svg') }}" title="Giant Bomb"></a>
+
+        <a href="https://www.mobygames.com/search/quick?q={{ game.title }}">
+            <img class="icon" src="{{ url_for('static', filename='assets/img/icons/moby.svg') }}" title="Moby Games"></a>
+
+        <a href="https://thegamesdb.net/search.php?name={{ game.title }}">
+            <img class="icon" src="{{ url_for('static', filename='assets/img/icons/tgdb.svg') }}" title="TGDB"></a>
+            
+        {% if game.platform.slug == 'windows' or game.platform.slug == 'steam' or game.platform == 'linux' %}
+            <a href="https://www.pcgamingwiki.com/w/index.php?search={{ game.title }}">
+                <img class="icon" src="{{ url_for('static', filename='assets/img/icons/pcgw.svg') }}" title="PCGamingWiki"></a>
+                {% if game.platform.slug == 'steam' %}
+                    <a href="https://www.protondb.com/app/{{ game.filename }}">
+                        <img class="icon" src="{{ url_for('static', filename='assets/img/icons/protondb.svg') }}" title="ProtonDB"></a>
+
+                    <a href="https://steamdb.info/app/{{ game.filename }}">
+                        <img class="icon" src="{{ url_for('static', filename='assets/img/icons/steamdb.svg') }}" title="SteamDB"></a>
+                {% else %}
+                    <a href="https://www.protondb.com/search?q={{ game.title }}&type=1&category=0">
+                        <img class="icon" src="{{ url_for('static', filename='assets/img/icons/protondb.svg') }}" title="ProtonDB"></a>
+
+                    <a href="https://steamdb.info/search/?a=app&q={{ game.title }}&type=1&category=0">
+                        <img class="icon" src="{{ url_for('static', filename='assets/img/icons/steamdb.svg') }}" title="SteamDB"></a>
+            {% endif %}
+        {% endif %}
+    </p>
+
+    <ul>
+        <li><a href="{{ url_for('library.game_edit', game_id=game.id) }}">EDIT</a></li>
+    </ul>
+
+    <div class="data-fields">
+        <label>Debug</label>
+        <ul>
+            <li><b>platform_slug: </b><span  id="platform_slug">{{ game.platform.slug }}</span></li>
+            <li><b>file_path: </b><span  id="file_path">{{ file_path }}</span></li>
+            <li id="save_path"><b>save_path: </b>{{ game.save_path }}</li>
+            <li id="boxart_url"><b>boxart_url: </b>{{ boxart_url }}</li>
+            <li>
+                <a href="{{ url_for('library.game_readme', game_id=game.id) }}">
+                    README
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

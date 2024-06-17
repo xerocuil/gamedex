@@ -1,0 +1,296 @@
+[
+    {
+        "id": 1,
+        "launcher": "",
+        "name": "Atari 2600",
+        "slug": "atari2600",
+        "core": "stella_libretro"
+    },
+    {
+        "id": 2,
+        "launcher": "",
+        "name": "32X",
+        "slug": "32x",
+        "core": "picodrive_libretro"
+    },
+    {
+        "id": 3,
+        "launcher": "",
+        "name": "3DO",
+        "slug": "3do",
+        "core": "opera_libretro"
+    },
+    {
+        "id": 4,
+        "launcher": "",
+        "name": "Nintendo 3DS",
+        "slug": "3ds",
+        "core": "citra_libretro"
+    },
+    {
+        "id": 5,
+        "launcher": "",
+        "name": "Amiga",
+        "slug": "amiga",
+        "core": "puae_libretro"
+    },
+    {
+        "id": 6,
+        "launcher": "",
+        "name": "Commodore 64",
+        "slug": "c64",
+        "core": "vice_x64_libretro"
+    },
+    {
+        "id": 7,
+        "launcher": "",
+        "name": "MS-DOS",
+        "slug": "dos",
+        "core": "dosbox_pure_libretro"
+    },
+    {
+        "id": 8,
+        "launcher": "",
+        "name": "Dreamcast",
+        "slug": "dreamcast",
+        "core": "flycast_libretro"
+    },
+    {
+        "id": 9,
+        "launcher": "['ruffle', %filename%]",
+        "name": "Adobe Flash",
+        "slug": "flash",
+        "core": ""
+    },
+    {
+        "id": 10,
+        "launcher": "['dolphin-emu', '-b', '-e', %filename%]",
+        "name": "GameCube",
+        "slug": "gamecube",
+        "core": ""
+    },
+    {
+        "id": 11,
+        "launcher": "",
+        "name": "Game Boy",
+        "slug": "gb",
+        "core": "sameboy_libretro"
+    },
+    {
+        "id": 12,
+        "launcher": "",
+        "name": "Game Boy Advance",
+        "slug": "gba",
+        "core": "mgba_libretro"
+    },
+    {
+        "id": 13,
+        "launcher": "",
+        "name": "Game Boy Color",
+        "slug": "gbc",
+        "core": "sameboy_libretro"
+    },
+    {
+        "id": 14,
+        "launcher": "",
+        "name": "Genesis",
+        "slug": "genesis",
+        "core": "picodrive_libretro"
+    },
+    {
+        "id": 15,
+        "launcher": "",
+        "name": "Game Gear",
+        "slug": "gg",
+        "core": "picodrive_libretro"
+    },
+    {
+        "id": 16,
+        "launcher": "",
+        "name": "Atari Jaguar",
+        "slug": "jaguar",
+        "core": "virtualjaguar_libretro"
+    },
+    {
+        "id": 17,
+        "launcher": "['start_app(%filename%)']",
+        "name": "Linux",
+        "slug": "linux",
+        "core": ""
+    },
+    {
+        "id": 18,
+        "launcher": "",
+        "name": "Atari Lynx",
+        "slug": "lynx",
+        "core": "mednafen_lynx_libretro"
+    },
+    {
+        "id": 19,
+        "launcher": "",
+        "name": "MAME",
+        "slug": "mame",
+        "core": "mame_libretro"
+    },
+    {
+        "id": 20,
+        "launcher": "",
+        "name": "MSX",
+        "slug": "msx",
+        "core": "bluemsx_libretro"
+    },
+    {
+        "id": 21,
+        "launcher": "",
+        "name": "Nintendo 64",
+        "slug": "n64",
+        "core": "mupen64plus_next_libretro"
+    },
+    {
+        "id": 22,
+        "launcher": "",
+        "name": "Nintendo DS",
+        "slug": "nds",
+        "core": "desmume_libretro"
+    },
+    {
+        "id": 23,
+        "launcher": "",
+        "name": "Neo Geo",
+        "slug": "neogeo",
+        "core": "fbneo_libretro"
+    },
+    {
+        "id": 24,
+        "launcher": "",
+        "name": "Nintendo",
+        "slug": "nes",
+        "core": "nestopia_libretro"
+    },
+    {
+        "id": 25,
+        "launcher": "",
+        "name": "Neo Geo Pocket",
+        "slug": "ngp",
+        "core": "race_libretro"
+    },
+    {
+        "id": 26,
+        "launcher": "",
+        "name": "PlayStation 2",
+        "slug": "ps2",
+        "core": "pcsx2_libretro"
+    },
+    {
+        "id": 27,
+        "launcher": "['rpcs3', '--no-gui', '--fullscreen', %filename%]",
+        "name": "PlayStation 3",
+        "slug": "ps3",
+        "core": ""
+    },
+    {
+        "id": 28,
+        "launcher": "",
+        "name": "PlayStation Portable",
+        "slug": "psp",
+        "core": "ppsspp_libretro"
+    },
+    {
+        "id": 29,
+        "launcher": "",
+        "name": "PlayStation",
+        "slug": "psx",
+        "core": "mednafen_psx_libretro"
+    },
+    {
+        "id": 30,
+        "launcher": "",
+        "name": "Saturn",
+        "slug": "saturn",
+        "core": "mednafen_saturn_libretro"
+    },
+    {
+        "id": 31,
+        "launcher": "",
+        "name": "Sega CD",
+        "slug": "scd",
+        "core": "picodrive_libretro"
+    },
+    {
+        "id": 32,
+        "launcher": "['scummvm', '-f', '--auto-detect', '-p', %filename%]",
+        "name": "ScummVM",
+        "slug": "scummvm",
+        "core": ""
+    },
+    {
+        "id": 33,
+        "launcher": "",
+        "name": "Master System",
+        "slug": "sms",
+        "core": "picodrive_libretro"
+    },
+    {
+        "id": 34,
+        "launcher": "",
+        "name": "Super Nintendo",
+        "slug": "snes",
+        "core": "snes9x_libretro"
+    },
+    {
+        "id": 35,
+        "launcher": "['steam', '-silent', '-applaunch']",
+        "name": "Steam",
+        "slug": "steam",
+        "core": ""
+    },
+    {
+        "id": 36,
+        "launcher": "",
+        "name": "TurboGrafx-16",
+        "slug": "tg16",
+        "core": "mednafen_pce_libretro"
+    },
+    {
+        "id": 37,
+        "launcher": "",
+        "name": "Virtual Boy",
+        "slug": "vb",
+        "core": "mednafen_vb_libretro"
+    },
+    {
+        "id": 38,
+        "launcher": "",
+        "name": "Wii",
+        "slug": "wii",
+        "core": "dolphin_libretro"
+    },
+    {
+        "id": 39,
+        "launcher": "['cemu', %filename%]",
+        "name": "Wii U",
+        "slug": "wiiu",
+        "core": ""
+    },
+    {
+        "id": 40,
+        "launcher": "['start_app(%filename%)']",
+        "name": "Windows",
+        "slug": "windows",
+        "core": ""
+    },
+    {
+        "id": 41,
+        "launcher": "",
+        "name": "WonderSwan",
+        "slug": "ws",
+        "core": "mednafen_wswan_libretro"
+    },
+    {
+        "id": 42,
+        "launcher": "['xemu', '-full-screen', '-dvd_path', %filename%]",
+        "name": "Xbox",
+        "slug": "xbox",
+        "core": ""
+    }
+]

@@ -1,0 +1,84 @@
+{% extends "dashboard/full.html" %}
+{% load markdown static %}
+
+{% block content %}
+
+<div class="row">
+  <div class="columns">
+    <h4>{% block title %}Scrape results for '{{ path }}'{% endblock %}</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columns">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <div class="row">
+        <div class="seven columns">
+
+          <div class="row">
+            <div class="two columns"><label>Title</label></div>
+            <div class="ten columns">
+              <input type="text" name="title" required maxlength="128" id="id_title" {% if title %}value="{{ title }}"{% endif %}>
+            </div>
+          </div><hr>
+
+          <div class="row">
+            <div class="two columns"><label>Sort Title</label></div>
+            <div class="ten columns">
+              <input type="text" name="sort_title" required maxlength="128" id="id_sort_title" {% if title %}value="{{ title }}"{% endif %}>
+            </div>
+          </div><hr>
+
+          <div class="row">
+            <div class="two columns"><label>Platform</label></div>
+            <div class="ten columns">{{ game_form.platform }}</div>
+          </div><hr>
+
+          <div class="row">
+            <div class="two columns"><label>Description</label></div>
+            <div class="ten columns">
+              <textarea name="description" cols="40" rows="10" maxlength="1024" id="id_description">{{ description }}</textarea>
+            </div>
+          </div><hr>
+
+          <div class="row">
+            <div class="two columns"><label>Developer</label></div>
+            <div class="ten columns">
+              <input type="text" name="developer" maxlength="128" id="id_developer" value="{{ developer }}">
+            </div>
+          </div><hr>
+
+          <div class="row">
+            <div class="two columns"><label>Publisher</label></div>
+            <div class="ten columns">
+              <input type="text" name="publisher" maxlength="128" id="id_publisher" value="{{ publisher }}">
+            </div>
+          </div><hr>
+
+          <div class="row">
+            <div class="two columns"><label>Release Date</label></div>
+            <div class="ten columns">
+              <input type="text" name="release_date" id="id_release_date"  value="{{ release_date }}">
+            </div>
+          </div><hr>
+
+          <div class="row">
+            <div class="two columns"><label>File Name</label></div>
+            <div class="ten columns">
+              <input type="text" name="path" maxlength="128" required id="id_path" value="{{ path }}">
+            </div>
+          </div><hr>
+        </div>
+      </div>
+
+      {{ game_form.date_added.as_hidden }}
+      {{ game_form.date_modified.as_hidden }}
+         
+      <button class="button" type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

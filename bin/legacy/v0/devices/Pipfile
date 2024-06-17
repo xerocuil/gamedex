@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+icecream = "*"
+pytest = "*"
+asttokens = "==2.4.1"
+colorama = "==0.4.6"
+executing = "==2.0.1"
+pygments = "==2.17.2"
+six = "==1.16.0"
+configparser = "*"
+pandas = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.6"
+
+[scripts]
+debug = "./main.py debug"
+check_device = "./main.py check_device"
+clean = "./bash.sh clean"
+update = "./main.py update"
+405v = "./405v/main.py"

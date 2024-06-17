@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Video Game Database{% endblock %}&nbsp;&nbsp;|&nbsp;&nbsp;Empr</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'assets/favicon.ico' %}"/>
+  <link rel="manifest" href="{% static 'manifest.json' %}">
+  <style>
+    .box { display: none }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <div class="row">
+        <article id="title" class="twelve columns">
+          <h1>Launcher</h1>
+        </article>
+      </div>
+    </div>
+  </div>

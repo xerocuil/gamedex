@@ -1,0 +1,20 @@
+{% extends "dashboard/default.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+	<h2>Latest Games</h2>
+
+	{% include "games/game_list_header.html" %}
+	{% for g in latest_games %}
+		{% include "games/game_list.html" %}
+	{% endfor %}
+	{% include "games/game_list_footer.html" %}
+	
+
+{% endblock %}
+
+{% block sidebar %}
+{% include "dashboard/default_sidebar.html" %}
+{% endblock %}

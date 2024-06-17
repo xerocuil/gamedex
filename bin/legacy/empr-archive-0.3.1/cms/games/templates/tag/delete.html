@@ -1,0 +1,16 @@
+{% extends "dashboard/base.html" %}
+{% load markdown static %}
+
+{% block title %}Delete tag.title?{% endblock %}
+
+{% block content %}
+  
+<p>Delete <b>{{ tag.name }}</b> from Tags?</p>
+<p><em>Note: This will also delete any games under this category.</em></p>
+
+<form method="post">
+    {% csrf_token %}
+    <input class="button is-small is-danger" type="submit" value="Confirm">
+</form>
+
+{% endblock %}

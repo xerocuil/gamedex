@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Role-Playing"
+    },
+    {
+        "id": 2,
+        "name": "Sports"
+    },
+    {
+        "id": 3,
+        "name": "Action"
+    },
+    {
+        "id": 4,
+        "name": "Action/RPG"
+    },
+    {
+        "id": 5,
+        "name": "Action/Adventure"
+    },
+    {
+        "id": 6,
+        "name": "Adventure"
+    },
+    {
+        "id": 7,
+        "name": "Racing/Driving"
+    },
+    {
+        "id": 8,
+        "name": "Tabletop"
+    },
+    {
+        "id": 9,
+        "name": "Fighting"
+    },
+    {
+        "id": 10,
+        "name": "Puzzle"
+    },
+    {
+        "id": 11,
+        "name": "Strategy"
+    },
+    {
+        "id": 12,
+        "name": "Educational"
+    },
+    {
+        "id": 13,
+        "name": "Compilation"
+    },
+    {
+        "id": 14,
+        "name": "Music/Rhythm"
+    },
+    {
+        "id": 15,
+        "name": "Quiz/Trivia"
+    }
+]

@@ -1,0 +1,266 @@
+[
+    {
+        "id": 1,
+        "name": "Platformer"
+    },
+    {
+        "id": 2,
+        "name": "Beat'em Up"
+    },
+    {
+        "id": 3,
+        "name": "Turn-Based"
+    },
+    {
+        "id": 4,
+        "name": "Strategy"
+    },
+    {
+        "id": 5,
+        "name": "Real-Time"
+    },
+    {
+        "id": 6,
+        "name": "Hack 'n Slash"
+    },
+    {
+        "id": 7,
+        "name": "Third-Person"
+    },
+    {
+        "id": 8,
+        "name": "Side-Scroller"
+    },
+    {
+        "id": 9,
+        "name": "Fantasy"
+    },
+    {
+        "id": 10,
+        "name": "Sci-Fi"
+    },
+    {
+        "id": 11,
+        "name": "Horror"
+    },
+    {
+        "id": 12,
+        "name": "Metroidvania"
+    },
+    {
+        "id": 13,
+        "name": "2D"
+    },
+    {
+        "id": 14,
+        "name": "Pixel Art"
+    },
+    {
+        "id": 15,
+        "name": "Top-Down"
+    },
+    {
+        "id": 16,
+        "name": "Survival"
+    },
+    {
+        "id": 17,
+        "name": "Sandbox"
+    },
+    {
+        "id": 18,
+        "name": "Open World"
+    },
+    {
+        "id": 19,
+        "name": "Party"
+    },
+    {
+        "id": 21,
+        "name": "Puzzle"
+    },
+    {
+        "id": 22,
+        "name": "Shooter"
+    },
+    {
+        "id": 24,
+        "name": "Rouge-Light"
+    },
+    {
+        "id": 26,
+        "name": "First-Person"
+    },
+    {
+        "id": 27,
+        "name": "Point and Click"
+    },
+    {
+        "id": 28,
+        "name": "Vehicle Combat"
+    },
+    {
+        "id": 29,
+        "name": "3D"
+    },
+    {
+        "id": 30,
+        "name": "4X"
+    },
+    {
+        "id": 31,
+        "name": "Simulation"
+    },
+    {
+        "id": 32,
+        "name": "Stealth"
+    },
+    {
+        "id": 33,
+        "name": "Crime"
+    },
+    {
+        "id": 34,
+        "name": "Martial Arts"
+    },
+    {
+        "id": 35,
+        "name": "Boxing"
+    },
+    {
+        "id": 36,
+        "name": "Role-Playing"
+    },
+    {
+        "id": 37,
+        "name": "Managerial"
+    },
+    {
+        "id": 38,
+        "name": "Rhythm"
+    },
+    {
+        "id": 39,
+        "name": "Flight"
+    },
+    {
+        "id": 40,
+        "name": "Skateboarding"
+    },
+    {
+        "id": 41,
+        "name": "Mystery"
+    },
+    {
+        "id": 42,
+        "name": "Post-apocalyptic"
+    },
+    {
+        "id": 43,
+        "name": "6DOF"
+    },
+    {
+        "id": 44,
+        "name": "Shoot 'Em Up"
+    },
+    {
+        "id": 45,
+        "name": "Bullet Hell"
+    },
+    {
+        "id": 46,
+        "name": "Trivia"
+    },
+    {
+        "id": 48,
+        "name": "Noir"
+    },
+    {
+        "id": 49,
+        "name": "Driving"
+    },
+    {
+        "id": 50,
+        "name": "Physics"
+    },
+    {
+        "id": 51,
+        "name": "Run and Gun"
+    },
+    {
+        "id": 52,
+        "name": "Sport"
+    },
+    {
+        "id": 53,
+        "name": "Golf"
+    },
+    {
+        "id": 54,
+        "name": "Tennis"
+    },
+    {
+        "id": 55,
+        "name": "Baseball"
+    },
+    {
+        "id": 57,
+        "name": "Racing"
+    },
+    {
+        "id": 58,
+        "name": "Card Collectible"
+    },
+    {
+        "id": 59,
+        "name": "Hockey"
+    },
+    {
+        "id": 60,
+        "name": "Bowling"
+    },
+    {
+        "id": 61,
+        "name": "On-Rails Shooter"
+    },
+    {
+        "id": 62,
+        "name": "Wrestling"
+    },
+    {
+        "id": 63,
+        "name": "Isometric"
+    },
+    {
+        "id": 64,
+        "name": "Tactical"
+    },
+    {
+        "id": 65,
+        "name": "Soccer"
+    },
+    {
+        "id": 66,
+        "name": "4D"
+    },
+    {
+        "id": 67,
+        "name": "Quick-Time Events"
+    },
+    {
+        "id": 68,
+        "name": "MMORPG"
+    },
+    {
+        "id": 69,
+        "name": "Live Action"
+    },
+    {
+        "id": 70,
+        "name": "Western"
+    },
+    {
+        "id": 71,
+        "name": "Tower Defense"
+    }
+]

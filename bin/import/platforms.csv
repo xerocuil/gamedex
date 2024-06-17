@@ -1,0 +1,43 @@
+"id","slug","name","emulator","new_id","ra_core","launcher"
+9,"2600","Atari 2600",TRUE,1,"stella_libretro",
+31,"32x","32X",TRUE,2,"picodrive_libretro",
+13,"3do","3DO",TRUE,3,"opera_libretro",
+38,"3ds","Nintendo 3DS",TRUE,4,"citra_libretro",
+3,"amiga","Amiga",FALSE,5,"puae_libretro",
+34,"c64","Commodore 64",TRUE,6,"vice_x64_libretro",
+41,"dos","MS-DOS",FALSE,7,"dosbox_pure_libretro",
+6,"dreamcast","Dreamcast",TRUE,8,"flycast_libretro",
+44,"flash","Adobe Flash",TRUE,9,,"['ruffle', %filename%]"
+2,"gamecube","GameCube",TRUE,10,,"['dolphin-emu', '-b', '-e', %filename%]"
+35,"gb","Game Boy",TRUE,11,"sameboy_libretro",
+15,"gba","Game Boy Advance",TRUE,12,"mgba_libretro",
+16,"gbc","Game Boy Color",TRUE,13,"sameboy_libretro",
+12,"genesis","Genesis",TRUE,14,"picodrive_libretro",
+28,"gg","Game Gear",TRUE,15,"picodrive_libretro",
+26,"jaguar","Atari Jaguar",TRUE,16,"virtualjaguar_libretro",
+42,"linux","Linux",FALSE,17,,"['start_app(%filename%)’]"
+30,"lynx","Atari Lynx",TRUE,18,"mednafen_lynx_libretro",
+14,"mame","Multiple Arcade Machine Emulator",TRUE,19,"mame_libretro",
+39,"msx","MSX",TRUE,20,"bluemsx_libretro",
+7,"n64","Nintendo 64",TRUE,21,"mupen64plus_next_libretro",
+37,"nds","Nintendo DS",TRUE,22,"desmume_libretro",
+17,"neogeo","Neo Geo",TRUE,23,"fbneo_libretro",
+10,"nes","Nintendo",TRUE,24,"nestopia_libretro",
+18,"ngp","Neo Geo Pocket",TRUE,25,"race_libretro",
+11,"ps2","PlayStation 2",TRUE,26,"pcsx2_libretro",
+36,"ps3","PlayStation 3",TRUE,27,,"[‘rpcs3', '--no-gui', '--fullscreen', %filename%]"
+8,"psp","PlayStation Portable",TRUE,28,"ppsspp_libretro",
+5,"psx","PlayStation",TRUE,29,"mednafen_psx_libretro",
+19,"saturn","Saturn",TRUE,30,"mednafen_saturn_libretro",
+27,"scd","Sega CD",TRUE,31,"picodrive_libretro",
+,"scummvm","ScummVM",TRUE,32,,"[‘scummvm', '-f', '--auto-detect', '-p', %filename%]"
+29,"sms","Master System",TRUE,33,"picodrive_libretro",
+24,"snes","Super Nintendo",TRUE,34,"snes9x_libretro",
+4,"steam","Steam",FALSE,35,,"[‘steam', '-silent', '-applaunch']"
+20,"tg16","TurboGrafx-16",TRUE,36,"mednafen_pce_libretro",
+32,"vb","Virtual Boy",TRUE,37,"mednafen_vb_libretro",
+21,"wii","Wii",TRUE,38,"dolphin_libretro",
+23,"wiiu","Wii U",TRUE,39,,"[‘cemu', %filename%]"
+43,"windows","Windows",FALSE,40,,"[‘start_app(%filename%)’]"
+33,"ws","WonderSwan",TRUE,41,"mednafen_wswan_libretro",
+22,"xbox","Xbox",TRUE,42,,"[‘xemu', '-full-screen', '-dvd_path', %filename%]"

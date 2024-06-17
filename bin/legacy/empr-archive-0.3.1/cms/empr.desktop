@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Empr
+Comment=Video game manager
+MimeType=application/x-shellscript;
+Exec=AppRun
+Type=Application
+Categories=Game;
+Terminal=false
+Icon=empr

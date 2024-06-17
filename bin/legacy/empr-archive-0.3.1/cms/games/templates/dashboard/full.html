@@ -1,0 +1,18 @@
+{% load static %}
+
+{% include "dashboard/header.html" %}
+
+<!-- {% include "dashboard/admin_panel.html" %} -->
+
+	<div id="content" class="container">
+
+		{% include "dashboard/messages.html" %}
+
+		<div class="row">
+			<div class="twelve columns">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+
+{% include "dashboard/footer.html" %}

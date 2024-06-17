@@ -1,0 +1,50 @@
+{% extends "dashboard/base.html" %}
+
+{%load static %}
+
+{% block content %}
+
+<div class="row">
+	<div class="eight columns">
+		<h2>{{ page_title }}</h2>
+	</div>
+
+	<div class="four columns right">
+		<p><a href="/platform/add"><img class="sm-icon" src="{% static 'assets/add.png' %}" title="Add Platform"></a></p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="twelve columns">
+		<table class="u-full-width">
+			<thead>
+				<th>Name</th>
+				<th>Logo</th>
+				<th>Icon</th>
+			</thead>
+			<tbody>
+				{% for p in platforms %}
+				<tr>
+					<td><a href="{% url 'games:edit_platform' p.id %}">{{ p.name }}</a></td>
+					<td>
+						{% if p.logo %}
+							<img class="logo" src="{{ p.logo.url }}">
+						{% endif %}
+					</td>
+					<td>
+						{% if p.icon %}
+							<img class="icon" src="{{ p.icon.url }}">
+						{% endif %}
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+	
+{% endblock %}
+
+{% block sidebar %}
+{% include "dashboard/default_sidebar.html" %}
+{% endblock %}

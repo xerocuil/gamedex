@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Readme</title>
+</head>
+<body>
+<div style="width:600px;">
+<code><pre>
+# {{ game.title }}
+
+{% if game.display %}![{{ game.display }}]({{ game.display }}){% elif game.boxart %}![boxart.jpg](boxart.jpg){% endif %}
+
+## Description
+
+{{ game.description }}
+
+**Genre**: {{ game.genre }}  
+**Release Date**: {{ game.release_date }}  
+**Developer**: {{ game.developer }}  
+**Publisher**: {{ game.publisher }}  
+**ESRB Rating**: {{ game.esrb }}  
+**Player(s)**: {{ game.player }}  
+**Controller Support**: {% if game.controller_support %}Yes{% else %}No{% endif %}  
+
+{% if game.manual %}## Documentation
+
+- [{{ game.title }} Manual]('{{ game.manual.name }}'){% endif %}
+
+{% if game.operating_system %}
+## Minimum System Requirements
+
+**Operating System:** {{ game.operating_system }}  
+**Processor:** {{ game.processor }}  
+**Memory:** {{ game.ram }}  
+**Disk Space:** {{ game.hdd }}  
+**Graphics:** {{ game.gpu }}  
+{% endif %}
+
+{% if game.notes %}{{ game.notes }}{% endif %}
+</pre></code>
+</div>
+</body>
+</html>

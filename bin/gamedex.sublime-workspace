@@ -1,0 +1,1315 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"t",
+				"tuple"
+			],
+			[
+				"p",
+				"placeholders"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"data",
+				"data_keys"
+			],
+			[
+				"data_",
+				"data_values"
+			],
+			[
+				"ga",
+				"game_data"
+			],
+			[
+				"sl",
+				"slugify"
+			],
+			[
+				"fi",
+				"file_ext"
+			],
+			[
+				"file",
+				"file_base"
+			],
+			[
+				"F",
+				"FILEBASE"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"da",
+				"data_values"
+			],
+			[
+				"s",
+				"split"
+			],
+			[
+				"d",
+				"data_values"
+			],
+			[
+				"in",
+				"inspector"
+			],
+			[
+				"D",
+				"DB"
+			],
+			[
+				"json",
+				"json_file"
+			],
+			[
+				"bas",
+				"BASH_DIR\tGet bash script directory"
+			],
+			[
+				"e",
+				"export"
+			],
+			[
+				"sr",
+				"serve"
+			],
+			[
+				"C",
+				"COMMAND"
+			],
+			[
+				"AP",
+				"APPDIR"
+			],
+			[
+				"g",
+				"game"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"pr",
+				"project_info"
+			],
+			[
+				"A",
+				"APP_NAME"
+			],
+			[
+				"DE",
+				"DEFAULT_INSTALL_DIR"
+			],
+			[
+				"jus",
+				"justify-items"
+			],
+			[
+				"wind",
+				"window-two"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"src_f",
+				"src_file"
+			],
+			[
+				"de",
+				"dest"
+			],
+			[
+				"app",
+				"appName"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"dir",
+				"BASH_DIR\tGet bash script directory"
+			],
+			[
+				"Du",
+				"Dune-2000"
+			],
+			[
+				"IN",
+				"INSTALL_PARENT"
+			],
+			[
+				"ins",
+				"install_files"
+			],
+			[
+				"get",
+				"get_filepath"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"r",
+				"render_template"
+			],
+			[
+				"platfor",
+				"platform_dir"
+			],
+			[
+				"pla",
+				"platform_dir"
+			],
+			[
+				"lo",
+				"local_device"
+			],
+			[
+				"pl",
+				"platform_dir"
+			],
+			[
+				"f",
+				"file_name"
+			],
+			[
+				"im",
+				"img_path"
+			],
+			[
+				"dev",
+				"device_slug"
+			],
+			[
+				"es",
+				"else"
+			],
+			[
+				"gam",
+				"game_data"
+			],
+			[
+				"device",
+				"devices"
+			],
+			[
+				"fil",
+				"filename"
+			],
+			[
+				"device_pla",
+				"device_platform_path"
+			],
+			[
+				"plat",
+				"platform_path"
+			],
+			[
+				"pal",
+				"platform_path"
+			],
+			[
+				"sq",
+				"sqlite_query"
+			],
+			[
+				"env",
+				"!env\t#!/usr/bin/env"
+			],
+			[
+				"coll",
+				"collection_id"
+			],
+			[
+				"c",
+				"collection_detail"
+			],
+			[
+				"col",
+				"collections"
+			],
+			[
+				"ar",
+				"archives"
+			],
+			[
+				"arc",
+				"archives"
+			],
+			[
+				"l",
+				"list_data"
+			],
+			[
+				"li",
+				"list_data"
+			],
+			[
+				"host",
+				"host_platform"
+			],
+			[
+				"ho",
+				"host_root"
+			],
+			[
+				"pa",
+				"path"
+			],
+			[
+				"ex",
+				"except"
+			],
+			[
+				"qu",
+				"query_count"
+			],
+			[
+				"ftp",
+				"ftp_query"
+			],
+			[
+				"ftp_",
+				"ftp_query"
+			],
+			[
+				"rg",
+				"rg35xx"
+			],
+			[
+				"j",
+				"json"
+			],
+			[
+				"Con",
+				"CONNECTION"
+			],
+			[
+				"game",
+				"game_data"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"ind",
+				"index"
+			],
+			[
+				"cs",
+				"csvdf"
+			],
+			[
+				"csv",
+				"csvdf"
+			],
+			[
+				"ima",
+				"image_src"
+			],
+			[
+				"device_plat",
+				"device_platform_path"
+			],
+			[
+				"file_d",
+				"file_dest"
+			],
+			[
+				"devic",
+				"device_platforms"
+			],
+			[
+				"b",
+				"boxart_path"
+			],
+			[
+				"device_im",
+				"device_image_path"
+			],
+			[
+				"boxart",
+				"boxart_path"
+			],
+			[
+				"devi",
+				"device_image_path"
+			],
+			[
+				"box",
+				"boxart"
+			],
+			[
+				"device_",
+				"device_path"
+			],
+			[
+				"des",
+				"device_settings"
+			],
+			[
+				"file_s",
+				"file_src"
+			],
+			[
+				"a",
+				"archive_path"
+			],
+			[
+				"Onf",
+				"Config"
+			],
+			[
+				"file_",
+				"file_slug"
+			],
+			[
+				"co",
+				"column"
+			],
+			[
+				"gen",
+				"genres"
+			],
+			[
+				"tit",
+				"title_query"
+			],
+			[
+				"play",
+				"play_count"
+			],
+			[
+				"date",
+				"date_modified"
+			],
+			[
+				"sess",
+				"sessionmaker"
+			],
+			[
+				"sessi",
+				"sessionmaker"
+			],
+			[
+				"CO",
+				"CONNECTION"
+			],
+			[
+				"eb",
+				"esrb"
+			],
+			[
+				"mg",
+				"mg_data"
+			],
+			[
+				"pu",
+				"publisher"
+			],
+			[
+				"pub",
+				"publisher"
+			],
+			[
+				"deve",
+				"developer"
+			],
+			[
+				"Pl",
+				"PLATFORMS"
+			],
+			[
+				"FILE",
+				"FILENAME"
+			],
+			[
+				"FI",
+				"FILENAME"
+			],
+			[
+				"GE",
+				"GENRES"
+			],
+			[
+				"dat",
+				"date_added"
+			],
+			[
+				"el",
+				"elif"
+			],
+			[
+				"sav",
+				"save_path"
+			],
+			[
+				"R",
+				"REGIONS"
+			],
+			[
+				"se",
+				"selected"
+			],
+			[
+				"i",
+				"image_src"
+			],
+			[
+				"m",
+				"mkdir"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/asciidoc.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/MarkdownPreview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/User/SyncToArcade.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/MarkdownPreview/Markdown.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/asciidoc.sublime-build",
+					""
+				],
+				[
+					"Packages/User/love2d-dev.sublime-build",
+					""
+				],
+				[
+					"Packages/User/pygame.sublime-build",
+					""
+				],
+				[
+					"Packages/User/sass-build.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/asciidoc.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packag",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"packages",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"toc",
+				"MarkdownTOC:Insert TOC"
+			],
+			[
+				"SAVE",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"prev",
+				"MarkdownLivePreview: Open Preview"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"sqli",
+				"Set Syntax: SQL (Rails)"
+			],
+			[
+				"previ",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"PYTHO",
+				"Set Syntax: Python"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"markdow",
+				"Set Syntax: Markdown"
+			],
+			[
+				"PREVIEW",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"review",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"rpeview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"revie",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prevew",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"termin",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"terminus op",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"term",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"terminus ope",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"terminus open",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"terminus",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"sav",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"pre",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"save",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pan",
+				"Pandoc"
+			],
+			[
+				"PREVIRE",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"preivew",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"preivr",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"formatter s",
+				"Formatter: Beautify With Stylelint"
+			],
+			[
+				"formatter",
+				"Formatter: Beautify With JSONMax"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/xerocuil/Documents/projects/gamedex",
+		"/home/xerocuil/Documents/projects/gamedex/src",
+		"/home/xerocuil/.gamedex"
+	],
+	"file_history":
+	[
+		"/home/xerocuil/.gamedex/config.ini",
+		"/run/media/xerocuil/FDCB-FDDF/Archive/Games/windows/yooka-laylee/docs/readme.adoc",
+		"/home/xerocuil/Documents/projects/gamedex/src/lib/utils.py",
+		"/home/xerocuil/Downloads/games/tony-hawks-underground-2/docs/readme.adoc",
+		"/home/xerocuil/Documents/projects/gamedex/src/templates/library/game/readme.txt",
+		"/home/xerocuil/Documents/projects/gamedex/src/models/library.py",
+		"/home/xerocuil/Documents/projects/gamedex/src/routes/library.py",
+		"/home/xerocuil/Downloads/hdd.txt",
+		"/home/xerocuil/Downloads/tmp.txt",
+		"/home/xerocuil/Downloads/witcher-3-blurb.txt",
+		"/home/xerocuil/.gamedex/export/collection.json",
+		"/home/xerocuil/Games/windows/unreal-gold/data/drive_c/GOG Games/Unreal Gold/System/Unreal.ini",
+		"/home/xerocuil/.gamedex/export/platform.json",
+		"/home/xerocuil/.gamedex/export/game.json",
+		"/home/xerocuil/Documents/projects/gamedex/src/lib/archive.py",
+		"/home/xerocuil/Documents/projects/gamedex/src/lib/config.py",
+		"/home/xerocuil/Documents/projects/gamedex/src/test.py",
+		"/home/xerocuil/Documents/projects/gamedex/src/main.py",
+		"/home/xerocuil/Documents/projects/gamedex/src/forms/library.py",
+		"/home/xerocuil/.gamedex/config.old.ini",
+		"/home/xerocuil/Documents/projects/gamedex/src/devices/main.py",
+		"/home/xerocuil/.gamedex/json/devices/local.json",
+		"/home/xerocuil/.gamedex/json/devices/rg35xx.json",
+		"/home/xerocuil/Documents/projects/gamedex/src/main.",
+		"/home/xerocuil/Documents/projects/gamedex/src/models/device.py",
+		"/home/xerocuil/Documents/projects/gamedex/src/Pipfile",
+		"/home/xerocuil/Games/n64/dothing.sh",
+		"/home/xerocuil/.config/strawberry/strawberry.conf",
+		"/home/xerocuil/.config/autostart/Sanbox IP Table.desktop",
+		"/home/xerocuil/.local/share/applications/gamedex.desktop",
+		"/home/xerocuil/Documents/projects/gamedex/src/main.sh",
+		"/home/xerocuil/Documents/projects/gamedex/src/templates/library/game/detail.html",
+		"/home/xerocuil/Games/psx/links",
+		"/home/xerocuil/Documents/projects/gamedex/src/launcher.py",
+		"/home/xerocuil/Games/n64/links",
+		"/home/xerocuil/Documents/projects/gamedex/docs/changelog.md",
+		"/home/xerocuil/Documents/projects/gamedex/src/scraper.py",
+		"/home/xerocuil/Downloads/blurb.txt",
+		"/home/xerocuil/Downloads/kirby-64.txt",
+		"/home/xerocuil/Downloads/dr-mario.txt",
+		"/home/xerocuil/Games/windows/nuclear-strike/start.sh",
+		"/home/xerocuil/Downloads/games/nuclear-strike/links",
+		"/home/xerocuil/Games/dreamcast/Hydro Thunder (NA, Rev 1.02)/Hydro Thunder v1.020 (1999)(Midway)(NTSC)(US)[!].gdi",
+		"/home/xerocuil/Downloads/loz-oot.txt",
+		"/home/xerocuil/Games/dreamcast/Hydro Thunder (USA)/Hydro Thunder (USA).cue",
+		"/run/media/xerocuil/6F2B-FFD8/Games/linux/quake/quake.desktop",
+		"/run/media/xerocuil/6F2B-FFD8/Games/linux/quake/start.sh",
+		"/home/xerocuil/.local/share/applications/games/linux/neverwinter-nights-enchanced-edition.desktop",
+		"/home/xerocuil/.local/share/applications/games/linux/gog_com-Neverwinter_Nights_Enhanced_Edition_1.desktop",
+		"/home/xerocuil/.local/share/applications/games/linux/quadrilateral-cowboy.desktop",
+		"/home/xerocuil/.local/share/applications/games/linux/net.lutris.quadrilateral-cowboy-31.desktop",
+		"/run/media/xerocuil/6F2B-FFD8/Games/linux/remnants-of-the-precursors/remnants-of-the-precursors.desktop",
+		"/home/xerocuil/.local/share/applications/games/linux/dune-2000.desktop",
+		"/home/xerocuil/.local/share/applications/games/linux/doom-rpg.desktop",
+		"/run/media/xerocuil/6F2B-FFD8/steam/steamapps/appmanifest_12100.acf",
+		"/home/xerocuil/Games/psx/thousand-arms.m3u",
+		"/home/xerocuil/Games/dreamcast/dothing.sh",
+		"/home/xerocuil/Games/psx/heart-of-darkness.m3u",
+		"/home/xerocuil/Games/dreamcast/headhunter.m3u",
+		"/home/xerocuil/Documents/projects/gamedex/src/lib/extensions.py",
+		"/home/xerocuil/Documents/projects/gamedex/docs/dev_notes/index.md",
+		"/home/xerocuil/Documents/projects/gamedex/docs/dev_notes/issues.md",
+		"/home/xerocuil/Documents/projects/gamedex/src/lib/game_scraper.py",
+		"/home/xerocuil/Games/windows/daikatana/start.sh",
+		"/home/xerocuil/Games/dreamcast/TNN Motorsports Hardcore Heat (USA)/tnn-ms-hh.cue",
+		"/home/xerocuil/Downloads/dead-to-rights.txt.txt",
+		"/home/xerocuil/Games/windows/stalker-shadow-of-chernobyl/start.sh",
+		"/home/xerocuil/Games/windows/stalker/ReadMe.txt",
+		"/home/xerocuil/Games/windows/star-wars-battlefront-ii/start.sh",
+		"/home/xerocuil/Games/dreamcast/links",
+		"/home/xerocuil/Games/dreamcast/Shadow Man (USA).cue",
+		"/home/xerocuil/Games/dreamcast/resident-evil-2.m3u",
+		"/home/xerocuil/Games/windows/star-wars-battlefront-ii/star-wars-battlefront-ii.desktop",
+		"/home/xerocuil/Documents/projects/gamedex/Pipfile",
+		"/home/xerocuil/Documents/projects/gamedex/mkdocs.yml",
+		"/home/xerocuil/Documents/projects/gamedex/.env",
+		"/home/xerocuil/Applications/skraper/data/drive_c/Apps/Skraper-1.1.1/skraper.config.mono.json",
+		"/home/xerocuil/Games/windows/warhammer-40k-fire-warrior/start.sh",
+		"/home/xerocuil/Downloads/games/warhammer-40k-fire-warrior/config",
+		"/home/xerocuil/VM/vagrant/generic-debian12/Vagrantfile",
+		"/home/xerocuil/VM/vagrant/debian12-arm/Vagrantfile",
+		"/home/xerocuil/Games/windows/tony-hawks-underground/start.sh",
+		"/home/xerocuil/Downloads/games/her-story/start.sh",
+		"/home/xerocuil/Downloads/games/her-story/notes.md",
+		"/home/xerocuil/Downloads/games/her-story/data/drive_c/Games/Her_Story_PC/HerStory_Data/StreamingAssets/batch.bat",
+		"/home/xerocuil/Games/windows/paraworld/start.sh",
+		"/home/xerocuil/Games/windows/paraworld/data/drive_c/Program Files/Sunflowers/ParaWorld/extras/NoCD v1.01/Serial Keys.txt",
+		"/home/xerocuil/Downloads/games/paraworld/notes.md",
+		"/home/xerocuil/Games/windows/paraworld/data/drive_c/Program Files/Sunflowers/ParaWorld/patch/patch2/Installation of patch.txt",
+		"/home/xerocuil/Downloads/games/pandora-directive/links",
+		"/home/xerocuil/Downloads/games/beast-within/links",
+		"/home/xerocuil/Documents/projects/gamedex/src/routes/device.py",
+		"/home/xerocuil/Documents/projects/gamedex/src/routes/api.py",
+		"/home/xerocuil/Documents/projects/gamedex/bin/sqlite2json.sh",
+		"/home/xerocuil/Documents/projects/gamedex/bin/test.md",
+		"/home/xerocuil/Documents/projects/gamedex/bin/unregistered_games.txt",
+		"/home/xerocuil/Documents/projects/gamedex/bin/sample_data.sql",
+		"/home/xerocuil/Documents/projects/gamedex/docs/index.md",
+		"/home/xerocuil/Documents/projects/gamedex/docs/dev_notes/models.md",
+		"/home/xerocuil/Documents/projects/gamedex/docs/dev_notes/js_api.md",
+		"/home/xerocuil/Documents/projects/gamedex/docs/readme.md",
+		"/home/xerocuil/Documents/projects/gamedex/src/static/assets/js/main.js",
+		"/home/xerocuil/Documents/projects/gamedex/.git/config",
+		"/home/xerocuil/Documents/projects/gamedex/docs/dev_notes/config.md",
+		"/home/xerocuil/Documents/projects/gamedex/docs/models.md",
+		"/home/xerocuil/Documents/projects/gamedex/bin/notes.md",
+		"/home/xerocuil/Documents/projects/gamedex/.gitignore",
+		"/home/xerocuil/Documents/projects/gamedex/Pipfile.lock",
+		"/home/xerocuil/Applications/webapps/data/ai-apps/start.sh",
+		"/home/xerocuil/.local/share/applications/empr.desktop",
+		"/home/xerocuil/Documents/projects/empr/docs/index.md",
+		"/home/xerocuil/Documents/projects/empr/src/lib/config.py",
+		"/home/xerocuil/Documents/projects/empr/readme.md",
+		"/home/xerocuil/Applications/Empr/utils/django.sh",
+		"/home/xerocuil/Documents/projects/empr/src/main.py",
+		"/home/xerocuil/Documents/projects/empr/docs/bin/notes.md",
+		"/home/xerocuil/Applications/webapps/data/chatgpt/start.sh",
+		"/home/xerocuil/Documents/projects/empr/mkdocs.yml",
+		"/home/xerocuil/Applications/webapps/data/chatgpt/icon.svg",
+		"/home/xerocuil/Documents/projects/empr/docs/dev_notes/index.md",
+		"/home/xerocuil/Documents/projects/empr/docs/dev_notes/js_api.md",
+		"/home/xerocuil/Applications/mkdocs/requirements.txt",
+		"/home/xerocuil/Documents/projects/empr/docs/developer_notes.md",
+		"/home/xerocuil/Applications/Empr/utils/utils.sh",
+		"/home/xerocuil/Applications/Empr/run.sh",
+		"/home/xerocuil/Applications/mkdocs/serve.sh",
+		"/home/xerocuil/Applications/mkdocs/mkdocs.sh",
+		"/home/xerocuil/Applications/mkdocs/mkdocs-terminal/terminal/mkdocs_theme.yml"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 125.0,
+		"where_history":
+		[
+			"",
+			"/home/xerocuil/Documents/projects/empr/src",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ic",
+			"emulator",
+			"legacy_id",
+			"\\u2019",
+			"\\u2018",
+			"ra_core",
+			"ic",
+			"export_dir",
+			"EXPORT_DIR",
+			"ic",
+			"slugify",
+			"generate_key",
+			"roms_dir",
+			"Config.server_name",
+			"Config.MEDIA",
+			"Config.JSON",
+			"roms_dir",
+			"rgw",
+			".z64",
+			"/home/xerocuil/Games/n64/",
+			"Utils",
+			"/home/xerocuil/Games/n64/",
+			"exit",
+			"v64",
+			"n64",
+			"/home/xerocuil/Games/n64/",
+			"FILEBASE",
+			"/home/xerocuil/Games/linux",
+			"/run/media/xerocuil/6F2B-FFD8/Games/linux",
+			"/run/media/xerocuil/6F2B-FFD8/Games/linux/neverwinter-nights-enhanced-edition",
+			"/run/media/xerocuil/6F2B-FFD8/Games/linux/neverwinter-nights-enhanced-edition/",
+			"/home/xerocuil/Games/linux/",
+			"original_release_date",
+			").bin",
+			"TNN Motorsports Hardcore Heat (USA) (Track ",
+			"star-wars-battlefront-ii",
+			"empr",
+			".empr",
+			"  ",
+			"url_for",
+			"or",
+			"empr",
+			"closeWindow",
+			"api",
+			"Api",
+			"json",
+			"list",
+			"filename",
+			"platform_slug",
+			"close_window",
+			"toggle_fullscreen",
+			"uninstallGame",
+			"  ",
+			"\t",
+			"toggleConsole",
+			"markdown",
+			"icon",
+			"setInstallDir",
+			"response-container",
+			"assets/",
+			"CATEGORY",
+			"category",
+			"data",
+			"goTopage",
+			"resetPages",
+			"message-three",
+			"window-one",
+			"class=\"window\"",
+			"json.load",
+			"json",
+			"'",
+			"auto",
+			"appName",
+			"response",
+			"response-container",
+			"shutil",
+			"tarfile",
+			"subprocess",
+			"makeself.1",
+			"header",
+			"confirm_installdir",
+			"DEFAULT_PATH",
+			"game_path",
+			"file_archive",
+			"cache_dir",
+			"file_slug+'.zip'",
+			"text",
+			"pd",
+			"get_filepath",
+			"Config",
+			"cabin-bold",
+			"     ",
+			"silver",
+			"$steel-blue",
+			").bin",
+			"Betrayal at Krondor (USA) (Track ",
+			"redirect",
+			"404",
+			"redirect",
+			"device_path",
+			"device_data",
+			"local_device_json",
+			"ic",
+			"webview",
+			"api",
+			"lib",
+			"classList",
+			"head",
+			"lib",
+			"rgw",
+			"deviceSlug",
+			"file_name",
+			"could not find ",
+			")",
+			"device_path",
+			"device_json",
+			"archive",
+			"create_rg35xx_image",
+			"install_to_rg35xx",
+			"print",
+			"db.",
+			"\"",
+			"path",
+			"ACEF",
+			".detail",
+			"font-size",
+			"\")\n",
+			")\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"core",
+			"print",
+			"EXPORT_DIR",
+			"",
+			"z64",
+			"",
+			"/run/media/xerocuil/6F2B-FFD8/Games/linux",
+			"/run/media/xerocuil/6F2B-FFD8/Games/linux/quadrilateral-cowboy",
+			"/run/media/xerocuil/6F2B-FFD8/Games/linux/quadrilateral-cowboy/",
+			"/run/media/xerocuil/6F2B-FFD8/Games/linux/",
+			".bin",
+			"tnn-ms-hh.track0",
+			"stalker-shadow-of-chernobyl",
+			"gamedex",
+			".gamedex",
+			"    ",
+			"|",
+			"gamedex",
+			"JsApi",
+			"fileName",
+			"platformSlug",
+			"closeWindow",
+			"toggleFullscreen",
+			"unInstallGame",
+			"    ",
+			"",
+			"CATEGORIES",
+			"categories",
+			"app",
+			"confirmation",
+			"config",
+			"class=\"page\"",
+			"\"",
+			"confirm_install_dir",
+			"INSTALL_DIR",
+			"games_path",
+			"CACHE_DIR",
+			"archive_name",
+			"Utils.get_filepath",
+			"    ",
+			".bin",
+			"betrayal-at-kondor.track",
+			"local_device_path",
+			"local_device_data",
+			"nav",
+			"device_slug",
+			"filename",
+			"game_path",
+			"display_img",
+			"install",
+			"",
+			".bin",
+			"disc.track",
+			"device_slug",
+			"slug",
+			"device_slug",
+			"platform_data",
+			"platform_config_path",
+			"platform_dir",
+			" ",
+			"",
+			"dragons-lair",
+			"./test",
+			"test",
+			"rg35xx",
+			"') }}\"",
+			"') }}",
+			"{{ url_for('static', filename='assets/",
+			"{{ url_for('static', filename=",
+			"games[\"1\"]",
+			"GENRES",
+			"option value='0'",
+			"validators=['FARTS', ",
+			"disc3",
+			"iso",
+			"(id=\"",
+			"platform",
+			"$default-margin * 2",
+			"$default-margin",
+			"platform_slug",
+			"filename",
+			"print",
+			"%}\n",
+			"",
+			"\n",
+			"CONIFG_EXTENSIONS",
+			"device",
+			"\"",
+			"GB_API_KEY",
+			"tl",
+			"t",
+			"ta",
+			"slug",
+			"IMPORT_JSON",
+			"IMPORT_DIR",
+			"",
+			"successfully.",
+			")",
+			"",
+			"GAMES_JSON",
+			"PLATFORMS_JSON",
+			"GENRES_JSON",
+			"CURSOR",
+			"CONNECTION",
+			"COLLECTIONS_JSON",
+			"game.filename",
+			"filename",
+			"12fr 4fr",
+			"0",
+			"1",
+			"em",
+			"template",
+			"rem",
+			"'",
+			"|",
+			"'",
+			"",
+			"['APP']",
+			"<div class=\"detail\">",
+			"div",
+			"span",
+			"label",
+			"div",
+			"  ",
+			"response-container",
+			"system-message",
+			"0"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 47.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 156.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 162.0
+	},
+	"output.Terminus":
+	{
+		"height": 206.0
+	},
+	"output.exec":
+	{
+		"height": 162.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 108.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gamedex.sublime-project",
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Projects/ACOCS/acocs.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 350.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 1280.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 230.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

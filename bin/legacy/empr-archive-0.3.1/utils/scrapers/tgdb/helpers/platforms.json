@@ -1,0 +1,114 @@
+{"id":1,"name":"PC","alias":"pc"}
+{"id":2,"name":"Nintendo GameCube","alias":"nintendo-gamecube"}
+{"id":3,"name":"Nintendo 64","alias":"nintendo-64"}
+{"id":4,"name":"Nintendo Game Boy","alias":"nintendo-gameboy"}
+{"id":5,"name":"Nintendo Game Boy Advance","alias":"nintendo-gameboy-advance"}
+{"id":6,"name":"Super Nintendo (SNES)","alias":"super-nintendo-snes"}
+{"id":7,"name":"Nintendo Entertainment System (NES)","alias":"nintendo-entertainment-system-nes"}
+{"id":8,"name":"Nintendo DS","alias":"nintendo-ds"}
+{"id":9,"name":"Nintendo Wii","alias":"nintendo-wii"}
+{"id":10,"name":"Sony Playstation","alias":"sony-playstation"}
+{"id":11,"name":"Sony Playstation 2","alias":"sony-playstation-2"}
+{"id":12,"name":"Sony Playstation 3","alias":"sony-playstation-3"}
+{"id":13,"name":"Sony Playstation Portable","alias":"sony-psp"}
+{"id":14,"name":"Microsoft Xbox","alias":"microsoft-xbox"}
+{"id":15,"name":"Microsoft Xbox 360","alias":"microsoft-xbox-360"}
+{"id":16,"name":"Sega Dreamcast","alias":"sega-dreamcast"}
+{"id":17,"name":"Sega Saturn","alias":"sega-saturn"}
+{"id":18,"name":"Sega Genesis","alias":"sega-genesis"}
+{"id":20,"name":"Sega Game Gear","alias":"sega-game-gear"}
+{"id":21,"name":"Sega CD","alias":"sega-cd"}
+{"id":22,"name":"Atari 2600","alias":"atari-2600"}
+{"id":23,"name":"Arcade","alias":"arcade"}
+{"id":24,"name":"Neo Geo","alias":"neogeo"}
+{"id":25,"name":"3DO","alias":"3do"}
+{"id":26,"name":"Atari 5200","alias":"atari-5200"}
+{"id":27,"name":"Atari 7800","alias":"atari-7800"}
+{"id":28,"name":"Atari Jaguar","alias":"atari-jaguar"}
+{"id":29,"name":"Atari Jaguar CD","alias":"atari-jaguar-cd"}
+{"id":30,"name":"Atari XE","alias":"atari-xe"}
+{"id":31,"name":"Colecovision","alias":"colecovision"}
+{"id":32,"name":"Intellivision","alias":"intellivision"}
+{"id":33,"name":"Sega 32X","alias":"sega-32x"}
+{"id":34,"name":"TurboGrafx 16","alias":"turbografx-16"}
+{"id":35,"name":"Sega Master System","alias":"sega-master-system"}
+{"id":36,"name":"Sega Mega Drive","alias":"sega-mega-drive"}
+{"id":37,"name":"Mac OS","alias":"mac-os"}
+{"id":38,"name":"Nintendo Wii U","alias":"nintendo-wii-u"}
+{"id":39,"name":"Sony Playstation Vita","alias":"sony-playstation-vita"}
+{"id":40,"name":"Commodore 64","alias":"commodore-64"}
+{"id":41,"name":"Nintendo Game Boy Color","alias":"nintendo-gameboy-color"}
+{"id":4911,"name":"Amiga","alias":"amiga"}
+{"id":4912,"name":"Nintendo 3DS","alias":"nintendo-3ds"}
+{"id":4913,"name":"Sinclair ZX Spectrum","alias":"sinclair-zx-spectrum"}
+{"id":4914,"name":"Amstrad CPC","alias":"amstrad-cpc"}
+{"id":4915,"name":"iOS","alias":"ios"}
+{"id":4916,"name":"Android","alias":"android"}
+{"id":4917,"name":"Philips CD-i","alias":"philips-cd-i"}
+{"id":4918,"name":"Nintendo Virtual Boy","alias":"nintendo-virtual-boy"}
+{"id":4919,"name":"Sony Playstation 4","alias":"sony-playstation-4"}
+{"id":4920,"name":"Microsoft Xbox One","alias":"microsoft-xbox-one"}
+{"id":4921,"name":"Ouya","alias":"ouya"}
+{"id":4922,"name":"Neo Geo Pocket","alias":"neo-geo-pocket"}
+{"id":4923,"name":"Neo Geo Pocket Color","alias":"neo-geo-pocket-color"}
+{"id":4924,"name":"Atari Lynx","alias":"atari-lynx"}
+{"id":4925,"name":"WonderSwan","alias":"wonderswan"}
+{"id":4926,"name":"WonderSwan Color","alias":"wonderswan-color"}
+{"id":4927,"name":"Magnavox Odyssey 2","alias":"magnavox-odyssey-2"}
+{"id":4928,"name":"Fairchild Channel F","alias":"fairchild"}
+{"id":4929,"name":"MSX","alias":"msx"}
+{"id":4930,"name":"PC-FX","alias":"pcfx"}
+{"id":4931,"name":"Sharp X68000","alias":"x68"}
+{"id":4932,"name":"FM Towns Marty","alias":"fmtowns"}
+{"id":4933,"name":"PC-88","alias":"pc88"}
+{"id":4934,"name":"PC-98","alias":"pc98"}
+{"id":4935,"name":"Nuon","alias":"nuon"}
+{"id":4936,"name":"Famicom Disk System","alias":"fds"}
+{"id":4937,"name":"Atari ST","alias":"atari-st"}
+{"id":4938,"name":"N-Gage","alias":"ngage"}
+{"id":4939,"name":"Vectrex","alias":"vectrex"}
+{"id":4940,"name":"Game.com","alias":"game-com"}
+{"id":4941,"name":"TRS-80 Color Computer","alias":"trs80-color"}
+{"id":4942,"name":"Apple II","alias":"apple2"}
+{"id":4943,"name":"Atari 800","alias":"atari800"}
+{"id":4944,"name":"Acorn Archimedes","alias":"acorn-archimedes"}
+{"id":4945,"name":"Commodore VIC-20","alias":"commodore-vic20"}
+{"id":4946,"name":"Commodore 128","alias":"c128"}
+{"id":4947,"name":"Amiga CD32","alias":"amiga-cd32"}
+{"id":4948,"name":"Mega Duck","alias":"megaduck"}
+{"id":4949,"name":"SEGA SG-1000","alias":"sg1000"}
+{"id":4950,"name":"Game & Watch","alias":"game-and-watch"}
+{"id":4951,"name":"Handheld Electronic Games (LCD)","alias":"lcd"}
+{"id":4952,"name":"Dragon 32/64","alias":"dragon32-64"}
+{"id":4953,"name":"Texas Instruments TI-99/4A","alias":"texas-instruments-ti-99-4a"}
+{"id":4954,"name":"Acorn Electron","alias":"acorn-electron"}
+{"id":4955,"name":"TurboGrafx CD","alias":"turbo-grafx-cd"}
+{"id":4956,"name":"Neo Geo CD","alias":"neo-geo-cd"}
+{"id":4957,"name":"Nintendo Pokémon Mini","alias":"nintendo-pokmon-mini"}
+{"id":4958,"name":"Sega Pico","alias":"sega-pico"}
+{"id":4959,"name":"Watara Supervision","alias":"watara-supervision"}
+{"id":4960,"name":"Tomy Tutor","alias":"tomy-pyta"}
+{"id":4961,"name":"Magnavox Odyssey 1","alias":"magnavox-odyssey"}
+{"id":4962,"name":"Gakken Compact Vision","alias":"gakken-compact-vision"}
+{"id":4963,"name":"Emerson Arcadia 2001","alias":"emerson-arcadia-2001"}
+{"id":4964,"name":"Casio PV-1000","alias":"casio-pv-1000"}
+{"id":4965,"name":"Epoch Cassette Vision","alias":"epoch-cassette-vision"}
+{"id":4966,"name":"Epoch Super Cassette Vision","alias":"epoch-super-cassette-vision"}
+{"id":4967,"name":"RCA Studio II","alias":"rca-studio-ii"}
+{"id":4968,"name":"Bally Astrocade","alias":"bally-astrocade"}
+{"id":4969,"name":"APF MP-1000","alias":"apf-mp-1000"}
+{"id":4970,"name":"Coleco Telstar Arcade","alias":"coleco-telstar-arcade"}
+{"id":4971,"name":"Nintendo Switch","alias":"nintendo-switch"}
+{"id":4972,"name":"Milton Bradley Microvision","alias":"milton-bradley-microvision"}
+{"id":4973,"name":"Entex Select-a-Game","alias":"entex-select-a-game"}
+{"id":4974,"name":"Entex Adventure Vision","alias":"entex-adventure-vision"}
+{"id":4975,"name":"Pioneer LaserActive","alias":""}
+{"id":4976,"name":"Action Max","alias":"action-max"}
+{"id":4977,"name":"Sharp X1","alias":"sharp-x1"}
+{"id":4978,"name":"Fujitsu FM-7","alias":"fujitsu-fm-7"}
+{"id":4979,"name":"SAM Coupé","alias":"sam-coupe"}
+{"id":4980,"name":"Sony Playstation 5","alias":"sony-playstation-5"}
+{"id":4981,"name":"Microsoft Xbox Series X","alias":"microsoft-xbox-series-x"}
+{"id":4982,"name":"Tandy Visual Interactive System","alias":"tandy-vis"}
+{"id":4983,"name":"R-Zone","alias":"r-zone"}
+{"id":4984,"name":"Xavix Port","alias":"xavix-port"}

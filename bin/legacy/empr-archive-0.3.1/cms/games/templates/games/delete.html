@@ -1,0 +1,15 @@
+{% extends "dashboard/base.html" %}
+{% load markdown static %}
+
+{% block title %}Delete game.title?{% endblock %}
+
+{% block content %}
+  
+<p>Delete {{ game.title }}?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <input class="button is-small is-danger" type="submit" value="Delete Game">
+</form>
+
+{% endblock %}

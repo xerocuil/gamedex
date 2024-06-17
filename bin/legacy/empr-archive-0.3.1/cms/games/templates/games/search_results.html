@@ -1,0 +1,17 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+
+<h1>Search Results</h1>
+
+<table class="u-full-width">
+	{% include "games/game_list_header.html" %}
+
+	{% for g in object_list %}
+		{% include "games/game_list.html" %}
+	{% endfor %}
+</table>
+
+{% include "games/game_list_footer.html" %}
+
+{% endblock %}

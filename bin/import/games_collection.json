@@ -1,0 +1,382 @@
+[
+    {
+        "description": "Games starring any version of the Batman character owned by DC Comics.",
+        "id": 2,
+        "name": "Batman"
+    },
+    {
+        "description": "The EA Sports BIG label was used for publishing sports games published by Electronic Arts that were focused either on casual gameplay or extreme sports.",
+        "id": 3,
+        "name": "EA Sports BIG"
+    },
+    {
+        "description": "Any game that is produced under or based on the official Dungeons & Dragons (D&D) or Advanced Dungeons & Dragons (AD&D) brands and is officially licensed under them.",
+        "id": 4,
+        "name": "Dungeons & Dragons"
+    },
+    {
+        "description": "All games from the Sid Meier's Civilization series and its spin-offs.",
+        "id": 5,
+        "name": "Civilization"
+    },
+    {
+        "description": "Any game that contains characters, locations, or situations licensed from the Star Wars franchise.",
+        "id": 7,
+        "name": "Star Wars"
+    },
+    {
+        "description": "Games based on the popular LEGO building blocks.",
+        "id": 9,
+        "name": "LEGO"
+    },
+    {
+        "description": "Fantasy RPG games based on a series of novels written by Andrzej Sapkowski.",
+        "id": 10,
+        "name": "The Witcher"
+    },
+    {
+        "description": "Grand Theft Auto is a sandbox-violence game, that has drawn attention all over the world, and has pretty much become one of the most noticeable criminal-sandbox franchises ever.",
+        "id": 11,
+        "name": "Grand Theft Auto"
+    },
+    {
+        "description": "The Fallout franchise is a post-apocalyptic series of role-playing and tactics games originally developed by Black Isle, and most recently, Bethesda Softworks and Obsidian Entertainment.",
+        "id": 12,
+        "name": "Fallout"
+    },
+    {
+        "description": "A collection of award-winning, first-person shooter, cyberpunk role-playing games.",
+        "id": 13,
+        "name": "Deus Ex"
+    },
+    {
+        "description": "Licensed games in the Parasite Eve series, by Squaresoft, loosely based on the novel by Hideaki Sena.",
+        "id": 15,
+        "name": "Parasite Eve"
+    },
+    {
+        "description": "The God of War franchise is a series of action-adventure games that chronicle the exploits of the anti-hero Kratos and his quest for revenge on the Greek Gods for the death of his family.",
+        "id": 16,
+        "name": "God of War"
+    },
+    {
+        "description": "Tactical, Espionage, Action. A revered and long-running series directed by Hideo Kojima.",
+        "id": 17,
+        "name": "Metal Gear"
+    },
+    {
+        "description": "Set in the mythical realm of Nosgoth, the Legacy of Kain franchise follows the tragic tale of the vampire Kain as he tries to fulfill his destiny as Nosgoth's savior. The gameplay involves action and puzzle-solving elements.",
+        "id": 18,
+        "name": "Legacy of Kain"
+    },
+    {
+        "description": "SNK's 2D fighting universe.",
+        "id": 19,
+        "name": "King of Fighters"
+    },
+    {
+        "description": "All Super Mario platform games, the core of the Super Mario franchise.",
+        "id": 21,
+        "name": "Super Mario"
+    },
+    {
+        "description": "The Castlevania franchises chronicles the ongoing fight against Count Dracula by the Belmont family and their allies. To this day, Dracula continues to pose a threat to the world.",
+        "id": 22,
+        "name": "Castlevania"
+    },
+    {
+        "description": "Nintendo's flagship fantasy action-adventure series created by Shigeru Miyamoto and Takashi Tezuka in 1985, the Zelda series is the source of many revolutionary gameplay conventions, and continues to be one of the most popular and critically acclaimed video game franchises of all time.",
+        "id": 23,
+        "name": "Legend of Zelda"
+    },
+    {
+        "description": "The Mega Man franchise covers a large number of action games from the core series and several offshoots, including the Mega Man X series and  Mega Man Battle Network.",
+        "id": 24,
+        "name": "Mega Man"
+    },
+    {
+        "description": "The Metroid series follows the missions of Samus Aran--a bounty hunter for the Galactic Federation--as she explores the galaxy fighting off Space Pirates and a variety of other enemies.",
+        "id": 25,
+        "name": "Metroid"
+    },
+    {
+        "description": "Half-Life is a series of games developed by Valve, which share a common setting and recurrent gameplay elements. The main installments are predominantly linear, story-driven first-person shooters with light puzzle-solving elements, connected by an overarching story-line and a common protagonist, the scientist Gordon Freeman.",
+        "id": 26,
+        "name": "Half-Life"
+    },
+    {
+        "description": "Elder Scrolls is a series of predominantly action role-playing games united by a common setting, a medieval fantasy world known as Nirn. The first game in the series was Arena (1994), which introduced the series' lore, themes, and main visual elements, including 3D environments and first-person view.",
+        "id": 27,
+        "name": "Elder Scrolls"
+    },
+    {
+        "description": "Borderlands is an action role-playing first-person looter shooter video game franchise set in a space-western science fantasy setting.",
+        "id": 28,
+        "name": "Borderlands"
+    },
+    {
+        "description": "Any game that contains characters, locations, or situations licensed from The Walt Disney Company.",
+        "id": 29,
+        "name": "Disney"
+    },
+    {
+        "description": "Divinity is a series of role-playing games by the Belgian developer Larian Studios. The games take place in a fantasy world known as Rivellon and have an overarching story involving the Divine Lucian and his adopted son Damian, who eventually becomes the series' main antagonist. Though the protagonist in each game is different, there are a few recurrent characters and themes as well.",
+        "id": 30,
+        "name": "Divinity"
+    },
+    {
+        "description": "This group includes the main series of first-person shooters by Id Software, starting with Doom (1993), as well as their official expansion packs and spin-offs. The original Doom is commonly considered one of the genre's progenitors. Doom games feature predominantly horror-based thematics with sci-fi elements.",
+        "id": 31,
+        "name": "DOOM"
+    },
+    {
+        "description": "A series of games which puts you in the middle of a comedy game show known as \"You Don't Know Jack.\" The central theme of the game is that it combines high culture (art, literature, history, the sciences) and pop culture (television, movies, video games, music, trivia). For example, one question might take Homer the Poet and Homer Simpson and use them to create a question about corporal punishment. Sometimes, however, a specific game in the series may focus on one theme in particular, such as the movies.\r\n\r\nEmphasis is placed on the series' humorous appeal, especially with its quick, witty dialog, its sarcastic game show host, and the often bizarre situations that occur on the show itself. The series uses very little visuals and mostly utilizes audio recordings to illustrate the idea that players are on the set of a game show.",
+        "id": 32,
+        "name": "You Don't Know Jack"
+    },
+    {
+        "description": "Games in id Software's 3D first-person-shooter series, Quake, sporadically recounting the ongoing saga of Earth's war against the Stroggs.",
+        "id": 33,
+        "name": "Quake"
+    },
+    {
+        "description": "Sonic the Hedgehog is a series of games released by Sega and originally developed by its Sonic Team division. The titular character, a semi-anthropomorphic hedgehog who can run at supersonic speed, was created to fill the role of Sega's official mascot (replacing Alex Kidd) and a character who was supposed to compete in popularity with Nintendo's Mario.",
+        "id": 34,
+        "name": "Sonic the Hedgehog"
+    },
+    {
+        "description": "Tomb Raider is a series of action games with platforming and puzzle-solving elements, featuring a recurrent heroine, an archaeologist named Lara Croft. Most of the games in the series involve Lara traversing complex and hazardous locations, solving environmental puzzles and using abilities such as jumping and climbing to access new areas. Lara's trademark weapons are twin pistols with unlimited ammunition; however, she can usually find other weapons and items to help her deal with enemies.",
+        "id": 35,
+        "name": "Tomb Raider"
+    },
+    {
+        "description": "This group includes all licensed games based on the Japanese anime meta-series Gundam by Sunrise Studios.",
+        "id": 36,
+        "name": "Gundam"
+    },
+    {
+        "description": "Rolling Thunder is a series of run and gun shooters produced by Namco.",
+        "id": 37,
+        "name": "Rolling Thunder"
+    },
+    {
+        "description": "Nihon Bussan's line of arcade shmups, starting with Moon Cresta.",
+        "id": 38,
+        "name": "Cresta"
+    },
+    {
+        "description": "Phantasy Star games, created by Sega, include the original Japanese-style role-playing series (which encompassed four games), its various spin-offs (such as the Phantasy Star Text Adventures series), and online RPGs, which originated with Phantasy Star Online (2000) and have been dominating the series ever since. The initial games were designed by Rieko Kodama and Yuji Naka.",
+        "id": 41,
+        "name": "Phantasy Star"
+    },
+    {
+        "description": "A series of skateboarding games endorsed by pro skateboarder Tony Hawk.",
+        "id": 42,
+        "name": "Tony Hawk"
+    },
+    {
+        "description": "Electronic Arts' long-running series of racing games.",
+        "id": 43,
+        "name": "Need For Speed"
+    },
+    {
+        "description": "Streets of Rage is a series of side-scrolling beat 'em up video games, centering on the efforts of several ex-police vigilantes trying to rid a fictional, large American city from a crime syndicate that has corrupted its local government.",
+        "id": 44,
+        "name": "Streets of Rage"
+    },
+    {
+        "description": "Games featuring Hudson Soft's heroic robot bomb-lobber, generally in top-down brick-destroying environments -- and often in party deathmatches against other players.",
+        "id": 45,
+        "name": "Bomberman"
+    },
+    {
+        "description": "After porting Wonderboy on the Famicom/NES, Hudson Soft further developed the platformer saga of this primitive South Seas islander, spinning it off in a totally different direction.",
+        "id": 46,
+        "name": "Adventure Island"
+    },
+    {
+        "description": "Hudson's premier shoot'em'up series, beginning in the mid-eighties.",
+        "id": 47,
+        "name": "Star Soldier"
+    },
+    {
+        "description": "A series of humorous titles in various genres by Konami starring Goemon, a warrior in feudal Japan who sets out to fight evil. The character is based on the historical Ishikawa Goemon, a 16th century outlaw who has become very popular in Japan. The series spans side-scrollers, 3D action games, and a few RPGs and adventures.",
+        "id": 48,
+        "name": "Ganbare Goemon"
+    },
+    {
+        "description": "All games produced under an official Tetris license/brand, including Tetris, Welltris, Hatris, Wordtris, Super Tetris, etc.",
+        "id": 49,
+        "name": "Tetris"
+    },
+    {
+        "description": "SNK's original Street Fighter clone turned legit fighting franchise in which warriors from all corners of the world battle against each other.",
+        "id": 50,
+        "name": "Fatal Fury"
+    },
+    {
+        "description": "A long running series of side-scrolling run and gun shooters. The majority of the games feature Marco Rossi of the Peregrine Falcon Special Forces Squad. The games usually deal with battling against General Morden's army, although some games deal with protecting Earth from an extraterrestrial menace.",
+        "id": 51,
+        "name": "Metal Slug"
+    },
+    {
+        "description": "SNK's belt scrolling action series that mixes ancient Japanese history and modern settings characters.",
+        "id": 52,
+        "name": "Sengoku"
+    },
+    {
+        "description": "Shining is a series of fantasy console games developed by Sega.",
+        "id": 53,
+        "name": "Shining"
+    },
+    {
+        "description": "Fire Emblem is a series of tactical role-playing games by Intelligent Systems. Its installments take place on different continents of a fantasy world, which largely constitute their own separate universes and are otherwise unrelated to each other. The games are plot-driven and focus on individual characters and their relationships.\r\n\r\nLike other representatives of the genre, these games combine large-scale tactical battles with role-playing elements such as equipment customization and leveling up. The series' trademark gameplay elements involve a rock-paper-scissors system for weapons, breakable equipment, and permanent death (characters fallen in battle usually cannot be revived by any means).",
+        "id": 54,
+        "name": "Fire Emblem"
+    },
+    {
+        "description": "Syphon Filter is a series of third person shooters released on Sony consoles. The series focuses on a spy named Gabe Logan.",
+        "id": 55,
+        "name": "Syphon Filter"
+    },
+    {
+        "description": "The Picross games are nonogram games, where the player has to uncover a picture using number hints given on the borders of the hidden image in a sort of paint-by-numbers fashion.",
+        "id": 56,
+        "name": "Picross"
+    },
+    {
+        "description": "A long-running action-platformer franchise by Capcom, notorious for its severe difficulty.",
+        "id": 57,
+        "name": "Ghost 'N Goblins"
+    },
+    {
+        "description": "Series of games featuring the exploits of Indiana Jones-style archaeologist-explorer-cum-treasure-hunter Pitfall Harry and members of his extended family as they run, jump, duck and occasionally shoot their way through dense jungles, dim caverns, dangerous ruins and other such exotic locales in pursuit of adventure and valuable artifacts. Gameplay is generally of the platformer variety, both of the 2D and 3D varieties.",
+        "id": 58,
+        "name": "Pitfall"
+    },
+    {
+        "description": "The Soul Blade / Edge / Calibur series is a 3D weapon-based versus fighting originally developed by Bandai Namco Entertainment.",
+        "id": 59,
+        "name": "SoulCalibur"
+    },
+    {
+        "description": "Christmas themed games.",
+        "id": 60,
+        "name": "Christmas"
+    },
+    {
+        "description": "Developed by Game Freak, Pokémon games are predominantly RPGs with a heavy emphasis on monster training, somewhat similar in concept to earlier Megami Tensei games. Typically, the protagonist is a monster trainer whose goal is to capture various types of Pokémon and train them so that they can achieve higher level and participate in battles against enemies, which may include hostile trainers and their Pokémon.",
+        "id": 61,
+        "name": "Pokémon"
+    },
+    {
+        "description": "Titles in the Aero Fighters / Sonic Wings series. The earlier games are arcade-style shoot-'em-ups with vertical scrolling, and the later ones feature 3D graphics and light sim elements.",
+        "id": 62,
+        "name": "Aero Fighters/Sonic Wings"
+    },
+    {
+        "description": "Megami Tensei encompasses all games that feature themes, characters, and gameplay elements first introduced in Digital Devil Story: Megami Tensei. With a few exceptions, these games belong to the role-playing genre. This includes games under the Shin Megami Tensei label, sub-series such as Persona, and others.",
+        "id": 63,
+        "name": "Megami Tensei"
+    },
+    {
+        "description": "Front Mission series revolves around warfare in a near to distant future. The setting is a fictionalized Earth, typically divided into several supranational unions that wage war on each other. Political conflicts intertwined with the characters' personal ambitions constitute the main plot-related content in these games.",
+        "id": 64,
+        "name": "Front Mission"
+    },
+    {
+        "description": "Tekken (鉄拳, \"Iron Fist\") is a series of versus fighting games by Namco. The gameplay is close to the Virtua Fighter series in attempting to emulate realistic combat. A trademark feature of the series is the assignment of separate buttons for each of the player character's limbs. Later installments also made use of 3D environments for sidestepping and other abilities.",
+        "id": 65,
+        "name": "Tekken"
+    },
+    {
+        "description": "Columns is a falling block puzzle game where players try to match blocks of the same color in order to remove them. It was first developed in 1989 by Jay Geertson with Sega purchasing the rights in 1990.",
+        "id": 66,
+        "name": "Columns"
+    },
+    {
+        "description": "Weapon fighting 2D series by SNK set in feudal Japan.",
+        "id": 67,
+        "name": "Samurai Shodown"
+    },
+    {
+        "description": "Bonk is a bald-headed, prehistoric caveman who loves to head-bump his foes.",
+        "id": 68,
+        "name": "Bonk"
+    },
+    {
+        "description": "Success' series of games (generally shoot-'em-ups) featuring the anime-inspired stylings of young witch Cotton (and her faerie sidekick Silk from Filament) overcoming the obstacles strewn in their path by Wool interfering with their pursuit of the delicious confection Willow.",
+        "id": 69,
+        "name": "Cotton"
+    },
+    {
+        "description": "Panzer Dragoon is a series of games united by a common setting and revolving around the adventures of dragon-riding warriors.",
+        "id": 70,
+        "name": "Panzer Dragoon"
+    },
+    {
+        "description": "Gothic is a series of role-playing games with action combat, originally created by the German developer Piranha Bytes. The games are set in an unnamed medieval fantasy world, in or around the fictional kingdom of Myrtana.",
+        "id": 71,
+        "name": "Gothic"
+    },
+    {
+        "description": "The main games in the Halo franchise stars the character Master Chief along with his AI companion Cortana fighting the alien race known as The Covenant. This war also involves an ancient, extinct race known as The Forerunner that once created a number of relics including the titular Halo rings.",
+        "id": 72,
+        "name": "Halo"
+    },
+    {
+        "description": "Prince of Persia is a long-running series of action games with predominantly platform-oriented gameplay and puzzle-solving elements.",
+        "id": 73,
+        "name": "Prince of Persia"
+    },
+    {
+        "description": "Space flight and combat simulation series developed by ORIGIN Systems, Inc. set around the military conflicts between Earth and other space-faring races, notably the feline Kilrathi, in the far future.",
+        "id": 74,
+        "name": "Wing Commander"
+    },
+    {
+        "description": "King's Field is a series of first-person action role-playing games by FromSoftware. The first game in the series was one of the earliest releases for the PlayStation console. The first three games follow an overarching storyline, which differs in some details between the Japanese and the Western releases, but for the most part focuses on the royal family Forester from the kingdom of Verdite. A recurrent plot element in the games is the retrieval of the holy Moonlight Sword.",
+        "id": 75,
+        "name": "King's Field"
+    },
+    {
+        "description": "This group includes games based on the tabletop RPG Shadowrun, created in 1989 by FASA Corporation. The Shadowrun universe combines elements of science fiction, cyberpunk, and fantasy. It is set in late 21st century and depicts a futuristic world where magic has re-emerged, co-existing with nanotechnology and a global computer network known as the Matrix. Many humans practice magic as shamans, and non-human races such as trolls, elves, dwarves, as well as other mythological creatures (e.g. dragons) play an active role in contemporary urban life. Powerful mega-corporations are commonly portrayed as the enemies in Shadowrun.",
+        "id": 76,
+        "name": "Shadowrun"
+    },
+    {
+        "description": "Atari's long-lived franchise of multiplayer top-down fantasy dungeon romps, classically featuring monster generators and character class selection color-coded by player.",
+        "id": 77,
+        "name": "Gauntlet"
+    },
+    {
+        "description": "A series of free-roaming futuristic strategy games set in space.",
+        "id": 78,
+        "name": "Homeworld"
+    },
+    {
+        "description": "A series of fantasy strategy games originally developed by Bungie Studios. When the company was acquired by Microsoft in 2000, Take-Two Interactive Software, Inc. acquired the rights.",
+        "id": 79,
+        "name": "Myth"
+    },
+    {
+        "description": "THQ's series of insurrectionary Martian story-driven first-person shooters, featuring for its miner protagonists fully deformable terrain.",
+        "id": 80,
+        "name": "Red Faction"
+    },
+    {
+        "description": "Series of rally games by developed by Sega.",
+        "id": 81,
+        "name": "SEGA Rally"
+    },
+    {
+        "description": "The Ninja Gaiden series by Tecmo follows the adventures of the ninja Ryu Hayabusa throughout the world and even other dimensions. The series began in the 2D side scroller action genre and was eventually revitalized as a 3D action game.",
+        "id": 82,
+        "name": "Ninja Gaiden"
+    },
+    {
+        "description": "Games starring the Turok: Dinosaur Hunter character or featuring characters settings or situations from the Turok comics, originally from Western publishing, then later published by Dell Comics, then Gold Key, then Valiant and finally Acclaim Entertainment.",
+        "id": 83,
+        "name": "Turok"
+    }
+]

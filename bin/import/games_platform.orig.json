@@ -1,0 +1,354 @@
+[
+    {
+        "icon": "platform/icons/gamecube_icon.png",
+        "id": 2,
+        "logo": "platform/logos/gamecube_logo.png",
+        "name": "GameCube",
+        "platform_type": "EMU",
+        "slug": "gamecube"
+    },
+    {
+        "icon": "platform/icons/amiga-icon.png",
+        "id": 3,
+        "logo": "platform/logos/amiga.png",
+        "name": "Amiga",
+        "platform_type": "EMU",
+        "slug": "amiga"
+    },
+    {
+        "icon": "platform/icons/steam-icon.png",
+        "id": 4,
+        "logo": "platform/logos/steam-logo.png",
+        "name": "Steam",
+        "platform_type": "APP",
+        "slug": "steam"
+    },
+    {
+        "icon": "platform/icons/ps1-icon.png",
+        "id": 5,
+        "logo": "platform/logos/ps1-logo.png",
+        "name": "PlayStation",
+        "platform_type": "EMU",
+        "slug": "psx"
+    },
+    {
+        "icon": "platform/icons/dreamcast-icon.png",
+        "id": 6,
+        "logo": "platform/logos/dreamcast-logo.png",
+        "name": "Dreamcast",
+        "platform_type": "EMU",
+        "slug": "dreamcast"
+    },
+    {
+        "icon": "platform/icons/nintendo-64-icon.png",
+        "id": 7,
+        "logo": "platform/logos/nintendo-64-logo.png",
+        "name": "Nintendo 64",
+        "platform_type": "EMU",
+        "slug": "n64"
+    },
+    {
+        "icon": "platform/icons/psp_icon.png",
+        "id": 8,
+        "logo": "platform/logos/psp_logo.png",
+        "name": "PlayStation Portable",
+        "platform_type": "EMU",
+        "slug": "psp"
+    },
+    {
+        "icon": "platform/icons/atari-icon.png",
+        "id": 9,
+        "logo": "platform/logos/atari-logo.png",
+        "name": "Atari 2600",
+        "platform_type": "EMU",
+        "slug": "2600"
+    },
+    {
+        "icon": "platform/icons/nes-icon_6r5gmjR.png",
+        "id": 10,
+        "logo": "platform/logos/nes-logo.png",
+        "name": "Nintendo",
+        "platform_type": "EMU",
+        "slug": "nes"
+    },
+    {
+        "icon": "platform/icons/ps2-icon.png",
+        "id": 11,
+        "logo": "platform/logos/ps2-logo.png",
+        "name": "PlayStation 2",
+        "platform_type": "EMU",
+        "slug": "ps2"
+    },
+    {
+        "icon": "platform/icons/genesis-icon.png",
+        "id": 12,
+        "logo": "platform/logos/genesis-logo.png",
+        "name": "Genesis",
+        "platform_type": "EMU",
+        "slug": "genesis"
+    },
+    {
+        "icon": "platform/icons/3do-icon.png",
+        "id": 13,
+        "logo": "platform/logos/3do-logo.png",
+        "name": "3DO",
+        "platform_type": "EMU",
+        "slug": "3d0"
+    },
+    {
+        "icon": "platform/icons/arcade-icon.png",
+        "id": 14,
+        "logo": "platform/logos/arcade-logo.png",
+        "name": "Arcade",
+        "platform_type": "EMU",
+        "slug": "arcade"
+    },
+    {
+        "icon": "platform/icons/gba-icon.png",
+        "id": 15,
+        "logo": "platform/logos/gba-logo.png",
+        "name": "Game Boy Advance",
+        "platform_type": "EMU",
+        "slug": "gba"
+    },
+    {
+        "icon": "platform/icons/game-boy-color-icon.png",
+        "id": 16,
+        "logo": "platform/logos/game-boy-color-logo.png",
+        "name": "Game Boy Color",
+        "platform_type": "EMU",
+        "slug": "gbc"
+    },
+    {
+        "icon": "platform/icons/neo-geo-icon.png",
+        "id": 17,
+        "logo": "platform/logos/neo-geo-logo.png",
+        "name": "NEO•GEO",
+        "platform_type": "EMU",
+        "slug": "neogeo"
+    },
+    {
+        "icon": "platform/icons/neo-geo-pocket-icon.png",
+        "id": 18,
+        "logo": "platform/logos/neo-geo-pocket-logo.png",
+        "name": "Neo Geo Pocket",
+        "platform_type": "EMU",
+        "slug": "ngp"
+    },
+    {
+        "icon": "platform/icons/saturn-icon.png",
+        "id": 19,
+        "logo": "platform/logos/saturn-logo.png",
+        "name": "Saturn",
+        "platform_type": "EMU",
+        "slug": "saturn"
+    },
+    {
+        "icon": "platform/icons/turbo-duo-icon.png",
+        "id": 20,
+        "logo": "platform/logos/turbo-duo-logo.png",
+        "name": "TurboGrafx-16",
+        "platform_type": "EMU",
+        "slug": "tg16"
+    },
+    {
+        "icon": "platform/icons/wii-icon.png",
+        "id": 21,
+        "logo": "platform/logos/wii-logo.png",
+        "name": "Wii",
+        "platform_type": "EMU",
+        "slug": "wii"
+    },
+    {
+        "icon": "platform/icons/xbox-icon.png",
+        "id": 22,
+        "logo": "platform/logos/xbox-logo.png",
+        "name": "Xbox",
+        "platform_type": "EMU",
+        "slug": "xbox"
+    },
+    {
+        "icon": "platform/icons/wii-u-icon.png",
+        "id": 23,
+        "logo": "platform/logos/wii-u-logo.png",
+        "name": "Wii U",
+        "platform_type": "EMU",
+        "slug": "wiiu"
+    },
+    {
+        "icon": "platform/icons/snes-icon.png",
+        "id": 24,
+        "logo": "platform/logos/snes-logo.png",
+        "name": "Super Nintendo",
+        "platform_type": "EMU",
+        "slug": "snes"
+    },
+    {
+        "icon": "platform/icons/jaguar-icon.png",
+        "id": 26,
+        "logo": "platform/logos/jaguar-logo.png",
+        "name": "Atari Jaguar",
+        "platform_type": "EMU",
+        "slug": "jaguar"
+    },
+    {
+        "icon": "platform/icons/sega-cd-icon.png",
+        "id": 27,
+        "logo": "platform/logos/sega-cd-logo.png",
+        "name": "Sega CD",
+        "platform_type": "EMU",
+        "slug": "scd"
+    },
+    {
+        "icon": "platform/icons/gg-icon.png",
+        "id": 28,
+        "logo": "platform/logos/gg-logo.png",
+        "name": "Game Gear",
+        "platform_type": "EMU",
+        "slug": "gg"
+    },
+    {
+        "icon": "platform/icons/sms-icon.png",
+        "id": 29,
+        "logo": "platform/logos/sms-logo.png",
+        "name": "Master System",
+        "platform_type": "EMU",
+        "slug": "sms"
+    },
+    {
+        "icon": "platform/icons/lynx_icon.png",
+        "id": 30,
+        "logo": "platform/logos/lynx-logo.png",
+        "name": "Atari Lynx",
+        "platform_type": "EMU",
+        "slug": "lynx"
+    },
+    {
+        "icon": "platform/icons/32x-icon.png",
+        "id": 31,
+        "logo": "platform/logos/32x-logo.png",
+        "name": "32X",
+        "platform_type": "EMU",
+        "slug": "32x"
+    },
+    {
+        "icon": "platform/icons/Virtualboy_icon.png",
+        "id": 32,
+        "logo": "platform/logos/Virtualboy_logo.png",
+        "name": "Virtual Boy",
+        "platform_type": "EMU",
+        "slug": "vb"
+    },
+    {
+        "icon": "platform/icons/wonderswan-icon.png",
+        "id": 33,
+        "logo": "platform/logos/wonderswan-logo.png",
+        "name": "WonderSwan",
+        "platform_type": "EMU",
+        "slug": "ws"
+    },
+    {
+        "icon": "platform/icons/c64-icon.png",
+        "id": 34,
+        "logo": "platform/logos/c64-logo.png",
+        "name": "Commodore 64",
+        "platform_type": "EMU",
+        "slug": "c64"
+    },
+    {
+        "icon": "platform/icons/gb-icon.png",
+        "id": 35,
+        "logo": "platform/logos/gb-logo.png",
+        "name": "Game Boy",
+        "platform_type": "EMU",
+        "slug": "gb"
+    },
+    {
+        "icon": "platform/icons/ps3_icon.png",
+        "id": 36,
+        "logo": "platform/logos/ps3_logo.png",
+        "name": "PlayStation 3",
+        "platform_type": "EMU",
+        "slug": "ps3"
+    },
+    {
+        "icon": "platform/icons/nds_icon.png",
+        "id": 37,
+        "logo": "platform/logos/nds_logo.png",
+        "name": "Nintendo DS",
+        "platform_type": "EMU",
+        "slug": "nds"
+    },
+    {
+        "icon": "platform/icons/3ds_icon.png",
+        "id": 38,
+        "logo": "platform/logos/3ds_logo.png",
+        "name": "Nintendo 3DS",
+        "platform_type": "EMU",
+        "slug": "3ds"
+    },
+    {
+        "icon": "platform/icons/msx_icon.png",
+        "id": 39,
+        "logo": "platform/logos/msx_logo.png",
+        "name": "MSX",
+        "platform_type": "EMU",
+        "slug": "msx"
+    },
+    {
+        "icon": "platform/icons/neo_geo_cd_icon.png",
+        "id": 40,
+        "logo": "platform/logos/neo_geo_cd_logo.png",
+        "name": "Neo Geo CD",
+        "platform_type": "EMU",
+        "slug": "ngcd"
+    },
+    {
+        "icon": "platform/icons/ms-dos-icon.png",
+        "id": 41,
+        "logo": "platform/logos/ms-dos-logo-gs.png",
+        "name": "MS-DOS",
+        "platform_type": "EMU",
+        "slug": "dos"
+    },
+    {
+        "icon": "platform/icons/icon.png",
+        "id": 42,
+        "logo": "platform/logos/logo.png",
+        "name": "Linux",
+        "platform_type": "APP",
+        "slug": "linux"
+    },
+    {
+        "icon": "platform/icons/icon_2WUqVlM.png",
+        "id": 43,
+        "logo": "platform/logos/logo_sKFgwY0.png",
+        "name": "Windows",
+        "platform_type": "APP",
+        "slug": "windows"
+    },
+    {
+        "icon": "",
+        "id": 44,
+        "logo": "",
+        "name": "Adobe Flash",
+        "platform_type": "EMU",
+        "slug": "flash"
+    },
+    {
+        "icon": "",
+        "id": 45,
+        "logo": "",
+        "name": "ScummVM",
+        "platform_type": "EMU",
+        "slug": "scummvm"
+    },
+    {
+        "icon": "",
+        "id": 46,
+        "logo": "",
+        "name": "GZDoom",
+        "platform_type": "EMU",
+        "slug": "gzdoom"
+    }
+]

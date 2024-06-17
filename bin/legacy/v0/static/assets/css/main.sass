@@ -1,0 +1,233 @@
+@use "shared" as *
+@use "themes/print" as *
+
+
+// Global Variables
+$base: 1.6rem
+$default-margin: $base * 2
+
+
+// Elements
+html
+    font-size: 62.5%
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea
+    font-family: $default-font
+    font-size: $base
+
+body
+    color: $main-color
+    background-color: $main-bkgd
+    height: 100%
+    z-index: 0
+
+a
+    color: $alt-color
+    text-decoration: underline
+    text-decoration-style: dotted
+
+a:hover
+    text-decoration: underline
+    text-decoration-style: dotted
+
+.confirm
+    background-color: $confirm
+
+button
+    display: inline-flex
+    align-items: center
+    padding: 0.8rem
+    font-family: "cabin-bold"
+    text-transform: uppercase
+    color: white
+    border: $main-border
+
+code
+    background: rgb(55, 55, 55)
+    font-size: $base
+    border: none
+
+h1, h2, h3, h4, h5, h6
+    font-family: "cabin-bold"
+    text-transform: uppercase
+
+input
+    border: $main-border
+
+label
+    font-weight: 600
+
+nav
+    a
+        margin-right: 3.2rem
+
+table
+    width: 100%
+    tr
+        td, th
+            text-align: left
+            padding: 0.4em 0
+            border-bottom: $main-border
+            
+// IDS
+#console
+    height: 100%
+    width: 100%
+    z-index: 100
+    position: fixed
+    top: 0
+    left: 0
+    background-color: $alt-bkgd
+    #console-container
+        width: 64.0rem
+        height: 80%
+        top: $default-margin
+        margin: 3.2rem auto 0 auto
+        padding: $default-margin
+        background-color: white
+
+#content, #sidebar
+    margin-top: $default-margin * 2
+
+#device
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: $default-margin * 2
+    .listing
+        height: 72vh
+        overflow: scroll
+        scrollbar-width: thin
+
+#header
+    width: 100%
+    height: 6.4rem
+    padding: 0 $default-margin
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    gap: 0 $base
+    position: fixed
+    top: 0
+    background: $alt-bkgd
+    z-index: 10
+    *
+        align-self: center
+    #query
+        width: $base * 8
+
+#main-window
+    width: 100%
+    display: grid
+    grid-template-columns: 12fr 4fr
+    justify-content: space-between
+    z-index: 0
+
+#search
+    height: $default-margin
+    border-radius: $base
+    input:focus
+        border: $main-border
+    input#query
+        // border-radius: 0.4rem
+        height: $default-margin
+        width: 18.4rem
+        padding-right: 4.8rem
+        // display: flex
+        // align-items: center
+        background-image: url("/static/assets/img/icons/search.svg")
+        background-repeat: no-repeat
+        background-position: right
+        background-size: 3.6rem
+        // padding-left: $default-margin
+
+
+#system-messages
+    ul
+        display: block
+        padding: $base
+        border: 1px dashed #ccc
+
+
+// Game
+#game
+    display: grid
+    grid-template-columns: 1fr 2fr
+    #boxart
+        margin: 0 $default-margin 0 0
+        img
+            max-width: 100%
+            max-height: 32.0rem
+            position: relative
+
+    #game_details
+        max-height: 32.0rem
+        display: flex
+        flex-flow: column wrap
+        justify-content: flex-start
+        .detail
+            margin: 0 0 $base 0
+
+#game-title
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    gap: 0 $default-margin
+
+#main-window
+    padding: 0 $default-margin
+
+#tech-info
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+
+
+// CLASSES
+.columns
+    display: flex
+    flex-flow: row nowrap
+
+.icon
+    max-width: $default-margin
+    max-height: $default-margin
+
+.game-list
+    border-collapse: collapse
+    tr
+        td
+            height: 4.8rem
+            .alt_title
+                font-size: 1.4rem 
+
+.sub-header
+    padding: $default-margin 0
+    display: inline-block
+    font-size: 2.0rem
+    text-transform: uppercase
+    a
+        text-decoration: none
+
+.sub-menu-content
+    padding: 0.8rem
+    display: none
+    position: absolute
+    z-index: 50
+    background-color: $alt-bkgd
+    li
+        padding: 0.8rem 0
+        list-style: none
+
+.sub-menu:hover .sub-menu-content
+    display: block
+
+// INTERFACE
+.confirm
+    background-color: $confirm
+
+.execute
+    background-color: $execute

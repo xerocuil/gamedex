@@ -1,0 +1,13 @@
+.dtrash
+autoresume.flag
+autostart
+brightness
+cpuspeed
+font
+lang
+main
+menu.flag
+retroarch
+rootfs.img
+shutdown.flag
+start

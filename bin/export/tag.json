@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "name": "2D Scrolling"
+    },
+    {
+        "id": 2,
+        "name": "4X"
+    },
+    {
+        "id": 3,
+        "name": "6DOF"
+    },
+    {
+        "id": 4,
+        "name": "Adult"
+    },
+    {
+        "id": 5,
+        "name": "Anime"
+    },
+    {
+        "id": 6,
+        "name": "Aquatic"
+    },
+    {
+        "id": 7,
+        "name": "Arcade"
+    },
+    {
+        "id": 8,
+        "name": "Baseball"
+    },
+    {
+        "id": 9,
+        "name": "Basketball"
+    },
+    {
+        "id": 10,
+        "name": "Board Game"
+    },
+    {
+        "id": 11,
+        "name": "Bowling"
+    },
+    {
+        "id": 12,
+        "name": "Boxing"
+    },
+    {
+        "id": 13,
+        "name": "Brawler"
+    },
+    {
+        "id": 14,
+        "name": "Bullet Hell"
+    },
+    {
+        "id": 15,
+        "name": "Card Collectible"
+    },
+    {
+        "id": 16,
+        "name": "Crime"
+    },
+    {
+        "id": 17,
+        "name": "Dating"
+    },
+    {
+        "id": 18,
+        "name": "Dodgeball"
+    },
+    {
+        "id": 19,
+        "name": "Espionage"
+    },
+    {
+        "id": 20,
+        "name": "FMV"
+    },
+    {
+        "id": 21,
+        "name": "Falling Block"
+    },
+    {
+        "id": 22,
+        "name": "Fantasy"
+    },
+    {
+        "id": 23,
+        "name": "Fighting"
+    },
+    {
+        "id": 24,
+        "name": "First-Person"
+    },
+    {
+        "id": 25,
+        "name": "Flight"
+    },
+    {
+        "id": 26,
+        "name": "Football"
+    },
+    {
+        "id": 27,
+        "name": "Formula Racing"
+    },
+    {
+        "id": 28,
+        "name": "Gambling"
+    },
+    {
+        "id": 29,
+        "name": "Golf"
+    },
+    {
+        "id": 30,
+        "name": "Hack & Slash"
+    },
+    {
+        "id": 31,
+        "name": "Hockey"
+    },
+    {
+        "id": 32,
+        "name": "Horror"
+    },
+    {
+        "id": 33,
+        "name": "Isometric"
+    },
+    {
+        "id": 34,
+        "name": "Jet Ski"
+    },
+    {
+        "id": 35,
+        "name": "Kart Racing"
+    },
+    {
+        "id": 36,
+        "name": "MMA"
+    },
+    {
+        "id": 37,
+        "name": "MMORPG"
+    },
+    {
+        "id": 38,
+        "name": "Management"
+    },
+    {
+        "id": 39,
+        "name": "Martial Arts"
+    },
+    {
+        "id": 40,
+        "name": "Mecha"
+    },
+    {
+        "id": 41,
+        "name": "Medieval"
+    },
+    {
+        "id": 42,
+        "name": "Metroidvania"
+    },
+    {
+        "id": 43,
+        "name": "Military"
+    },
+    {
+        "id": 44,
+        "name": "Mini-Games"
+    },
+    {
+        "id": 45,
+        "name": "Motorcycle"
+    },
+    {
+        "id": 46,
+        "name": "Mystery"
+    },
+    {
+        "id": 47,
+        "name": "Nature"
+    },
+    {
+        "id": 48,
+        "name": "Naval"
+    },
+    {
+        "id": 49,
+        "name": "Noir"
+    },
+    {
+        "id": 50,
+        "name": "None"
+    },
+    {
+        "id": 51,
+        "name": "Olympiad"
+    },
+    {
+        "id": 52,
+        "name": "Open World"
+    },
+    {
+        "id": 53,
+        "name": "Paddle"
+    },
+    {
+        "id": 54,
+        "name": "Party"
+    },
+    {
+        "id": 55,
+        "name": "Physics"
+    },
+    {
+        "id": 56,
+        "name": "Pinball"
+    },
+    {
+        "id": 57,
+        "name": "Pixel Art"
+    },
+    {
+        "id": 58,
+        "name": "Platformer"
+    },
+    {
+        "id": 59,
+        "name": "Point & Click"
+    },
+    {
+        "id": 60,
+        "name": "Post-Apocalyptic"
+    },
+    {
+        "id": 61,
+        "name": "Prehistoric"
+    },
+    {
+        "id": 62,
+        "name": "Puzzle"
+    },
+    {
+        "id": 63,
+        "name": "QTE"
+    },
+    {
+        "id": 64,
+        "name": "RPG"
+    },
+    {
+        "id": 65,
+        "name": "Racing"
+    },
+    {
+        "id": 66,
+        "name": "Rail Shooter"
+    },
+    {
+        "id": 67,
+        "name": "Rally"
+    },
+    {
+        "id": 68,
+        "name": "Real-Time"
+    },
+    {
+        "id": 69,
+        "name": "Rhythm"
+    },
+    {
+        "id": 70,
+        "name": "Roguelike"
+    },
+    {
+        "id": 71,
+        "name": "Roguelite"
+    },
+    {
+        "id": 72,
+        "name": "Role-Playing"
+    },
+    {
+        "id": 73,
+        "name": "Run & Gun"
+    },
+    {
+        "id": 74,
+        "name": "Runner"
+    },
+    {
+        "id": 75,
+        "name": "Sandbox"
+    },
+    {
+        "id": 76,
+        "name": "Sci-Fi"
+    },
+    {
+        "id": 77,
+        "name": "Shooter"
+    },
+    {
+        "id": 78,
+        "name": "Simulation"
+    },
+    {
+        "id": 79,
+        "name": "Skateboarding"
+    },
+    {
+        "id": 80,
+        "name": "Skating"
+    },
+    {
+        "id": 81,
+        "name": "Snowboarding"
+    },
+    {
+        "id": 82,
+        "name": "Soccer"
+    },
+    {
+        "id": 83,
+        "name": "Squash"
+    },
+    {
+        "id": 84,
+        "name": "Stealth"
+    },
+    {
+        "id": 85,
+        "name": "Strategy"
+    },
+    {
+        "id": 86,
+        "name": "Street Racing"
+    },
+    {
+        "id": 87,
+        "name": "Survival"
+    },
+    {
+        "id": 88,
+        "name": "Tactical"
+    },
+    {
+        "id": 89,
+        "name": "Tank"
+    },
+    {
+        "id": 90,
+        "name": "Tennis"
+    },
+    {
+        "id": 91,
+        "name": "Third-Person"
+    },
+    {
+        "id": 92,
+        "name": "Top-Down"
+    },
+    {
+        "id": 93,
+        "name": "Tower Defense"
+    },
+    {
+        "id": 94,
+        "name": "Track Racing"
+    },
+    {
+        "id": 95,
+        "name": "Trivia"
+    },
+    {
+        "id": 96,
+        "name": "Turn-Based"
+    },
+    {
+        "id": 97,
+        "name": "Vehicular Combat"
+    },
+    {
+        "id": 98,
+        "name": "Volleyball"
+    },
+    {
+        "id": 99,
+        "name": "Western"
+    },
+    {
+        "id": 100,
+        "name": "Wrestling"
+    }
+]
