@@ -15,26 +15,28 @@ USER_LIBRARY = os.path.join(config.cfg['DIR']['games'], 'steam')
 STEAM_APPS = os.path.join(USER_LIBRARY, 'steamapps')
 REGISTRY_FILE = os.path.join(DEFAULT_STEAM_DIR, 'registry.vdf')
 
-JSON_DIR = os.path.join(config.PROFILE_DIR, 'sys', 'assets', 'json', 'steam')
+JSON_DIR = os.path.join(config.JSON_DIR, 'steam')
 JSON_FILE = os.path.join(JSON_DIR, 'installed.json')
 
 
 def export_data():
+    """Export Steam data to JSON files"""
     installed_games = []
 
     for file in os.listdir(os.path.join(STEAM_APPS)):
         if file.endswith('.acf'):
             file_data = vdf.load(open(os.path.join(STEAM_APPS, file)))
             manifest_data = {
-                'name': file_data['AppState']['name'],
-                'appid': file_data['AppState']['appid']
+                'title': file_data['AppState']['name'],
+                'filename': file_data['AppState']['appid']
                 }
             installed_games.append(manifest_data)
 
         for g in installed_games:
             try:
-                query = Game.objects.get(filename=g['appid'])
-                g['gdid'] = query.id
+                query = Game.objects.values('id', 'title').get(filename=g['filename'])
+                g['gdid'] = query['id']
+                g['title'] = query['title']
             except Game.DoesNotExist:
                 g['gdid'] = None
 
@@ -42,6 +44,6 @@ def export_data():
         os.makedirs(JSON_DIR)
 
     with open(JSON_FILE, 'w') as f:
-        json.dump(installed_games, f, indent=4)
+        json.dump(installed_games, f)
 
     print('Steam export complete.\n')

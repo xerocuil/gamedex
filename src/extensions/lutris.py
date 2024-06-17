@@ -46,23 +46,23 @@ def import_data():
     # Update last_played, play_time columns in `library_games`
     for g in lt_games:
         try:
-            g_obj = Game.objects.get(filename=g['slug'])
+            g_obj = Game.objects.values('last_played', 'play_time', 'date_modified').get(filename=g['filename'])
         except Game.DoesNotExist:
             g_obj = None
 
         if g_obj:
-            if g['lastplayed']:
-                if not g_obj.last_played or g['lastplayed'] > g_obj.last_played:
-                    g_obj.last_played = g['lastplayed']
-                    g_obj.date_modified = timezone.now()
+            if g['last_played']:
+                if not g_obj['last_played'] or g['last_played'] > g_obj['last_played']:
+                    g_obj['last_played'] = g['last_played']
+                    g_obj['date_modified'] = timezone.now()
                     g_obj.save()
                     print(g_obj.slug(), 'updated last_played\n')
 
-            if g['playtime']:
-                if not g_obj.play_time or \
-                        round(g['playtime'], 2) > round(g_obj.play_time, 2) + Decimal(0.01):
-                    g_obj.play_time = round(g['playtime'], 2)
-                    g_obj.date_modified = timezone.now()
+            if g['play_time']:
+                if not g_obj['play_time'] or \
+                        round(g['play_time'], 2) > round(g_obj['play_time'], 2) + Decimal(0.01):
+                    g_obj['play_time'] = round(g['play_time'], 2)
+                    g_obj['date_modified'] = timezone.now()
                     g_obj.save()
                     print(g_obj.slug(), 'updated play_time\n')
 
@@ -74,19 +74,20 @@ def export_data():
 
     installed_games = []
     lt_query = 'SELECT\
-        directory, lastplayed, name, platform, playtime, service, slug\
+        slug, name, platform, lastplayed, playtime, service \
         FROM games WHERE installed = 1;'
     LT_CURSOR.execute(lt_query)
-    columns = [description[0] for description in LT_CURSOR.description]
+    columns = ['filename', 'title', 'platform', 'last_played', 'play_time', 'store']
 
     for row in LT_CURSOR.fetchall():
-        result = dict(zip(columns, row))
-        installed_games.append(result)
+        game_dict = dict(zip(columns, row))
+        installed_games.append(game_dict)
 
     for g in installed_games:
         try:
-            query = Game.objects.get(filename=g['slug'])
-            g['gdid'] = query.id
+            query = Game.objects.values('id', 'title').get(filename=g['filename'])
+            g['gdid'] = query['id']
+            g['title'] = query['title']
         except Game.DoesNotExist:
             g['gdid'] = None
 
@@ -94,6 +95,6 @@ def export_data():
         os.makedirs(JSON_DIR)
 
     with open(JSON_FILE, 'w') as f:
-        json.dump(installed_games, f, indent=4)
+        json.dump(installed_games, f)
 
     print('Lutris export complete.\n')
