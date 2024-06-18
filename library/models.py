@@ -41,14 +41,14 @@ STORES = [
 ]
 
 GAME_MEDIA = [
-    {'img': 'banner', 'ext': 'jpg'},
-    {'img': 'boxart', 'ext': 'jpg'},
-    {'img': 'grid', 'ext': 'jpg'},
-    {'img': 'hero', 'ext': 'jpg'},
-    {'img': 'icon', 'ext': 'png'},
-    {'img': 'logo', 'ext': 'png'},
-    {'img': 'screenshot', 'ext': 'jpg'},
-    {'img': 'wallpaper', 'ext': 'jpg'}
+    {'img': 'banner', 'ext': 'jpg', 'width': 184, 'height': 69, 'type': 'constant'},
+    {'img': 'boxart', 'ext': 'jpg', 'width': 800, 'height': 800, 'type': 'variable'},
+    {'img': 'grid', 'ext': 'jpg', 'width': 460, 'height': 215, 'type': 'constant'},
+    {'img': 'hero', 'ext': 'jpg', 'width': 1920, 'height': 620, 'type': 'constant'},
+    {'img': 'icon', 'ext': 'png', 'width': 128, 'height': 128, 'type': 'constant'},
+    {'img': 'logo', 'ext': 'png', 'width': 640, 'height': 320, 'type': 'variable'},
+    {'img': 'screenshot', 'ext': 'jpg', 'width': 1024, 'height': 768, 'type': 'constant'},
+    {'img': 'wallpaper', 'ext': 'jpg', 'width': 1920, 'height': 1080, 'type': 'variable'}
 ]
 
 SC_FAIL = 'Value entered failed the sanity check'
@@ -61,6 +61,9 @@ class Collection(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
@@ -68,6 +71,9 @@ class Collection(models.Model):
 class Genre(models.Model):
     """ForeignKey for `Game.genre`"""
     name = models.CharField(max_length=200)
+
+    class Meta:
+        ordering = ['name']
 
     def __str__(self):
         return self.name
@@ -80,6 +86,9 @@ class Platform(models.Model):
     name = models.CharField(max_length=200, null=False)
     slug = models.CharField(max_length=32, null=False)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
@@ -87,6 +96,9 @@ class Platform(models.Model):
 class Tag(models.Model):
     """ManyToManyField for `Game.tags`"""
     name = models.CharField(max_length=200)
+
+    class Meta:
+        ordering = ['name']
 
     def __str__(self):
         return self.name
@@ -117,7 +129,7 @@ class Game(models.Model):
     operating_system = models.CharField(blank=True, max_length=64, null=True)
     platform = models.ForeignKey('Platform', on_delete=models.SET_NULL, null=True)
     play_count = models.IntegerField(blank=True, default=0, null=True)  # Deprecated
-    play_time = models.DecimalField(blank=True, null=True, max_digits=24, decimal_places=17)
+    play_time = models.DecimalField(blank=True, null=True, max_digits=10, decimal_places=5)
     players = models.IntegerField(
         default=1,
         validators=[
