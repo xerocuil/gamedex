@@ -7,12 +7,12 @@
 - [ ] Cover templates
 - [ ] Game scraper
 - [ ] Portable device plugins
-- [-] 3rd party integration
+- [ ] 3rd party integration
     - [ ] DosBox
-    - [-] Lutris
-    - [-] Retroarch
+    - [x] Lutris
+    - [ ] Retroarch
     - [ ] ScummVM
-    - [-] Steam
+    - [x] Steam
 - [ ] 'Arcade' mode
     - [ ] Fullscreen GUI
     - [ ] Controller support
