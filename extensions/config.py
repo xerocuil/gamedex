@@ -25,9 +25,14 @@ cfg = ConfigParser()
 
 
 # FUNCTIONS
-def generate_key():
-    """Returns:
-        key (str): Randomly generated 64 character key
+def generate_key(length=64):  # MOVE TO HELPERS
+    """Generates random character key.
+
+    Args:
+        length (int, optional): No. of characters to generate. Defaults to 64.
+
+    Returns:
+        key (str): Generated key.
     """
     key = ''.join(
         random.SystemRandom()
@@ -36,8 +41,10 @@ def generate_key():
 
 
 def generate_server_name():
-    """Returns:
-        server_name (arr): Generated IP, port
+    """Generates random IP address and port no. as a string.
+
+    Returns:
+        server_name (str): Generated IP/port address
     """
     ip_sfx = random.randrange(2, 255)
     port = random.randrange(8100, 8999)

@@ -33,7 +33,7 @@ def sort_title(title, option):
 
     Args:
         title (str): Title to convert
-        option (str): Conversion option [`s`/`d`]
+        option (str): Conversion option [`s` or `d`]
 
     Options:
         `s`: Convert to sortable title (move article to end of string)  
@@ -43,10 +43,12 @@ def sort_title(title, option):
         c_title (str): Converted title string
 
     Example:
-        Input: `sort_title('The Sample Title', c)`  
-        Output: `Sample Title, The`
+        Input:  
+        `sort_title('The Sample Title', c)`
 
-    """  # Supress trailing whitespace warning # noqa: W291
+        Output:  
+        `Sample Title, The`
+    """  # noqa: W291
 
     article = ''
     base_title = ''

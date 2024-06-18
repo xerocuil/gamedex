@@ -7,7 +7,6 @@ from django.utils import timezone
 
 from extensions.helpers import sort_title
 import gamedex.settings as settings
-# import extensions.utils
 
 
 # LIBRARY DATA
@@ -58,6 +57,7 @@ SC_FAIL = 'Value entered failed the sanity check'
 # CLASSES
 
 class Collection(models.Model):
+    """ForeignKey for `Game.collection`"""
     name = models.CharField(max_length=200)
     description = models.TextField()
 
@@ -66,6 +66,7 @@ class Collection(models.Model):
 
 
 class Genre(models.Model):
+    """ForeignKey for `Game.genre`"""
     name = models.CharField(max_length=200)
 
     def __str__(self):
@@ -73,6 +74,7 @@ class Genre(models.Model):
 
 
 class Platform(models.Model):
+    """ForeignKey for `Game.platform`"""
     core = models.CharField(max_length=200, null=True)
     launcher = models.CharField(max_length=200, null=True)
     name = models.CharField(max_length=200, null=False)
@@ -83,6 +85,7 @@ class Platform(models.Model):
 
 
 class Tag(models.Model):
+    """ManyToManyField for `Game.tags`"""
     name = models.CharField(max_length=200)
 
     def __str__(self):
@@ -90,6 +93,7 @@ class Tag(models.Model):
 
 
 class Game(models.Model):
+    """Main `library` model."""
     alt_title = models.CharField(blank=True, max_length=200, null=True)
     archived = models.BooleanField(default=False)
     co_op = models.BooleanField(default=False)
@@ -140,7 +144,14 @@ class Game(models.Model):
         return self.title
 
     def display_title(self):
-        return sort_title(self.title, 'd')
+        """Converts `game.title` field from sortable string to human-readable string.
+
+        Returns:
+            d_title (str): Converted title string
+        """
+
+        d_title = sort_title(self.title, 'd')
+        return d_title
 
     def get_game_media(self):
         platform_root = os.path.join(settings.MEDIA_ROOT, 'games', self.platform.slug)
@@ -162,7 +173,7 @@ class Game(models.Model):
     def md_notes(self):
         md = markdown.markdown(self.notes)
         return md
-    
+
     def slug(self):
         f = self.filename.split('.')
         s = f[0]

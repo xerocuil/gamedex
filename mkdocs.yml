@@ -17,11 +17,11 @@ theme:
   name: "material"
 
 nav:
-  - Home: index.md
+  - Home: readme.md
   - changelog.md
   - Developer Notes: dev_notes/index.md
 
 markdown_extensions:
   - toc:
-      toc_depth: "2"
+      toc_depth: "3"
   - pymdownx.tasklist

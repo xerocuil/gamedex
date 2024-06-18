@@ -1,22 +1,11 @@
 # GameDex
 
-GameDex is a video game library manager.
+Video game library management for GNU/Linux systems.
 
-## Planned Features
+## Features
 
-- [ ] Database to keep track of general game info, as well as:
-    - [x] Where the game was purchased
-    - [ ] Game playtime
-    - [x] Installation notes
-    - [-] Game manuals (Deprecated)
-- [ ] Generate ISOs and print templates for physical backups
-- [ ] Scraper to easily add games to the database
-- [ ] Portable device plugins
-- [x] Launch installed games
-- [x] Customizable platforms, genres, tags, and collections
-- [ ] 3rd party integration
-    - [ ] DosBox
-    - [ ] Lutris
-    - [ ] Retroarch
-    - [ ] ScummVM
-    - [ ] Steam
+- Catalog game library with custom platforms, tags, and collections.
+- Lauch games from database view or 'big screen' mode.
+- Third-party integration:
+    + Steam
+    + Lutris

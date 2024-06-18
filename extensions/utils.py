@@ -20,15 +20,10 @@ def scan_games():
     """Scan games directory for each platform and load game data.
 
     Returns:
-        list: Table of installed games
+        installed_games (list): Table of installed games
     """
 
     installed_games = []
-    json_dir = os.path.join(config.JSON_DIR, 'library')
-    json_file = os.path.join(json_dir, 'installed.json')
-
-    # installed_games_json = os.path.join(config.JSON_DIR, 'library', 'installed.json')
-
     lutris_data = load_json_file(
         os.path.join(
             config.JSON_DIR,
@@ -165,7 +160,7 @@ def count_tags():
     """Generate table of tags with total game instances.
 
     Returns:
-        list: Array of tag dictionaries
+        tag_count (list): Array of tag dictionaries
     """
 
     # Open database connection
@@ -202,7 +197,7 @@ def count_platforms():
     """Generate table of platforms with total game instances.
 
     Returns:
-        list: Array of platform dictionaries
+        platform_count (list): Array of platform dictionaries
     """
 
     # Init array and query tables
@@ -229,7 +224,7 @@ def total_playtime():
     """Get sum of play time of all games in `library_game` table.
 
     Returns:
-        decimal: Play time sum
+        total (decimal): Playtime sum
     """
     games = Game.objects.all()
     total = 0
@@ -275,7 +270,11 @@ def collect_static():
 
 
 def migrate_db(app):
-    """Make database migrations and migrate"""
+    """Make database migrations and migrate select app
+
+    Args:
+        app (str): name of Django app to migrate
+    """
 
     curr_dir = os.getcwd()
     os.chdir(APP_DIR)
