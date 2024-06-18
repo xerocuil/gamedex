@@ -1,4 +1,35 @@
 import json
+import random
+import string
+
+
+def generate_key(length=64):  # MOVE TO HELPERS
+    """Generates random character key.
+
+    Args:
+        length (int, optional): No. of characters to generate. Defaults to 64.
+
+    Returns:
+        key (str): Generated key.
+    """
+    key = ''.join(
+        random.SystemRandom()
+            .choice(string.ascii_letters + string.digits) for _ in range(64))
+    return key
+
+
+def generate_server_name():
+    """Generates random IP address and port number as a string.
+
+    Returns:
+        server_name (str): Generated IP/port address
+    """
+    ip_sfx = random.randrange(2, 255)
+    port = random.randrange(8100, 8999)
+    pfx = '127.0.0.'
+    ip_addr = pfx + str(ip_sfx)
+    server_name = [ip_addr, port]
+    return server_name
 
 
 def load_json_file(file):
