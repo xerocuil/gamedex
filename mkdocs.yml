@@ -17,9 +17,12 @@ theme:
   name: "material"
 
 nav:
-  - Home: readme.md
+  - Home: index.md
   - changelog.md
-  - Developer Notes: dev_notes/index.md
+  - developer_notes/index.md
+
+not_in_nav: |
+  /developer_notes
 
 markdown_extensions:
   - toc:

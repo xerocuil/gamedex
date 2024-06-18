@@ -6,7 +6,7 @@ __pycache__
 *.bak*
 *.pyc
 cache
-docs/bin/
+bin/
 site
 test.py
 Pipfile*

@@ -17,6 +17,9 @@ def loading(request):
 # GAME
 
 def game_index(request):
+    """List paginated view of all games in database."""
+
+    print('request', request, type(request))
     page_title = 'Home Page'
 
     # Query game objects
@@ -65,6 +68,13 @@ def game_index(request):
 
 
 def game_review(request, game_id):
+    print(type(game_review))
+    """Create report of single game instance.
+
+    Args:
+        game_id (int): Game ID number
+    """  # noqa W291
+
     game = get_object_or_404(Game, pk=game_id)
     installed_games_url = request.build_absolute_uri('/') + 'assets/json/library/installed.json'
     registered_games = requests.get(installed_games_url).json()['registered']
@@ -79,6 +89,8 @@ def game_review(request, game_id):
 
 
 def search_results(request):
+    """Display results of game query."""
+
     query = request.GET.get('q')
     results = Game.objects.filter(
         Q(title__icontains=query) |
@@ -126,7 +138,7 @@ def platform_review(request, platform_id):
 
 # SYSTEM
 
-def settings(request):
+def user_settings(request):
     """Form to update `config.ini` settings."""
 
     page_title = 'Settings'
@@ -155,14 +167,3 @@ def settings(request):
         'form': form,
         'message': message
         })
-
-# def settings(request):
-#     page_title = 'Settings'
-#     app_cfg = config.cfg['APP']
-#     dir_cfg = config.cfg['DIR']
-
-#     return render(request, 'library/system/settings.html', {
-#         'page_title': page_title,
-#         'app_cfg': app_cfg,
-#         'dir_cfg': dir_cfg
-#     })
