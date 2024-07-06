@@ -4,30 +4,20 @@ import sqlite3
 from decimal import Decimal
 from django.utils import timezone
 
-import extensions.app_context  # noqa: F401
+# import extensions.app_context  # noqa: F401
 import extensions.config as config
-from library.models import Game
-
+# from library.models import Game
+import extensions.sqlite_man as sqlite_man
 
 # GLOBALS
 
-JSON_DIR = os.path.join(config.JSON_DIR, 'lutris')
-JSON_FILE = os.path.join(JSON_DIR, 'installed.json')
+API_DIR = os.path.join(config.API_DIR, 'lutris')
+JSON_FILE = os.path.join(API_DIR, 'installed.json')
+DB_PATH = os.path.join(os.path.expanduser('~'), '.local', 'share', 'lutris', 'pga.db')
 
 
-# DB CONNECTION
-
-LUTRIS_DB = os.path.join(os.path.expanduser('~'), '.local', 'share', 'lutris', 'pga.db')
-LT_CONN = None
-CONN_ERR = 'Could not connect to Lutris database.'
-
-if os.path.exists(LUTRIS_DB):
-    try:
-        LT_CONN = sqlite3.connect(LUTRIS_DB)
-        LT_CURSOR = LT_CONN.cursor()
-    except sqlite3.OperationalError as e:
-        print(CONN_ERR, e)
-        exit()
+lutris_db = sqlite_man.SqliteDB(DB_PATH)
+gamedex_db = sqlite_man.SqliteDB(config.DB_PATH)
 
 
 # FUNCTIONS
@@ -43,28 +33,43 @@ def import_data():
 
     # Update last_played, play_time columns in `library_games`
     for g in lt_games:
+        print('\nLooking for', g['title'], '...')
         try:
-            g_obj = Game.objects.values('last_played', 'play_time', 'date_modified').get(filename=g['filename'])
-        except Game.DoesNotExist:
-            g_obj = None
+            query = 'SELECT title, id, last_played, play_time, date_modified FROM library_game WHERE filename == "' + g['filename'] + '";'
 
-        if g_obj:
+            result = gamedex_db.g(query)
+        except Exception:
+            result = None
+            print(g['filename'], 'not found in database.')
+
+        if result:
             if g['last_played']:
-                if not g_obj['last_played'] or g['last_played'] > g_obj['last_played']:
-                    g_obj['last_played'] = g['last_played']
-                    g_obj['date_modified'] = timezone.now()
-                    g_obj.save()
-                    print(g_obj.slug(), 'updated last_played\n')
+                if not result['last_played'] or g['last_played'] > result['last_played']:
+                    result['last_played'] = g['last_played']
+                    result['date_modified'] = timezone.now()
+                    update_lastplayed = 'UPDATE library_game SET last_played = "' +\
+                        str(result['last_played']) +\
+                        '", date_modified = "' +\
+                        str(result['date_modified']) +\
+                        '" WHERE id = "' +\
+                        str(result['id']) + '";'
+                    gamedex_db.cursor.execute(update_lastplayed)
 
             if g['play_time']:
-                if not g_obj['play_time'] or \
-                        round(g['play_time'], 2) > round(g_obj['play_time'], 2) + Decimal(0.01):
-                    g_obj['play_time'] = round(g['play_time'], 2)
-                    g_obj['date_modified'] = timezone.now()
-                    g_obj.save()
-                    print(g_obj.slug(), 'updated play_time\n')
+                if not result['play_time'] or \
+                        round(g['play_time'], 5) > Decimal(round(result['play_time'], 5)) + Decimal(0.0001):
+                    result['play_time'] = round(g['play_time'], 5)
+                    result['date_modified'] = timezone.now()
+                    update_playtime = 'UPDATE library_game SET play_time = "' +\
+                        str(result['play_time']) +\
+                        '", date_modified = "' +\
+                        str(result['date_modified']) +\
+                        '" WHERE id = "' + str(result['id']) + '";'
+                    gamedex_db.cursor.execute(update_playtime)
 
-    print('Lutris import complete.\n')
+    print('\nImport complete.\n')
+    gamedex_db.conn.commit()
+    gamedex_db.conn.close()
 
 
 def export_data():
@@ -74,23 +79,25 @@ def export_data():
     lt_query = 'SELECT\
         slug, name, platform, lastplayed, playtime, service \
         FROM games WHERE installed = 1;'
-    LT_CURSOR.execute(lt_query)
+    lutris_db.cursor.execute(lt_query)
     columns = ['filename', 'title', 'platform', 'last_played', 'play_time', 'store']
 
-    for row in LT_CURSOR.fetchall():
+    for row in lutris_db.cursor.fetchall():
         game_dict = dict(zip(columns, row))
         installed_games.append(game_dict)
 
     for g in installed_games:
         try:
-            query = Game.objects.values('id', 'title').get(filename=g['filename'])
+            # query = Game.objects.values('id', 'title').get(filename=g['filename'])
+            query = 'SELECT id, title, FROM games WHERE filename = ' + g['filename'] + ';'
+            # query = Game.objects.values('id', 'title').get(filename=g['filename'])
             g['gdid'] = query['id']
             g['title'] = query['title']
-        except Game.DoesNotExist:
+        except Exception:
             g['gdid'] = None
 
-    if not os.path.isdir(JSON_DIR):
-        os.makedirs(JSON_DIR)
+    if not os.path.isdir(API_DIR):
+        os.makedirs(API_DIR)
 
     with open(JSON_FILE, 'w') as f:
         json.dump(installed_games, f)
