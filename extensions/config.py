@@ -6,15 +6,17 @@ from extensions.helpers import generate_key, generate_server_name
 EXT_DIR = os.path.dirname(os.path.abspath(__file__))
 APP_DIR = os.path.dirname(EXT_DIR)
 HOME_DIR = os.path.expanduser('~')
+
 PROFILE_DIR = os.path.join(HOME_DIR, '.gamedex')
+API_DIR = os.path.join(PROFILE_DIR, 'api')
+ASSETS_DIR = os.path.join(PROFILE_DIR, 'assets')
 MEDIA_DIR = os.path.join(PROFILE_DIR, 'media')
 SYS_DIR = os.path.join(PROFILE_DIR, 'sys')
 DB_DIR = os.path.join(SYS_DIR, 'db')
-ASSETS_DIR = os.path.join(PROFILE_DIR, 'assets')
-JSON_DIR = os.path.join(ASSETS_DIR, 'json')
+GD_DIRS = [MEDIA_DIR, DB_DIR, API_DIR]
+
 CONFIG_PATH = os.path.join(PROFILE_DIR, 'config.ini')
 DB_PATH = os.path.join(PROFILE_DIR, 'sys', 'db', 'gd.db')
-GD_DIRS = [MEDIA_DIR, DB_DIR, JSON_DIR]
 
 
 # Initialize config object
